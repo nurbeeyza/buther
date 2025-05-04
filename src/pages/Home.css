@@ -35,7 +35,7 @@
 
 .section-title p {
   font-size: 1.2rem;
-  font-style: italic;
+  /* font-style: italic; */
   opacity: 0.8;
   color: var(--white);
 }
