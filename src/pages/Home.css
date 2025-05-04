@@ -86,6 +86,8 @@
   padding: 2rem;
   background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
   color: var(--white);
+  display: flex;
+  flex-direction: column;
 }
 
 .category-overlay h3 {
@@ -101,10 +103,11 @@
   margin-bottom: 1rem;
   opacity: 0.9;
   line-height: 1.4;
+  text-align: center;
 }
 
 .category-link {
-  display: inline-block;
+  /* display: inline-block; */
   padding: 0.8rem 1.5rem;
   background: var(--primary-color);
   color: var(--white);
@@ -114,6 +117,7 @@
   transition: all 0.3s ease;
   text-transform: uppercase;
   letter-spacing: 1px;
+  align-self: center;
 }
 
 .category-link:hover {
@@ -136,7 +140,7 @@
   }
 
   .category-image {
-    height: 200px;
+    height: 220px;
   }
 }
 
@@ -321,4 +325,4 @@
 
 .split-title .title2 {
   color: var(--primary-color);
-} 
+}
