@@ -16,7 +16,7 @@ const Home = () => {
       title: "20 YILI AŞKIN",
       subtitle: "Severek Tükettiğiniz",
       description: "Başpınarlar Et Entegre & Steak House ürünleri artık 7/24 bir telefon kadar yanınızda.",
-      image: "/images/vadi_kasap_slayt_arkaplan_02_1600x625_0.png",
+      background: "/images/vadi_kasap_slayt_arkaplan_02_1600x625_0.png",
       className: "second-slide"
     }
   ];
@@ -113,7 +113,7 @@ const Home = () => {
       <section className="hero">
         {slides.map((slide, index) => (
           <div
-            key={index}
+            key={`slide-${index}-${currentSlide}`}
             className={`hero-background ${slide.className} ${
               currentSlide === index ? 'active' : ''
             }`}
@@ -139,7 +139,7 @@ const Home = () => {
 
         {slides.map((slide, index) => (
           <div
-            key={index}
+            key={`slide-${index}-${currentSlide}`}
             className={`hero-slide ${slide.className} ${
               currentSlide === index ? 'active' : ''
             }`}
@@ -152,6 +152,16 @@ const Home = () => {
             </div>
           </div>
         ))}
+
+        <div className="slider-dots">
+          {slides.map((_, index) => (
+            <button
+              key={index}
+              className={`dot ${currentSlide === index ? 'active' : ''}`}
+              onClick={() => setCurrentSlide(index)}
+            />
+          ))}
+        </div>
       </section>
 
       {/* Categories Section */}
