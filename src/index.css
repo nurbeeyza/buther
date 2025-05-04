@@ -646,7 +646,7 @@ body {
 
 /* Footer */
 .footer {
-  background-color: var(--primary-color);
+  background-color: var(--dark-red);
   color: var(--white);
   padding: 4rem 0 2rem;
 }
@@ -669,7 +669,7 @@ body {
   font-size: 1.2rem;
   text-transform: uppercase;
   letter-spacing: 1px;
-  color: var(--secondary-color);
+  color: black;
 }
 
 .footer-section h3::after {
@@ -679,7 +679,7 @@ body {
   left: 0;
   width: 50px;
   height: 2px;
-  background-color: var(--secondary-color);
+  background-color: black;
 }
 
 .footer-section ul {
@@ -701,7 +701,7 @@ body {
 }
 
 .footer-section a:hover {
-  color: var(--secondary-color);
+  color: black;
   transform: translateX(5px);
 }
 
@@ -738,7 +738,7 @@ body {
 }
 
 .products-link a:hover {
-  color: var(--secondary-color);
+  color: black;
 }
 
 .kitchen-menu {
@@ -760,7 +760,7 @@ body {
 }
 
 .kitchen-toggle:hover {
-  color: var(--secondary-color);
+  color: black;
 }
 
 .kitchen-toggle i {
@@ -789,7 +789,7 @@ body {
 }
 
 .kitchen-submenu a:hover {
-  color: var(--secondary-color);
+  color: black;
   transform: translateX(5px);
 }
 
@@ -1205,22 +1205,78 @@ body {
 
 .cta-section .btn {
   border: 2px solid var(--white);
-  color: var(--white) ;
+  color: var(--white) !important;
   margin-top: 1rem;
   padding: 1rem 2rem;
   font-size: 1.2rem;
   text-transform: uppercase;
   letter-spacing: 1px;
-  transition: all 0.3s ease;
   background: transparent;
+  position: relative;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   display: inline-block;
-  text-decoration: none;
+  overflow: hidden;
+  min-width: 200px;
   text-align: center;
+  border-radius: 4px;
+  perspective: 1000px;
+  text-decoration: none;
+}
+
+.cta-section .btn span::before {
+  content: 'Sipariş Ver';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  color: var(--white);
+  transform-origin: center;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.cta-section .btn span::after {
+  content: 'İletişime Geç';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  color: var(--white);
+  transform: rotateX(90deg);
+  transform-origin: center;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  font-size: 1.2rem;
+  font-weight: 600;
 }
 
 .cta-section .btn:hover {
   background: var(--white);
-  color: var(--primary-color) !important;
+  transform: scale(1.05) translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+}
+
+.cta-section .btn:hover span::before {
+  transform: rotateX(-90deg);
+  opacity: 0;
+}
+
+.cta-section .btn:hover span::after {
+  transform: rotateX(0deg);
+  opacity: 1;
+  color: var(--primary-color);
 }
 
 .hero-slide.first-slide .btn,
@@ -1232,14 +1288,57 @@ body {
   font-size: 1.2rem;
   text-transform: uppercase;
   letter-spacing: 1px;
-  transition: all 0.3s ease;
   background: transparent;
+  position: relative;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-block;
+  overflow: hidden;
+  min-width: 200px;
+  text-align: center;
 }
 
 .hero-slide.first-slide .btn:hover,
 .hero-slide.second-slide .btn:hover {
   background: var(--white);
-  color: var(--primary-color) !important;
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.hero-slide.first-slide .btn span,
+.hero-slide.second-slide .btn span {
+  display: block;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  z-index: 2;
+}
+
+.hero-slide.first-slide .btn::after,
+.hero-slide.second-slide .btn::after {
+  content: 'İletişime Geç';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--white);
+  color: var(--primary-color);
+  transform: translateY(100%);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 1;
+}
+
+.hero-slide.first-slide .btn:hover span,
+.hero-slide.second-slide .btn:hover span {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+.hero-slide.first-slide .btn:hover::after,
+.hero-slide.second-slide .btn:hover::after {
+  transform: translateY(0);
 }
 
 .hero-slide.first-slide h1,
@@ -1391,7 +1490,7 @@ body {
 }
 
 .kitchen-toggle:hover {
-  color: var(--secondary-color);
+  color: black;
 }
 
 .kitchen-toggle i {
@@ -1420,7 +1519,7 @@ body {
 }
 
 .kitchen-submenu a:hover {
-  color: var(--secondary-color);
+  color: black;
   transform: translateX(5px);
 }
 
@@ -1466,7 +1565,7 @@ body {
 }
 
 .footer-link:hover {
-  color: var(--secondary-color);
+  color: black;
   transform: translateX(5px);
 }
 

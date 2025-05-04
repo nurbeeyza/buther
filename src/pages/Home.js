@@ -193,7 +193,7 @@ const Home = () => {
           <h2>Bu gün mangalda ne yapsak?</h2>
           <p>Hijyen, güvenilir et ürünlerini nerede bulabilirim?</p>
           <p>gibi sorularınızın cevabı BAŞPINARLAR 'da...</p>
-          <Link to="/contact" className="btn">Sipariş Ver</Link>
+          <Link to="/contact" className="btn"><span>Sipariş Ver</span></Link>
         </div>
       </section>
 
