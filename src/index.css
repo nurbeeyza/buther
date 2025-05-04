@@ -1182,8 +1182,7 @@ body {
 
 /* Call to Action Section */
 .cta-section {
-  background: linear-gradient(rgb(113, 113, 113), rgb(62, 62, 62)),
-    url("../public/images/bbq_bg.png");
+  background: rgb(113, 113, 113), url("../public/images/bbq_bg.png");
   background-size: cover, 850px;
   background-position: 430px;
   background-position-y: -250px;
