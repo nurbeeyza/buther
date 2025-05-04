@@ -5,19 +5,18 @@
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   line-height: 1.6;
   color: #333;
-  
 }
 
 :root {
-  --primary-color: #8B0000;
-  --secondary-color: #D4AF37;
+  --primary-color: #8b0000;
+  --secondary-color: #d4af37;
   --text-color: #333;
   --light-gray: #f5f5f5;
   --white: #ffffff;
-  --dark-red: #6B0000;
+  --dark-red: #6b0000;
 }
 
 .container {
@@ -115,7 +114,7 @@ body {
 }
 
 .nav-link::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 0;
@@ -366,7 +365,7 @@ body {
 }
 
 .hero h1 {
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
   font-size: 5rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
@@ -379,7 +378,7 @@ body {
 }
 
 .hero h2 {
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
   font-size: 4rem;
   font-weight: 700;
   margin-bottom: 1rem;
@@ -393,7 +392,7 @@ body {
 }
 
 .hero p {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 1.8rem;
   margin-bottom: 1rem;
   color: var(--text-color);
@@ -415,7 +414,7 @@ body {
   background: none;
   border: 2px solid var(--text-color);
   color: var(--text-color);
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 1.5rem;
   font-weight: 700;
   text-decoration: none;
@@ -518,7 +517,7 @@ body {
 }
 
 .section-title::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -556,18 +555,18 @@ body {
   background: var(--white);
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
   position: relative;
 }
 
 .product-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 .product-card::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -635,7 +634,7 @@ body {
 
 .feature-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .feature-icon {
@@ -673,7 +672,7 @@ body {
 }
 
 .footer-section h3::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 0;
@@ -896,14 +895,14 @@ body {
   background: var(--white);
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
   position: relative;
   animation: fadeIn 1s ease-in;
 }
 
 .category-card::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -921,12 +920,12 @@ body {
 
 .category-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 .category-image {
   width: 100%;
-  height: 200px;
+  height: 220px;
   overflow: hidden;
 }
 
@@ -946,19 +945,20 @@ body {
   text-align: center;
   font-size: 1.3rem;
   margin: 0;
-  color: var(--primary-color);
+  /* color: var(--primary-color); */
   position: relative;
   z-index: 2;
   transition: color 0.3s ease;
 }
 
 .category-card:hover h3 {
-  color: var(--dark-red);
+  /* color: var(--dark-red); */
 }
 
 /* About Page Styles */
 .about-hero {
-  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../public/images/kirmizi-et.png');
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../public/images/kirmizi-et.png");
   background-size: cover;
   background-position: center;
   height: 40vh;
@@ -1006,13 +1006,13 @@ body {
   padding: 2rem;
   border-radius: 8px;
   text-align: center;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
 }
 
 .feature-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 .feature-card i {
@@ -1028,7 +1028,8 @@ body {
 
 /* Contact Page Styles */
 .contact-hero {
-  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../public/images/kirmizi-et.png');
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../public/images/kirmizi-et.png");
   background-size: cover;
   background-position: center;
   height: 40vh;
@@ -1060,13 +1061,13 @@ body {
   padding: 2rem;
   border-radius: 8px;
   text-align: center;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
 }
 
 .contact-info-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 .contact-info-card i {
@@ -1086,7 +1087,7 @@ body {
   background: var(--white);
   padding: 2rem;
   border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .contact-form-container h2 {
@@ -1148,13 +1149,13 @@ body {
 }
 
 .btn::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 50%;
   left: 50%;
   width: 0;
   height: 0;
-  background: rgba(255,255,255,0.2);
+  background: rgba(255, 255, 255, 0.2);
   border-radius: 50%;
   transform: translate(-50%, -50%);
   transition: width 0.3s ease, height 0.3s ease;
@@ -1181,10 +1182,12 @@ body {
 
 /* Call to Action Section */
 .cta-section {
-  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('../public/images/kirmizi-et.png');
-  background-size: cover;
-  background-position: center;
+  background: rgb(113, 113, 113), url("../public/images/bbq_bg.png");
+  background-size: cover, 850px;
+  background-position: 430px;
+  background-position-y: -250px;
   background-attachment: fixed;
+  background-blend-mode: overlay;
   padding: 4rem 0;
   text-align: center;
   color: var(--white);
@@ -1194,13 +1197,13 @@ body {
 .cta-section h2 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .cta-section p {
   font-size: 1.2rem;
   margin-bottom: 1rem;
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .cta-section .btn {
@@ -1483,4 +1486,4 @@ body {
   .footer-link:hover {
     transform: none;
   }
-} 
+}

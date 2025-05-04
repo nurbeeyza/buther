@@ -35,7 +35,7 @@
 
 .section-title p {
   font-size: 1.2rem;
-  font-style: italic;
+  /* font-style: italic; */
   opacity: 0.8;
   color: var(--white);
 }
@@ -86,6 +86,8 @@
   padding: 2rem;
   background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
   color: var(--white);
+  display: flex;
+  flex-direction: column;
 }
 
 .category-overlay h3 {
@@ -103,12 +105,10 @@
   margin-bottom: 1rem;
   opacity: 0.9;
   line-height: 1.4;
-  color: white !important;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .category-link {
-  display: inline-block;
+  /* display: inline-block; */
   padding: 0.8rem 1.5rem;
   background: var(--primary-color);
   color: white !important;
@@ -118,7 +118,6 @@
   transition: all 0.3s ease;
   text-transform: uppercase;
   letter-spacing: 1px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .category-link:hover {
@@ -141,7 +140,7 @@
   }
 
   .category-image {
-    height: 200px;
+    height: 220px;
   }
 }
 
@@ -348,4 +347,4 @@
 
 .split-title .title2 {
   color: var(--primary-color);
-} 
+}
