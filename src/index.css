@@ -1182,11 +1182,11 @@ body {
 
 /* Call to Action Section */
 .cta-section {
-  background: linear-gradient(rgb(105 2 2), rgb(168 30 30)),
+  background: linear-gradient(rgb(113, 113, 113), rgb(62, 62, 62)),
     url("../public/images/bbq_bg.png");
-  background-size: inherit;
-  background-position: 370px;
-
+  background-size: cover, 850px;
+  background-position: 430px;
+  background-position-y: -250px;
   background-attachment: fixed;
   background-blend-mode: overlay;
   padding: 4rem 0;
