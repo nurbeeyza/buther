@@ -130,7 +130,7 @@ body {
 
 .dropdown-menu {
   position: absolute;
-  top: 100%;
+  top: 140%;
   left: 0;
   background: var(--white);
   min-width: 200px;

@@ -197,6 +197,10 @@
   margin-top: 40px;
 }
 
+li::marker {
+  display: none;
+}
+
 /* Standardized left alignment for consistency */
 .hero-content.left-align {
   left: 0;

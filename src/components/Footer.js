@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const [showKitchenMenu, setShowKitchenMenu] = useState(false);
@@ -11,19 +11,29 @@ const Footer = () => {
           <div className="footer-section company-info">
             <h3>BAŞPINARLAR ET</h3>
 
-            
             <div className="kitchen-menu">
-              <button 
+              <button
                 className="kitchen-toggle"
                 onClick={() => setShowKitchenMenu(!showKitchenMenu)}
               >
-                BAŞPINARLAR MUTFAK <i className={`fas fa-chevron-${showKitchenMenu ? 'up' : 'down'}`}></i>
+                BAŞPINARLAR MUTFAK{" "}
+                <i
+                  className={`fas fa-chevron-${
+                    showKitchenMenu ? "up" : "down"
+                  }`}
+                ></i>
               </button>
               {showKitchenMenu && (
                 <ul className="kitchen-submenu">
-                  <li><Link to="/recipes">YEMEK TARİFLERİ</Link></li>
-                  <li><Link to="/tips">PÜF NOKTALAR</Link></li>
-                  <li><Link to="/user-recipes">SİZDEN GELENLER</Link></li>
+                  <li>
+                    <Link to="/recipes">YEMEK TARİFLERİ</Link>
+                  </li>
+                  <li>
+                    <Link to="/tips">PÜF NOKTALAR</Link>
+                  </li>
+                  <li>
+                    <Link to="/user-recipes">SİZDEN GELENLER</Link>
+                  </li>
                 </ul>
               )}
             </div>
@@ -35,35 +45,76 @@ const Footer = () => {
           <div className="footer-section main-links">
             <h3>BAŞPINARLAR</h3>
             <ul>
-              <li><button className="footer-link">KURUMSAL</button></li>
-              <li><button className="footer-link">ŞUBELERİMİZ</button></li>
-              <li><button className="footer-link">KARİYER</button></li>
-              <li><button className="footer-link">İLETİŞİM</button></li>
+              <li>
+                <Link to="/corporate" className="footer-link">
+                  KURUMSAL
+                </Link>
+              </li>
+              <li>
+                <Link to="/branches" className="footer-link">
+                  ŞUBELERİMİZ
+                </Link>
+              </li>
+              <li>
+                <Link to="/career" className="footer-link">
+                  KARİYER
+                </Link>
+              </li>
+              <li>
+                <Link to="/contact" className="footer-link">
+                  İLETİŞİM
+                </Link>
+              </li>
             </ul>
           </div>
 
           <div className="footer-section legal">
             <h3>GİZLİLİK VE SÖZLEŞMELER</h3>
             <ul>
-              <li><button className="footer-link">İPTAL VE İADE ŞARTLARI</button></li>
-              <li><button className="footer-link">MESAFELİ SATIŞ SÖZLEŞMESİ</button></li>
-              <li><button className="footer-link">GİZLİLİK VE GÜVENLİK</button></li>
-              <li><button className="footer-link">ÇEREZ POLİTİKASI</button></li>
+              <li>
+                <Link to="/cancellation-policy" className="footer-link">
+                  İPTAL VE İADE ŞARTLARI
+                </Link>
+              </li>
+              <li>
+                <Link to="/distance-sales-agreement" className="footer-link">
+                  MESAFELİ SATIŞ SÖZLEŞMESİ
+                </Link>
+              </li>
+              <li>
+                <Link to="/privacy-security" className="footer-link">
+                  GİZLİLİK VE GÜVENLİK
+                </Link>
+              </li>
+              <li>
+                <Link to="/cookie-policy" className="footer-link">
+                  ÇEREZ POLİTİKASI
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
 
         <div className="footer-bottom">
           <div className="social-links">
-            <a href="#" target="_blank" rel="noopener noreferrer"><i className="fab fa-facebook"></i></a>
-            <a href="#" target="_blank" rel="noopener noreferrer"><i className="fab fa-instagram"></i></a>
-            <a href="#" target="_blank" rel="noopener noreferrer"><i className="fab fa-twitter"></i></a>
+            <a href="#" target="_blank" rel="noopener noreferrer">
+              <i className="fab fa-facebook"></i>
+            </a>
+            <a href="#" target="_blank" rel="noopener noreferrer">
+              <i className="fab fa-instagram"></i>
+            </a>
+            <a href="#" target="_blank" rel="noopener noreferrer">
+              <i className="fab fa-twitter"></i>
+            </a>
           </div>
-          <p>&copy; {new Date().getFullYear()} Başpınarlar Et. Tüm hakları saklıdır.</p>
+          <p>
+            &copy; {new Date().getFullYear()} Başpınarlar Et. Tüm hakları
+            saklıdır.
+          </p>
         </div>
       </div>
     </footer>
   );
 };
 
-export default Footer; 
+export default Footer;
