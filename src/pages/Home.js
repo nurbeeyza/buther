@@ -87,7 +87,7 @@ const Home = () => {
       if (!isTransitioning) {
         setCurrentSlide((prev) => (prev + 1) % slides.length);
       }
-    }, 5000);
+    }, 6000);
 
     return () => clearInterval(interval);
   }, [isTransitioning, slides.length]);
@@ -154,7 +154,7 @@ const Home = () => {
               <h2>{slide.subtitle}</h2>
               <p>{slide.description}</p>
               <Link to={slide.buttonLink} className="btn">
-                {slide.buttonText}
+                <span>{slide.buttonText}</span>
               </Link>
             </div>
           </div>
@@ -165,6 +165,7 @@ const Home = () => {
               key={index}
               className={`dot ${index === currentSlide ? "active" : ""}`}
               onClick={() => handleSlideChange(index)}
+              aria-label={`Go to slide ${index + 1}`}
             />
           ))}
         </div>

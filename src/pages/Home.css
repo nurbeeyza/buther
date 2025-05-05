@@ -144,10 +144,12 @@
   }
 }
 
+/* Hero Section - Improved Slider */
 .hero {
   position: relative;
   height: 100vh;
   overflow: hidden;
+  margin-top: 60px;
 }
 
 .hero-slide {
@@ -155,7 +157,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 80%;
   opacity: 0;
   transition: opacity 1s ease-in-out;
   background-size: cover;
@@ -165,8 +167,20 @@
 
 .hero-slide.active {
   opacity: 1;
+  z-index: 10;
 }
 
+/* Reset animations when slide is not active */
+.hero-slide:not(.active) h1,
+.hero-slide:not(.active) h2,
+.hero-slide:not(.active) p,
+.hero-slide:not(.active) .btn,
+.hero-slide:not(.active) .split-title h1 {
+  opacity: 0;
+  transform: translateX(-50px);
+}
+
+/* Improved hero content positioning and styling */
 .hero-content {
   position: absolute;
   top: 50%;
@@ -175,132 +189,133 @@
   text-align: center;
   color: white !important;
   z-index: 2;
-  width: 80%;
+  width: 90%;
   max-width: 800px;
-}
-
-.hero-content.left-align {
-  left: 10%;
-  top: 50%;
-  transform: translateY(-50%);
-  text-align: center;
-  width: 40%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  height: 100%;
+  margin-top: 40px;
 }
 
-.hero-content.left-align h1 {
-  font-size: 4.5rem;
+/* Standardized left alignment for consistency */
+.hero-content.left-align {
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  max-width: 580px;
+  margin-left: 10%;
+  align-items: flex-start;
+  text-align: left;
 }
 
-.hero-content.left-align h2 {
-  font-size: 2.5rem;
-  text-align: center;
-  width: 100%;
+/* Standardized typography for hero titles WITH ANIMATIONS */
+.hero-slide.active h1,
+.hero-slide.active .split-title h1 {
+  animation: slideInFromLeft 0.8s ease-out forwards;
 }
 
-.hero-content.left-align p {
-  font-size: 1.5rem;
-  text-align: center;
-  width: 100%;
+.hero-slide.active h2 {
+  animation: slideInFromLeft 0.8s ease-out 0.2s forwards;
 }
 
-.hero-content.left-align .btn {
-  font-size: 1.4rem;
-  padding: 1.2rem 2.5rem;
-  margin-top: 1rem;
+.hero-slide.active p {
+  animation: slideInFromLeft 0.8s ease-out 0.4s forwards;
 }
 
-.hero-content h1 {
-  font-size: 4rem;
+.hero-slide.active .btn {
+  animation: slideInFromLeft 0.8s ease-out 0.6s forwards;
+}
+
+/* Base styles for all text elements */
+.hero-content h1,
+.hero-content .split-title h1 {
+  font-size: 3.5rem;
   font-weight: 700;
-  margin-bottom: 1rem;
   text-transform: uppercase;
   letter-spacing: 2px;
-  opacity: 0;
-  transform: translateY(30px);
-  animation: slideIn 0.5s ease-out forwards;
-  color: white !important;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  color: white !important;
+  opacity: 0;
+  transform: translateX(-50px);
 }
 
 .hero-content h2 {
   font-size: 2rem;
   font-weight: 400;
-  margin-bottom: 2rem;
-  font-style: italic;
-  opacity: 0;
-  transform: translateY(30px);
-  animation: slideIn 0.5s ease-out 0.3s forwards;
-  color: white !important;
+  margin-bottom: 1.5rem;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  color: white !important;
+  opacity: 0;
+  transform: translateX(-50px);
 }
 
 .hero-content p {
   font-size: 1.2rem;
   margin-bottom: 2rem;
-  opacity: 0;
-  transform: translateY(30px);
-  animation: slideIn 0.5s ease-out 0.6s forwards;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
   color: white !important;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transform: translateX(-50px);
+  line-height: 1.6;
 }
 
+/* Improved button styling */
 .hero-content .btn {
-  opacity: 0;
-  transform: translateY(30px);
-  animation: slideIn 0.5s ease-out 0.9s forwards;
-  color: white !important;
+  display: inline-block;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
   border: 2px solid white;
   background: transparent;
-  padding: 1.2rem 2.5rem;
-  font-size: 1.4rem;
-  text-transform: uppercase;
-  letter-spacing: 2px;
+  color: white !important;
   transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
-  z-index: 1;
-}
-
-.hero-content .btn:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: white;
-  transform: scaleX(0);
-  transform-origin: right;
-  transition: transform 0.3s ease;
-  z-index: -1;
+  text-decoration: none;
+  opacity: 0;
+  transform: translateX(-50px);
 }
 
 .hero-content .btn:hover {
+  background: white;
   color: var(--primary-color) !important;
-  transform: translateY(-5px) rotate(5deg);
+  transform: translateY(-5px);
 }
 
-.hero-content .btn:hover:before {
-  transform: scaleX(1);
-  transform-origin: left;
+/* Consistent split title handling */
+.split-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  width: 100%;
 }
 
-@keyframes slideIn {
+.hero-content.left-align .split-title {
+  justify-content: flex-start;
+}
+
+.split-title h1 {
+  margin-bottom: 0;
+}
+
+.split-title .title2 {
+  color: var(--primary-color);
+}
+
+/* Animation definition */
+@keyframes slideInFromLeft {
   from {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateX(-50px);
   }
   to {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateX(0);
   }
 }
 
+/* Improved slider dots */
 .slider-dots {
   position: absolute;
   bottom: 2rem;
@@ -316,38 +331,102 @@
   height: 12px;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.5);
-  border: 2px solid transparent;
+  border: none;
   cursor: pointer;
   transition: all 0.3s ease;
+  padding: 0;
 }
 
 .dot:hover {
-  background: var(--white);
-  transform: scale(1.2);
+  background: rgba(255, 255, 255, 0.8);
 }
 
 .dot.active {
-  background: var(--white);
+  background: white;
   transform: scale(1.2);
 }
 
-.split-title {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  margin-bottom: 1rem;
-  width: 100%;
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .hero-content h1,
+  .hero-content .split-title h1 {
+    font-size: 3rem;
+  }
+
+  .hero-content h2 {
+    font-size: 1.8rem;
+  }
+
+  .hero-content p {
+    font-size: 1.1rem;
+  }
+
+  .hero-content.left-align {
+    margin-left: 5%;
+    max-width: 450px;
+  }
 }
 
-.split-title h1 {
-  margin-bottom: 0;
-  text-align: center;
+@media (max-width: 768px) {
+  .hero {
+    height: 80vh;
+  }
+
+  .hero-content h1,
+  .hero-content .split-title h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-content h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-content .btn {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+  }
+
+  .hero-content.left-align {
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    align-items: center;
+    max-width: 90%;
+    margin-left: 0;
+  }
+
+  .split-title {
+    flex-direction: column;
+    gap: 0.2rem;
+  }
 }
 
-.split-title .title2 {
-  color: var(--primary-color);
+@media (max-width: 480px) {
+  .hero {
+    height: 70vh;
+  }
+
+  .hero-content h1,
+  .hero-content .split-title h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content h2 {
+    font-size: 1.2rem;
+  }
+
+  .hero-content .btn {
+    padding: 0.7rem 1.2rem;
+    font-size: 0.9rem;
+  }
 }
+
 .mangal-cta-content {
   display: flex;
   flex-direction: column;
