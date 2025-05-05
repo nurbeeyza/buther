@@ -311,7 +311,7 @@ li::marker {
 @keyframes slideInFromLeft {
   from {
     opacity: 0;
-    transform: translateX(-50px);
+    transform: translateX(-51px);
   }
   to {
     opacity: 1;
