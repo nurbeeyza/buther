@@ -368,7 +368,7 @@ body {
 
 .hero h2 {
   font-family: "Playfair Display", serif;
-  font-size: 4rem;
+  font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 1rem;
   color: var(--text-color);
@@ -400,7 +400,7 @@ body {
 
 .hero .btn {
   position: relative;
-  background: none;
+  /* background: none; */
   border: 2px solid var(--text-color);
   color: var(--text-color);
   font-family: "Montserrat", sans-serif;

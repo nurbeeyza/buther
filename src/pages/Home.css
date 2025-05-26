@@ -144,7 +144,7 @@
   }
 }
 
-/* Hero Section - Improved Slider */
+/* Hero Section - Fixed Layout and Animations */
 .hero {
   position: relative;
   height: 100vh;
@@ -157,142 +157,146 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 80%;
+  height: 100%;
   opacity: 0;
   transition: opacity 1s ease-in-out;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .hero-slide.active {
   opacity: 1;
-  z-index: 10;
+  z-index: 5;
 }
 
-/* Reset animations when slide is not active */
-.hero-slide:not(.active) h1,
-.hero-slide:not(.active) h2,
-.hero-slide:not(.active) p,
-.hero-slide:not(.active) .btn,
-.hero-slide:not(.active) .split-title h1 {
-  opacity: 0;
-  transform: translateX(-50px);
+.hero-content.left-align h2 {
+  max-width: 900px;
+}
+
+.hero-content.left-align p {
+  max-width: 500px;
 }
 
 /* Improved hero content positioning and styling */
 .hero-content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  color: white !important;
-  z-index: 2;
-  width: 90%;
-  max-width: 800px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 40px;
+  justify-content: center;
+  text-align: center;
+  color: white !important;
+  z-index: 2;
+  /* width: 90%; */
+  /* max-width: 800px; */
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 8px;
 }
 
-li::marker {
-  display: none;
-}
-
-/* Standardized left alignment for consistency */
+/* Left alignment for specific slides */
 .hero-content.left-align {
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  max-width: 580px;
+  margin-right: auto;
   margin-left: 10%;
-  align-items: flex-start;
   text-align: left;
+  align-items: flex-start;
 }
 
-/* Standardized typography for hero titles WITH ANIMATIONS */
-.hero-slide.active h1,
-.hero-slide.active .split-title h1 {
-  animation: slideInFromLeft 0.8s ease-out forwards;
-}
-
-.hero-slide.active h2 {
-  animation: slideInFromLeft 0.8s ease-out 0.2s forwards;
-}
-
-.hero-slide.active p {
-  animation: slideInFromLeft 0.8s ease-out 0.4s forwards;
-}
-
-.hero-slide.active .btn {
-  animation: slideInFromLeft 0.8s ease-out 0.6s forwards;
-}
-
-/* Base styles for all text elements */
+/* Improved text styling */
 .hero-content h1,
 .hero-content .split-title h1 {
-  font-size: 3.5rem;
+  font-size: 4rem;
   font-weight: 700;
+  /* margin-bottom: 1rem; */
   text-transform: uppercase;
   letter-spacing: 2px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  color: white !important;
   opacity: 0;
-  transform: translateX(-50px);
+  transform: translateY(-20px);
+  color: white !important;
 }
 
 .hero-content h2 {
-  font-size: 2rem;
-  font-weight: 400;
+  font-size: 2.5rem;
+  font-weight: 500;
   margin-bottom: 1.5rem;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  color: white !important;
   opacity: 0;
-  transform: translateX(-50px);
+  transform: translateY(-20px);
+  color: white !important;
 }
 
 .hero-content p {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   margin-bottom: 2rem;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-  color: white !important;
   opacity: 0;
-  transform: translateX(-50px);
+  transform: translateY(-20px);
+  color: white !important;
   line-height: 1.6;
+  max-width: 90%;
 }
 
-/* Improved button styling */
 .hero-content .btn {
   display: inline-block;
-  padding: 1rem 2rem;
+  padding: 1rem 2.5rem;
   font-size: 1.2rem;
+  font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
-  border: 2px solid white;
-  background: transparent;
+  border: none;
+  background-color: var(--dark-red);
   color: white !important;
-  transition: all 0.3s ease;
+  transition: all 0.4s ease;
   text-decoration: none;
   opacity: 0;
-  transform: translateX(-50px);
+  transform: translateY(-20px);
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(139, 0, 0, 0.3);
+  margin-top: 1.5rem;
+  z-index: 5;
 }
 
 .hero-content .btn:hover {
-  background: white;
-  color: var(--primary-color) !important;
-  transform: translateY(-5px);
+  background: var(--dark-red);
+  color: white !important;
+  transform: translateY(-8px);
+  /* box-shadow: 0 8px 25px rgba(139, 0, 0, 0.5); */
 }
 
-/* Consistent split title handling */
+.hero-content .btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: 0.5s;
+}
+
+.hero-content .btn:hover::before {
+  left: 100%;
+}
+
+/* Better split title styling */
 .split-title {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  margin-bottom: 1rem;
+  gap: 1rem;
+  /* margin-bottom: 1.5rem; */
   width: 100%;
+  justify-content: center;
 }
 
 .hero-content.left-align .split-title {
@@ -307,19 +311,47 @@ li::marker {
   color: var(--primary-color);
 }
 
-/* Animation definition */
-@keyframes slideInFromLeft {
+/* Improved and fixed animations */
+.hero-slide.active .hero-content h1,
+.hero-slide.active .hero-content .split-title h1 {
+  animation: fadeInDown 1s ease-out forwards;
+}
+
+.hero-slide.active .hero-content h2 {
+  animation: fadeInDown 1s ease-out 0.3s forwards;
+}
+
+.hero-slide.active .hero-content p {
+  animation: fadeInDown 1s ease-out 0.6s forwards;
+}
+
+.hero-slide.active .hero-content .btn {
+  animation: fadeInUp 1s ease-out 0.9s forwards;
+}
+
+@keyframes fadeInDown {
   from {
     opacity: 0;
-    transform: translateX(-51px);
+    transform: translateY(-20px);
   }
   to {
     opacity: 1;
-    transform: translateX(0);
+    transform: translateY(0);
   }
 }
 
-/* Improved slider dots */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Better slider dots positioning */
 .slider-dots {
   position: absolute;
   bottom: 2rem;
@@ -327,7 +359,7 @@ li::marker {
   transform: translateX(-50%);
   display: flex;
   gap: 1rem;
-  z-index: 3;
+  z-index: 10;
 }
 
 .dot {
@@ -358,16 +390,11 @@ li::marker {
   }
 
   .hero-content h2 {
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
 
   .hero-content p {
     font-size: 1.1rem;
-  }
-
-  .hero-content.left-align {
-    margin-left: 5%;
-    max-width: 450px;
   }
 }
 
@@ -376,13 +403,17 @@ li::marker {
     height: 80vh;
   }
 
+  .hero-content {
+    padding: 1.5rem;
+  }
+
   .hero-content h1,
   .hero-content .split-title h1 {
     font-size: 2.5rem;
   }
 
   .hero-content h2 {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     margin-bottom: 1rem;
   }
 
@@ -397,12 +428,8 @@ li::marker {
   }
 
   .hero-content.left-align {
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    align-items: center;
-    max-width: 90%;
-    margin-left: 0;
+    margin-left: 5%;
+    width: 90%;
   }
 
   .split-title {
@@ -422,12 +449,24 @@ li::marker {
   }
 
   .hero-content h2 {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
+  }
+
+  .hero-content p {
+    font-size: 0.9rem;
   }
 
   .hero-content .btn {
     padding: 0.7rem 1.2rem;
     font-size: 0.9rem;
+  }
+
+  .hero-content.left-align {
+    margin-left: 0;
+    align-items: center;
+    text-align: center;
+    width: 90%;
+    margin: 0 auto;
   }
 }
 

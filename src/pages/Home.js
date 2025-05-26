@@ -30,6 +30,25 @@ const Home = () => {
     },
   ];
 
+  // Enable auto-slide functionality
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (!isTransitioning) {
+        setCurrentSlide((prev) => (prev + 1) % slides.length);
+      }
+    }, 6000);
+
+    return () => clearInterval(interval);
+  }, [isTransitioning, slides.length]);
+
+  const handleSlideChange = (index) => {
+    if (!isTransitioning) {
+      setIsTransitioning(true);
+      setCurrentSlide(index);
+      setTimeout(() => setIsTransitioning(false), 1000);
+    }
+  };
+
   const categories = [
     {
       name: "BEEF'S STEAK",
@@ -81,24 +100,6 @@ const Home = () => {
       link: "/products?category=kofte",
     },
   ];
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      if (!isTransitioning) {
-        setCurrentSlide((prev) => (prev + 1) % slides.length);
-      }
-    }, 6000);
-
-    return () => clearInterval(interval);
-  }, [isTransitioning, slides.length]);
-
-  const handleSlideChange = (index) => {
-    if (!isTransitioning) {
-      setIsTransitioning(true);
-      setCurrentSlide(index);
-      setTimeout(() => setIsTransitioning(false), 1000);
-    }
-  };
 
   const features = [
     {
