@@ -1,0 +1,177 @@
+.branches-page {
+  margin-top: 60px;
+}
+
+.branches-hero {
+  background-color: rgb(34, 34, 34);
+  padding: 4rem 0;
+  text-align: center;
+  color: var(--white);
+}
+
+.branches-hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.branches-hero p {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.branches-content {
+  margin: 4rem 0;
+}
+
+.branch-card {
+  margin-bottom: 3rem;
+  background-color: var(--white);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.branch-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.branch-header {
+  background-color: var(--primary-color);
+  color: var(--white);
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.branch-icon {
+  width: 60px;
+  height: 60px;
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.branch-icon i {
+  font-size: 1.8rem;
+  color: var(--white);
+}
+
+.branch-header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.branch-details {
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.branch-description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  color: var(--text-color);
+}
+
+.branch-contact-info {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.branch-contact-info li {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  font-size: 1.05rem;
+}
+
+.branch-contact-info i {
+  color: var(--primary-color);
+  margin-right: 1rem;
+  margin-top: 0.3rem;
+  width: 18px;
+  text-align: center;
+}
+
+.branch-contact-info span {
+  flex: 1;
+}
+
+.branch-map {
+  width: 100%;
+  height: 100%;
+  min-height: 300px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.branch-map iframe {
+  display: block;
+}
+
+@media (max-width: 992px) {
+  .branch-details {
+    grid-template-columns: 1fr;
+  }
+
+  .branch-map {
+    margin-top: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .branches-hero {
+    padding: 3rem 0;
+  }
+
+  .branches-hero h1 {
+    font-size: 2rem;
+  }
+
+  .branches-hero p {
+    font-size: 1rem;
+  }
+
+  .branch-header {
+    padding: 1.2rem;
+  }
+
+  .branch-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .branch-icon i {
+    font-size: 1.5rem;
+  }
+
+  .branch-header h2 {
+    font-size: 1.3rem;
+  }
+
+  .branch-details {
+    padding: 1.5rem;
+  }
+
+  .branch-description {
+    font-size: 1rem;
+  }
+
+  .branch-contact-info li {
+    font-size: 0.95rem;
+  }
+}
