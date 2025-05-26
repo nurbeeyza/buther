@@ -1071,8 +1071,9 @@ body {
 }
 
 .contact-form-container {
-  max-width: 600px;
-  margin: 0 auto;
+  flex: 1;
+  /* max-width: 620px; */
+  /* margin: 0 auto; */
   background: var(--white);
   padding: 2rem;
   border-radius: 8px;

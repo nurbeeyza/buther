@@ -192,21 +192,23 @@ const Contact = () => {
               <div className="contact-form-container">
                 <h3>Bizimle İletişime Geçin</h3>
                 <form className="contact-form">
-                  <div className="form-group">
-                    <input type="text" placeholder="Adınız" required />
-                  </div>
-                  <div className="form-group">
-                    <input
-                      type="email"
-                      placeholder="E-posta Adresiniz"
-                      required
-                    />
-                  </div>
-                  <div className="form-group">
-                    <input type="text" placeholder="Konu" required />
-                  </div>
-                  <div className="form-group">
-                    <textarea placeholder="Mesajınız" required></textarea>
+                  <div>
+                    <div className="form-group">
+                      <input type="text" placeholder="Adınız" required />
+                    </div>
+                    <div className="form-group">
+                      <input
+                        type="email"
+                        placeholder="E-posta Adresiniz"
+                        required
+                      />
+                    </div>
+                    <div className="form-group">
+                      <input type="text" placeholder="Konu" required />
+                    </div>
+                    <div className="form-group">
+                      <textarea placeholder="Mesajınız" required></textarea>
+                    </div>
                   </div>
                   <button type="submit" className="submit-button">
                     GÖNDER
