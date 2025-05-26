@@ -803,8 +803,8 @@ body {
 .social-links {
   display: flex;
   gap: 1.5rem;
-  position: absolute;
-  left: 0;
+  /* position: absolute; */
+  /* left: 0; */
 }
 
 .social-links a {
@@ -1017,11 +1017,10 @@ body {
 
 /* Contact Page Styles */
 .contact-hero {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("../public/images/kirmizi-et.png");
+  background: rgb(34, 34, 34);
   background-size: cover;
   background-position: center;
-  height: 40vh;
+  height: 20vh;
   display: flex;
   align-items: center;
   text-align: center;
@@ -1071,8 +1070,9 @@ body {
 }
 
 .contact-form-container {
-  max-width: 600px;
-  margin: 0 auto;
+  flex: 1;
+  /* max-width: 620px; */
+  /* margin: 0 auto; */
   background: var(--white);
   padding: 2rem;
   border-radius: 8px;
