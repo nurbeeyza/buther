@@ -210,7 +210,7 @@ const Contact = () => {
                       <textarea placeholder="Mesajınız" required></textarea>
                     </div>
                   </div>
-                  <button type="submit" className="submit-button">
+                  <button type="submit" className="contact-submit-button">
                     GÖNDER
                   </button>
                 </form>
