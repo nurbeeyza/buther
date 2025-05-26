@@ -803,8 +803,8 @@ body {
 .social-links {
   display: flex;
   gap: 1.5rem;
-  position: absolute;
-  left: 0;
+  /* position: absolute; */
+  /* left: 0; */
 }
 
 .social-links a {
