@@ -16,6 +16,8 @@ import CancellationPolicy from "./pages/CancellationPolicy";
 import DistanceSalesAgreement from "./pages/DistanceSalesAgreement";
 import PrivacySecurity from "./pages/PrivacySecurity";
 import CookiePolicy from "./pages/CookiePolicy";
+import MeatQuality from "./pages/MeatQuality";
+import MeatCuts from "./pages/MeatCuts";
 import "./index.css";
 
 function App() {
@@ -35,6 +37,7 @@ function App() {
             <Route path="/recipes" element={<Recipes />} />
             <Route path="/tips" element={<Tips />} />
             <Route path="/user-recipes" element={<UserRecipes />} />
+            
             <Route
               path="/cancellation-policy"
               element={<CancellationPolicy />}
@@ -45,6 +48,8 @@ function App() {
             />
             <Route path="/privacy-security" element={<PrivacySecurity />} />
             <Route path="/cookie-policy" element={<CookiePolicy />} />
+            <Route path="/tips/meat-quality" element={<MeatQuality />} />
+            <Route path="/tips/meat-cuts" element={<MeatCuts />} />
           </Routes>
         </main>
         <Footer />
