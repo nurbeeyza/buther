@@ -97,13 +97,13 @@ const Footer = () => {
 
         <div className="footer-bottom">
           <div className="social-links">
-            <a href="#" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.facebook.com/people/Ba%C5%9Fp%C4%B1narlar-Et/100062955683421/" target="_blank" rel="noopener noreferrer">
               <i className="fab fa-facebook"></i>
             </a>
-            <a href="#" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.instagram.com/baspinarlar_et/" target="_blank" rel="noopener noreferrer">
               <i className="fab fa-instagram"></i>
             </a>
-            <a href="#" target="_blank" rel="noopener noreferrer">
+            <a href="https://x.com/baspi_et" target="_blank" rel="noopener noreferrer">
               <i className="fab fa-twitter"></i>
             </a>
           </div>
