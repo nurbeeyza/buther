@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import '../styles/MeatCuts.css';
 
 const MeatCuts = () => {
@@ -63,8 +62,8 @@ const MeatCuts = () => {
 
   return (
     <div className="meat-cuts-container">
-      <div className="back-button">
-        <Link to="/" className="back-link">← Geri Dön</Link>
+      <div className="header-image">
+        <img src="/images/dana_parts.png" alt="Dana Eti Bölümleri" />
       </div>
 
       <h1 className="page-title">Dana Eti Bölümleri ve Yemeklerde Kullanımı</h1>

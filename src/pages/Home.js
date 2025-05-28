@@ -11,10 +11,8 @@ const Home = () => {
       title: "BAŞPINARLAR ET",
       subtitle: "KALİTE & LEZZET BİR ARADA",
       description:
-        "Konya'nın en iyi kasabı olarak kaliteli ve lezzetli et ürünleri ile hizmetinizdeyiz.",
-      buttonText: "SİPARİŞ VER",
+        "Eskişehir'in en iyi kasabı olarak kaliteli ve lezzetli et ürünleri ile hizmetinizdeyiz.",
       image: "/images/kirmizi-et.png",
-      buttonLink: "/products",
       align: "center",
     },
     {
@@ -23,9 +21,7 @@ const Home = () => {
       subtitle: "LEZZET DOLU MUTFAKLARIN VAZGEÇİLMEZ TEDARİKÇİSİ",
       description:
         "Kaliteli ve lezzetli et ürünleri ile her öğününüzü özel kılıyoruz.",
-      buttonText: "SİPARİŞ VER",
       image: "/images/vadi_kasap_slayt_arkaplan_02_1600x625_0.png",
-      buttonLink: "/products",
       align: "left",
     },
   ];
@@ -55,49 +51,49 @@ const Home = () => {
       description:
         "En kaliteli dana etlerinden hazırlanan steak çeşitlerimiz ile lezzetli sofralar sizleri bekliyor...",
       image: "/images/kucuket.png",
-      link: "/products?category=steak",
+      link: "/products/beef-steak",
     },
     {
       name: "İŞLENMİŞ ETLER",
       description:
         "Özenle hazırlanmış işlenmiş et ürünlerimiz ile pratik ve lezzetli yemekler...",
       image: "/images/kucuket.png",
-      link: "/products?category=islenmis",
+      link: "/products/processed-meats",
     },
     {
       name: "KASAP GRUBU",
       description:
         "Taze ve kaliteli kasap ürünlerimiz ile mutfağınızın vazgeçilmezi olacak lezzetler...",
       image: "/images/kucuket.png",
-      link: "/products?category=kasap",
+      link: "/products/butcher-group",
     },
     {
       name: "ŞARKÜTERİ GRUBU",
       description:
         "Çeşit çeşit şarküteri ürünlerimiz ile kahvaltılarınıza lezzet katın...",
       image: "/images/kucuket.png",
-      link: "/products?category=sarkuteri",
+      link: "/products/delicatessen-group",
     },
     {
       name: "PASTIRMA",
       description:
         "Geleneksel lezzetimiz pastırmalarımız ile sofralarınıza özel bir dokunuş...",
       image: "/images/kucuket.png",
-      link: "/products?category=pastirma",
+      link: "/products/pastirma",
     },
     {
       name: "SUCUK",
       description:
         "Özel baharatlarımız ile hazırlanan sucuklarımız ile kahvaltılarınıza lezzet katın...",
       image: "/images/kucuket.png",
-      link: "/products?category=sucuk",
+      link: "/products/sucuk",
     },
     {
       name: "KÖFTE",
       description:
         "Özel karışımlarımız ile hazırlanan köftelerimiz ile lezzetli sofralar...",
       image: "/images/kucuket.png",
-      link: "/products?category=kofte",
+      link: "/products/kofte",
     },
   ];
 
@@ -121,12 +117,6 @@ const Home = () => {
       title: "Müşteri Hizmetleri",
       description: "Her Gün 09:00-18:00 Arası Sizlere Yardımcı Olmaktayız",
       icon: "fas fa-headset",
-    },
-    {
-      id: 4,
-      title: "Güvenli Ödeme",
-      description: "3D Güvenlik Altyapımız İle Kart Bilgileriniz Güvendedir",
-      icon: "fas fa-shield-alt",
     },
   ];
 
@@ -154,9 +144,6 @@ const Home = () => {
               )}
               <h2>{slide.subtitle}</h2>
               <p>{slide.description}</p>
-              <Link to={slide.buttonLink} className="btn">
-                <span>{slide.buttonText}</span>
-              </Link>
             </div>
           </div>
         ))}
@@ -195,7 +182,15 @@ const Home = () => {
                   <div className="category-overlay">
                     <h3>{category.name}</h3>
                     <p>{category.description}</p>
-                    <Link to={category.link} className="category-link">
+                    <Link 
+                      to={category.link} 
+                      className="category-link" 
+                      onClick={(e) => {
+                        console.log("Link clicked!", category.name, category.link);
+                        console.log("Event:", e);
+                        console.log("Current URL:", window.location.href);
+                      }}
+                    >
                       Tümünü Gör
                     </Link>
                   </div>
@@ -213,9 +208,6 @@ const Home = () => {
             <h2>Bu gün mangalda ne yapsak?</h2>
             <p>Hijyen, güvenilir et ürünlerini nerede bulabilirim?</p>
             <p>gibi sorularınızın cevabı BAŞPINARLAR 'da...</p>
-            <Link to="/contact" className="btn">
-              <span>Sipariş Ver</span>
-            </Link>
           </div>
         </div>
       </section>
