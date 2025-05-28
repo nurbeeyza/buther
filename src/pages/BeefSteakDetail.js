@@ -533,8 +533,8 @@ const BeefSteakDetail = () => {
       {magnifier.isVisible && (
         <div style={{
           position: "fixed",
-          width: 200,
-          height: 200,
+          width: 150,
+          height: 150,
           borderRadius: "50%",
           border: "3px solid var(--primary-color)",
           background: `url(${magnifier.imageSrc}) no-repeat`,
@@ -542,8 +542,8 @@ const BeefSteakDetail = () => {
           backgroundPosition: magnifier.backgroundPosition,
           pointerEvents: "none",
           zIndex: 1000,
-          left: magnifier.x - 100,
-          top: magnifier.y - 100,
+          left: magnifier.x - 75,
+          top: magnifier.y - 75,
           boxShadow: "0 8px 24px rgba(0,0,0,0.3)",
           transform: "scale(1)",
           transition: "opacity 0.2s ease"

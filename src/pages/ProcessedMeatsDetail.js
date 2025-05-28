@@ -266,17 +266,17 @@ const ProcessedMeatsDetail = () => {
               <div
                 style={{
                   position: "absolute",
-                  width: 200,
-                  height: 200,
+                  width: 150,
+                  height: 150,
                   border: "3px solid var(--primary-color)",
                   borderRadius: "50%",
                   pointerEvents: "none",
                   backgroundImage: `url(${product.image})`,
                   backgroundRepeat: "no-repeat",
                   backgroundSize: "800% 800%",
-                  backgroundPosition: `${-magnifierPosition.x * 4 + 100}px ${-magnifierPosition.y * 4 + 100}px`,
-                  left: magnifierPosition.x - 100,
-                  top: magnifierPosition.y - 100,
+                  backgroundPosition: `${-magnifierPosition.x * 4 + 75}px ${-magnifierPosition.y * 4 + 75}px`,
+                  left: magnifierPosition.x - 75,
+                  top: magnifierPosition.y - 75,
                   boxShadow: "0 4px 12px rgba(0,0,0,0.3)",
                   backgroundColor: "#f8f9fa"
                 }}

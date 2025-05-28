@@ -15,9 +15,9 @@ const Header = () => {
             <li className="nav-item dropdown">
               <span className="nav-link">KURUMSAL</span>
               <ul className="dropdown-menu">
-                <li><Link to="/about">HAKKIMIZDA</Link></li>
-                <li><Link to="/branches">ŞUBELERİMİZ</Link></li>
-                <li><Link to="/career">KARİYER</Link></li>
+                <ul><Link to="/about">HAKKIMIZDA</Link></ul>
+                <ul><Link to="/branches">ŞUBELERİMİZ</Link></ul>
+                <ul><Link to="/career">KARİYER</Link></ul>
               </ul>
             </li>
           </ul>
