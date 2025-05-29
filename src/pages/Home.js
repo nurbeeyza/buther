@@ -12,7 +12,7 @@ const Home = () => {
       subtitle: "KALİTE & LEZZET BİR ARADA",
       description:
         "Eskişehir'in en iyi kasabı olarak kaliteli ve lezzetli et ürünleri ile hizmetinizdeyiz.",
-      image: "/images/kirmizi-et.png",
+      image: "/images/main-page(1).png",
       align: "center",
     },
     {
@@ -21,7 +21,7 @@ const Home = () => {
       subtitle: "LEZZET DOLU MUTFAKLARIN VAZGEÇİLMEZ TEDARİKÇİSİ",
       description:
         "Kaliteli ve lezzetli et ürünleri ile her öğününüzü özel kılıyoruz.",
-      image: "/images/vadi_kasap_slayt_arkaplan_02_1600x625_0.png",
+      image: "/images/main-page(2).png",
       align: "left",
     },
   ];
@@ -127,7 +127,12 @@ const Home = () => {
           <div
             key={index}
             className={`hero-slide ${index === currentSlide ? "active" : ""}`}
-            style={{ backgroundImage: `url(${slide.image})` }}
+            style={{
+              background: `url('${slide.image}')`,
+              backgroundSize: "cover",
+              backgroundPosition: "bottom",
+              backgroundRepeat: "no-repeat",
+            }}
           >
             <div
               className={`hero-content ${
@@ -162,7 +167,7 @@ const Home = () => {
       <div
         className="categories-section"
         style={{
-          background: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/images/kirmizi-et.png')`,
+          background: ` url('/images/kitchen.png')`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundAttachment: "fixed",
@@ -182,11 +187,15 @@ const Home = () => {
                   <div className="category-overlay">
                     <h3>{category.name}</h3>
                     <p>{category.description}</p>
-                    <Link 
-                      to={category.link} 
-                      className="category-link" 
+                    <Link
+                      to={category.link}
+                      className="category-link"
                       onClick={(e) => {
-                        console.log("Link clicked!", category.name, category.link);
+                        console.log(
+                          "Link clicked!",
+                          category.name,
+                          category.link
+                        );
                         console.log("Event:", e);
                         console.log("Current URL:", window.location.href);
                       }}
