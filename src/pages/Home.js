@@ -167,10 +167,11 @@ const Home = () => {
       <div
         className="categories-section"
         style={{
-          background: ` url('/images/kitchen.png')`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundAttachment: "fixed",
+          // background: ` url('/images/kitchen.png')`,
+          // backgroundSize: "cover",
+          // backgroundPosition: "center",
+          // backgroundAttachment: "fixed",
+          background: "linear-gradient(to bottom, rgb(18 18 18), #4d4d4d)",
         }}
       >
         <div className="awe-bg-overlay"></div>
