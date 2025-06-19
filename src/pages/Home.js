@@ -123,16 +123,14 @@ const Home = () => {
   return (
     <div className="home">
       <div className="hero">
+        <video className="hero-video" autoPlay muted loop playsInline>
+          <source src="/images/hero-section.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
         {slides.map((slide, index) => (
           <div
             key={index}
             className={`hero-slide ${index === currentSlide ? "active" : ""}`}
-            style={{
-              background: `url('${slide.image}')`,
-              backgroundSize: "cover",
-              backgroundPosition: "bottom",
-              backgroundRepeat: "no-repeat",
-            }}
           >
             <div
               className={`hero-content ${
