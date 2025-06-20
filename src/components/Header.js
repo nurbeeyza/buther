@@ -4,10 +4,14 @@ import { Link } from "react-router-dom";
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const handleLinkClick = () => {
+    setIsMenuOpen(false);
+  };
+
   return (
     <header className="header">
       <div className="header-container">
-        <nav className={`nav left-nav ${isMenuOpen ? "active" : ""}`}>
+        <nav className="nav left-nav">
           <ul className="nav-list">
             <li className="nav-item">
               <Link to="/" className="nav-link">
@@ -17,15 +21,15 @@ const Header = () => {
             <li className="nav-item dropdown">
               <span className="nav-link">KURUMSAL</span>
               <ul className="dropdown-menu">
-                <ul>
+                <li>
                   <Link to="/about">HAKKIMIZDA</Link>
-                </ul>
-                <ul>
+                </li>
+                <li>
                   <Link to="/branches">ŞUBELERİMİZ</Link>
-                </ul>
-                <ul>
+                </li>
+                <li>
                   <Link to="/career">KARİYER</Link>
-                </ul>
+                </li>
               </ul>
             </li>
           </ul>
@@ -37,7 +41,7 @@ const Header = () => {
           </Link>
         </div>
 
-        <nav className={`nav right-nav ${isMenuOpen ? "active" : ""}`}>
+        <nav className="nav right-nav">
           <ul className="nav-list">
             <li className="nav-item">
               <Link to="/products" className="nav-link">
@@ -46,6 +50,55 @@ const Header = () => {
             </li>
             <li className="nav-item">
               <Link to="/contact" className="nav-link">
+                İLETİŞİM
+              </Link>
+            </li>
+          </ul>
+        </nav>
+
+        {/* Mobile Nav */}
+        <nav className={`nav mobile-nav ${isMenuOpen ? "active" : ""}`}>
+          <ul className="nav-list">
+            <li className="nav-item">
+              <Link to="/" className="nav-link" onClick={handleLinkClick}>
+                ANASAYFA
+              </Link>
+            </li>
+            <li className="nav-item dropdown">
+              <span className="nav-link">KURUMSAL</span>
+              <ul className="dropdown-menu">
+                <li>
+                  <Link to="/about" onClick={handleLinkClick}>
+                    HAKKIMIZDA
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/branches" onClick={handleLinkClick}>
+                    ŞUBELERİMİZ
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/career" onClick={handleLinkClick}>
+                    KARİYER
+                  </Link>
+                </li>
+              </ul>
+            </li>
+            <li className="nav-item">
+              <Link
+                to="/products"
+                className="nav-link"
+                onClick={handleLinkClick}
+              >
+                ÜRÜNLERİMİZ
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link
+                to="/contact"
+                className="nav-link"
+                onClick={handleLinkClick}
+              >
                 İLETİŞİM
               </Link>
             </li>
