@@ -1,5 +1,10 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useLocation,
+} from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
@@ -34,24 +39,52 @@ import SucukDetail from "./pages/SucukDetail";
 import Kofte from "./pages/Kofte";
 import KofteDetail from "./pages/KofteDetail";
 import "./index.css";
+import { useEffect } from "react";
+
+function ScrollToTop() {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+  return null;
+}
 
 function App() {
   return (
     <Router>
       <div className="App">
+        <ScrollToTop />
         <Header />
         <main>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/products" element={<Products />} />
             <Route path="/products/beef-steak" element={<BeefSteak />} />
-            <Route path="/products/beef-steak/:id" element={<BeefSteakDetail />} />
-            <Route path="/products/processed-meats" element={<ProcessedMeats />} />
-            <Route path="/products/processed-meats/:id" element={<ProcessedMeatsDetail />} />
+            <Route
+              path="/products/beef-steak/:id"
+              element={<BeefSteakDetail />}
+            />
+            <Route
+              path="/products/processed-meats"
+              element={<ProcessedMeats />}
+            />
+            <Route
+              path="/products/processed-meats/:id"
+              element={<ProcessedMeatsDetail />}
+            />
             <Route path="/products/butcher-group" element={<ButcherGroup />} />
-            <Route path="/products/butcher-group/:id" element={<ButcherGroupDetail />} />
-            <Route path="/products/delicatessen-group" element={<DelicatessenGroup />} />
-            <Route path="/products/delicatessen-group/:id" element={<DelicatessenGroupDetail />} />
+            <Route
+              path="/products/butcher-group/:id"
+              element={<ButcherGroupDetail />}
+            />
+            <Route
+              path="/products/delicatessen-group"
+              element={<DelicatessenGroup />}
+            />
+            <Route
+              path="/products/delicatessen-group/:id"
+              element={<DelicatessenGroupDetail />}
+            />
             <Route path="/products/pastirma" element={<Pastirma />} />
             <Route path="/products/pastirma/:id" element={<PastirmaDetail />} />
             <Route path="/products/sucuk" element={<Sucuk />} />
@@ -67,7 +100,7 @@ function App() {
             <Route path="/recipes/:id" element={<RecipeDetail />} />
             <Route path="/tips" element={<Tips />} />
             <Route path="/user-recipes" element={<UserRecipes />} />
-            
+
             <Route
               path="/cancellation-policy"
               element={<CancellationPolicy />}
