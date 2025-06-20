@@ -158,6 +158,10 @@ body {
   padding: 0.5rem 1.5rem;
 }
 
+.dropdown-menu li::marker {
+  color: transparent;
+}
+
 .dropdown-menu a {
   color: var(--primary-color);
   text-decoration: none;
