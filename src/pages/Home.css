@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wdth@0,75..100;1,75..100&display=swap");
 .categories-section {
   position: relative;
   padding: 4rem 0;
@@ -196,7 +197,7 @@
 }
 
 .hero-content.left-align h2 {
-  max-width: 900px;
+  max-width: 700px;
 }
 
 .hero-content.left-align p {
@@ -215,13 +216,13 @@
   padding: 2rem;
   background-color: rgba(0, 0, 0, 0.4);
   border-radius: 8px;
-  font-family: "Playfair Display", serif;
+  font-family: "Lato", sans-serif;
 }
 
 /* Left alignment for specific slides */
 .hero-content.left-align {
-  margin-right: auto;
-  margin-left: 10%;
+  /* margin-right: auto;
+  margin-left: 10%; */
   text-align: left;
   align-items: flex-start;
 }

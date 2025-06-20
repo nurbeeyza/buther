@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -7,17 +7,25 @@ const Header = () => {
   return (
     <header className="header">
       <div className="header-container">
-        <nav className={`nav left-nav ${isMenuOpen ? 'active' : ''}`}>
+        <nav className={`nav left-nav ${isMenuOpen ? "active" : ""}`}>
           <ul className="nav-list">
             <li className="nav-item">
-              <Link to="/" className="nav-link">ANASAYFA</Link>
+              <Link to="/" className="nav-link">
+                ANASAYFA
+              </Link>
             </li>
             <li className="nav-item dropdown">
               <span className="nav-link">KURUMSAL</span>
               <ul className="dropdown-menu">
-                <ul><Link to="/about">HAKKIMIZDA</Link></ul>
-                <ul><Link to="/branches">ŞUBELERİMİZ</Link></ul>
-                <ul><Link to="/career">KARİYER</Link></ul>
+                <ul>
+                  <Link to="/about">HAKKIMIZDA</Link>
+                </ul>
+                <ul>
+                  <Link to="/branches">ŞUBELERİMİZ</Link>
+                </ul>
+                <ul>
+                  <Link to="/career">KARİYER</Link>
+                </ul>
               </ul>
             </li>
           </ul>
@@ -29,19 +37,23 @@ const Header = () => {
           </Link>
         </div>
 
-        <nav className={`nav right-nav ${isMenuOpen ? 'active' : ''}`}>
+        <nav className={`nav right-nav ${isMenuOpen ? "active" : ""}`}>
           <ul className="nav-list">
             <li className="nav-item">
-              <Link to="/products" className="nav-link">ÜRÜNLERİMİZ</Link>
+              <Link to="/products" className="nav-link">
+                ÜRÜNLERİMİZ
+              </Link>
             </li>
             <li className="nav-item">
-              <Link to="/contact" className="nav-link">İLETİŞİM</Link>
+              <Link to="/contact" className="nav-link">
+                İLETİŞİM
+              </Link>
             </li>
           </ul>
         </nav>
 
-        <button 
-          className={`menu-toggle ${isMenuOpen ? 'active' : ''}`}
+        <button
+          className={`menu-toggle ${isMenuOpen ? "active" : ""}`}
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
           <span></span>
@@ -53,4 +65,4 @@ const Header = () => {
   );
 };
 
-export default Header; 
+export default Header;
