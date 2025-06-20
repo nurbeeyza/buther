@@ -184,6 +184,10 @@ body {
 }
 
 @media (max-width: 770px) {
+  .header-container {
+    justify-content: flex-end;
+  }
+
   .menu-toggle {
     display: block;
     z-index: 1002;
@@ -272,8 +276,9 @@ body {
   }
 
   .logo {
-    position: static;
-    transform: none;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
     width: 150px;
     height: 50px;
   }
@@ -1626,6 +1631,7 @@ body {
   .logo {
     width: 120px;
     height: 40px;
+    z-index: 999999;
   }
 
   .nav-list {
@@ -1634,7 +1640,7 @@ body {
 
   /* Hero Section Mobile Styles */
   .hero {
-    height: 60vh;
+    height: 80vh;
     margin-top: 50px;
   }
 
