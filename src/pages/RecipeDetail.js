@@ -63,12 +63,12 @@ const RecipeDetail = () => {
           "180°C fırında 25-30 dakika pişirin.",
           "Üzerine pastırma dilimlerini ve kaşar peynirini ekleyip 10 dakika daha fırınlayın.",
           "Sıcak servis yapın.Afiyet olsun! 🍽️",
-          ,
         ],
       },
       {
         id: 3,
-        title: "Başpınarlar Kıymasıyla Hazırlanan Klasik İtalyan Bolonez Soslu Spagetti",
+        title:
+          "Başpınarlar Kıymasıyla Hazırlanan Klasik İtalyan Bolonez Soslu Spagetti",
         shortDescription:
           "İtalyan mutfağının en sevilen tariflerinden, Başpınarlar'ın özel kıyması ile hazırlanan enfes bolonez soslu spagetti.",
         image: "/images/yemek_tarif/spagetti.png",
