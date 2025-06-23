@@ -1,5 +1,5 @@
-import React from 'react';
-import '../styles/MeatCuts.css';
+import React from "react";
+import "../styles/MeatCuts.css";
 
 const MeatCuts = () => {
   const cuts = [
@@ -8,71 +8,87 @@ const MeatCuts = () => {
       cuts: [
         {
           name: "Gerdan",
-          description: "Dananın boyun bölümünde elde edilir. Kıyma, çorba ve yahni yapımında kullanılır.",
-          uses: ["Kıyma", "Çorba", "Yahni"]
-        }
-      ]
+          description:
+            "Dananın boyun bölümünde elde edilir. Kıyma, çorba ve yahni yapımında kullanılır.",
+          uses: ["Kıyma", "Çorba", "Yahni"],
+        },
+      ],
     },
     {
       title: "Göğüs Bölümü",
       cuts: [
         {
           name: "Göğüs",
-          description: "Dana etinin göğüs kısmından elde edilir. Haşlama, çorba ve kıyma yapımında kullanılır.",
-          uses: ["Haşlama", "Çorba", "Kıyma"]
-        }
-      ]
+          description:
+            "Dana etinin göğüs kısmından elde edilir. Haşlama, çorba ve kıyma yapımında kullanılır.",
+          uses: ["Haşlama", "Çorba", "Kıyma"],
+        },
+      ],
     },
     {
       title: "Sırt Bölümü",
       cuts: [
         {
           name: "Antrikot",
-          description: "Sırtın üst kısmından elde edilir. Izgara ve biftek yapımı için idealdir.",
-          uses: ["Izgara", "Biftek"]
+          description:
+            "Sırtın üst kısmından elde edilir. Izgara ve biftek yapımı için idealdir.",
+          uses: ["Izgara", "Biftek"],
         },
         {
           name: "Bonfile",
-          description: "Sırtın en iç kısmından elde edilir. En yumuşak ve değerli et parçasıdır.",
-          uses: ["Izgara", "Biftek", "Rosto"]
+          description:
+            "Sırtın en iç kısmından elde edilir. En yumuşak ve değerli et parçasıdır.",
+          uses: ["Izgara", "Biftek", "Rosto"],
         },
         {
           name: "Kontrfile",
-          description: "Sırtın alt kısmından elde edilir. Izgara ve biftek için uygundur.",
-          uses: ["Izgara", "Biftek"]
-        }
-      ]
+          description:
+            "Sırtın alt kısmından elde edilir. Izgara ve biftek için uygundur.",
+          uses: ["Izgara", "Biftek"],
+        },
+      ],
     },
     {
       title: "But Bölümü",
       cuts: [
         {
           name: "Nuar",
-          description: "Butun üst kısmından elde edilir. Rosto ve biftek yapımında kullanılır.",
-          uses: ["Rosto", "Biftek"]
+          description:
+            "Butun üst kısmından elde edilir. Rosto ve biftek yapımında kullanılır.",
+          uses: ["Rosto", "Biftek"],
         },
         {
           name: "Pirzola",
-          description: "Butun orta kısmından elde edilir. Izgara için idealdir.",
-          uses: ["Izgara", "Tavada"]
-        }
-      ]
-    }
+          description:
+            "Butun orta kısmından elde edilir. Izgara için idealdir.",
+          uses: ["Izgara", "Tavada"],
+        },
+      ],
+    },
   ];
 
   return (
-    <div className="meat-cuts-container">
+    <div
+      className="page-container"
+      style={{
+        maxWidth: 1400,
+        margin: "0 auto",
+        padding: "2rem",
+        background: "#f8f9fa",
+      }}
+    >
       <div className="header-image">
         <img src="/images/dana_parts.png" alt="Dana Eti Bölümleri" />
       </div>
 
       <h1 className="page-title">Dana Eti Bölümleri ve Yemeklerde Kullanımı</h1>
-      
+
       <div className="content-section">
         <p className="intro-text">
-          Dana etini herkes sever ancak biftek, bonfile, antrikot dananın hangi bölümünde 
-          yer alır diye sorulsa birçok kişi cevap veremez. Şimdi dana eti bölümleri ve bu 
-          bölümlerin hangi yemekler için nasıl kullanıldığından bahsedelim.
+          Dana etini herkes sever ancak biftek, bonfile, antrikot dananın hangi
+          bölümünde yer alır diye sorulsa birçok kişi cevap veremez. Şimdi dana
+          eti bölümleri ve bu bölümlerin hangi yemekler için nasıl
+          kullanıldığından bahsedelim.
         </p>
 
         <div className="cuts-grid">
@@ -98,7 +114,7 @@ const MeatCuts = () => {
             </div>
           ))}
         </div>
-           <div className="comment-section">
+        <div className="comment-section">
           <h2>Yorum Yap</h2>
           <form className="comment-form">
             <div className="form-group">
@@ -115,15 +131,23 @@ const MeatCuts = () => {
             </div>
             <div className="form-group">
               <label htmlFor="comment">Yorum *</label>
-              <textarea id="comment" name="comment" rows="5" required></textarea>
+              <textarea
+                id="comment"
+                name="comment"
+                rows="5"
+                required
+              ></textarea>
             </div>
             <div className="form-group checkbox">
               <input type="checkbox" id="save-info" name="save-info" />
               <label htmlFor="save-info">
-                Daha sonraki yorumlarımda kullanılması için adım, e-posta adresim ve site adresim bu tarayıcıya kaydedilsin.
+                Daha sonraki yorumlarımda kullanılması için adım, e-posta
+                adresim ve site adresim bu tarayıcıya kaydedilsin.
               </label>
             </div>
-            <button type="submit" className="submit-button">Yorum Gönder</button>
+            <button type="submit" className="submit-button">
+              Yorum Gönder
+            </button>
           </form>
         </div>
       </div>
@@ -131,4 +155,4 @@ const MeatCuts = () => {
   );
 };
 
-export default MeatCuts; 
+export default MeatCuts;

@@ -5,43 +5,37 @@ const reviewsData = [
     stars: 5,
     name: "Ayşe K.",
     city: "İstanbul",
-    text:
-      "Etler inanılmaz tazeydi, özellikle dana kuşbaşı yumuşacık pişti. Siparişim zamanında ve özenli paketlenmiş şekilde geldi. Kesinlikle tekrar sipariş vereceğim.",
+    text: "Etler inanılmaz tazeydi, özellikle dana kuşbaşı yumuşacık pişti. Siparişim zamanında ve özenli paketlenmiş şekilde geldi. Kesinlikle tekrar sipariş vereceğim.",
   },
   {
     stars: 4,
     name: "Mehmet T.",
     city: "Ankara",
-    text:
-      "Genel olarak çok memnun kaldım, sucuklar gerçekten lezzetliydi. Sadece kargo biraz geç geldi ama ürün kalitesi bunu telafi etti.",
+    text: "Genel olarak çok memnun kaldım, sucuklar gerçekten lezzetliydi. Sadece kargo biraz geç geldi ama ürün kalitesi bunu telafi etti.",
   },
   {
     stars: 5,
     name: "Elif A.",
     city: "İzmir",
-    text:
-      "Gerçek kasap kalitesi! Marketten aldıklarımın yanından geçmez. Tavuk göğsü bile bu kadar lezzetli olur mu ya :) Teşekkür ederim!",
+    text: "Gerçek kasap kalitesi! Marketten aldıklarımın yanından geçmez. Tavuk göğsü bile bu kadar lezzetli olur mu ya :) Teşekkür ederim!",
   },
   {
     stars: 5,
     name: "Burak Y.",
     city: "Bursa",
-    text:
-      "İlk kez internetten et alıyorum diye biraz tedirgindim ama boşuna endişelenmişim. Paketleme harika, hijyenik ve güven verici.",
+    text: "İlk kez internetten et alıyorum diye biraz tedirgindim ama boşuna endişelenmişim. Paketleme harika, hijyenik ve güven verici.",
   },
   {
     stars: 4,
     name: "Serkan D.",
     city: "Antalya",
-    text:
-      "Ürün kalitesi gayet iyiydi ama kargo firmasından kaynaklı bir gecikme yaşadım. Yine de destek ekibi çok ilgiliydi.",
+    text: "Ürün kalitesi gayet iyiydi ama kargo firmasından kaynaklı bir gecikme yaşadım. Yine de destek ekibi çok ilgiliydi.",
   },
   {
     stars: 5,
     name: "Zeynep H.",
     city: "Konya",
-    text:
-      "Kangal sucuğun lezzeti muazzam. Kahvaltılarda vazgeçilmezimiz oldu. Kesinlikle tavsiye ederim.",
+    text: "Kangal sucuğun lezzeti muazzam. Kahvaltılarda vazgeçilmezimiz oldu. Kesinlikle tavsiye ederim.",
   },
 ];
 
@@ -74,13 +68,11 @@ const UserRecipes = () => {
     <div
       className="page-container"
       style={{
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "flex-start",
-        alignItems: "center",
-        minHeight: "calc(100vh - 200px)",
+        maxWidth: 1400,
+        margin: "0 auto",
         padding: "2rem",
-        background: "var(--white)",
+        background: "#f8f9fa",
+        minHeight: "calc(100vh - 200px)",
       }}
     >
       <h1
@@ -121,7 +113,13 @@ const UserRecipes = () => {
             placeholder="Adınız"
             value={form.name}
             onChange={handleChange}
-            style={{ flex: 1, padding: 10, borderRadius: 6, border: "1.5px solid #8b0000", fontSize: 15 }}
+            style={{
+              flex: 1,
+              padding: 10,
+              borderRadius: 6,
+              border: "1.5px solid #8b0000",
+              fontSize: 15,
+            }}
           />
           <input
             type="text"
@@ -129,7 +127,13 @@ const UserRecipes = () => {
             placeholder="Şehir"
             value={form.city}
             onChange={handleChange}
-            style={{ flex: 1, padding: 10, borderRadius: 6, border: "1.5px solid #8b0000", fontSize: 15 }}
+            style={{
+              flex: 1,
+              padding: 10,
+              borderRadius: 6,
+              border: "1.5px solid #8b0000",
+              fontSize: 15,
+            }}
           />
         </div>
         <textarea
@@ -138,7 +142,13 @@ const UserRecipes = () => {
           value={form.text}
           onChange={handleChange}
           rows={2}
-          style={{ padding: 10, borderRadius: 6, border: "1.5px solid #8b0000", fontSize: 15, resize: "vertical" }}
+          style={{
+            padding: 10,
+            borderRadius: 6,
+            border: "1.5px solid #8b0000",
+            fontSize: 15,
+            resize: "vertical",
+          }}
         />
         <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
           <span style={{ fontWeight: 600, color: "#800020" }}>Puan:</span>
@@ -157,7 +167,9 @@ const UserRecipes = () => {
             </span>
           ))}
         </div>
-        {error && <div style={{ color: "#b00020", fontWeight: 600 }}>{error}</div>}
+        {error && (
+          <div style={{ color: "#b00020", fontWeight: 600 }}>{error}</div>
+        )}
         <button
           type="submit"
           style={{
@@ -203,15 +215,31 @@ const UserRecipes = () => {
               minHeight: 120,
             }}
           >
-            <div style={{ marginBottom: 8, display: "flex", alignItems: "center" }}>
+            <div
+              style={{ marginBottom: 8, display: "flex", alignItems: "center" }}
+            >
               <span style={{ color: "#eab308", fontSize: 20, fontWeight: 700 }}>
                 {"⭐️".repeat(review.stars)}
               </span>
-              <span style={{ color: "#111", marginLeft: 10, fontWeight: 600, fontSize: 15 }}>
+              <span
+                style={{
+                  color: "#111",
+                  marginLeft: 10,
+                  fontWeight: 600,
+                  fontSize: 15,
+                }}
+              >
                 – {review.name} / {review.city}
               </span>
             </div>
-            <div style={{ fontSize: 17, color: "#222", fontStyle: "italic", lineHeight: 1.7 }}>
+            <div
+              style={{
+                fontSize: 17,
+                color: "#222",
+                fontStyle: "italic",
+                lineHeight: 1.7,
+              }}
+            >
               "{review.text}"
             </div>
           </div>
