@@ -1232,8 +1232,8 @@ body {
 
 /* Call to Action Section */
 .cta-section {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url("../public/images/kirmizi-et.png");
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../public/images/butcher-pic-bg.png");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -1626,16 +1626,6 @@ body {
 }
 
 @media (max-width: 768px) {
-  .footer-link {
-    text-align: center;
-  }
-
-  .footer-link:hover {
-    transform: none;
-  }
-}
-
-@media (max-width: 768px) {
   /* General Mobile Styles */
   .container {
     padding: 0 15px;
@@ -1843,15 +1833,316 @@ body {
 }
 
 .cta-section {
-  background: linear-gradient(rgb(170, 170, 170), rgb(170, 170, 170)),
-    url("../public/images/bbq_bg.png");
-  background-size: cover, 850px;
-  background-position: 430px;
-  background-position-y: -250px;
+  /* background: linear-gradient(rgb(170, 170, 170), rgb(170, 170, 170)),
+    url("../public/images/bbq_bg.png"); */
+  background-repeat: no-repeat;
+  background-position: 0px;
+  background-position-y: 0px;
   background-attachment: fixed;
-  background-blend-mode: overlay;
+  background-blend-mode: color-dodge;
   padding: 4rem 0;
   text-align: center;
   color: var(--white);
   position: relative;
+}
+
+/* Detail Pages Mobile Responsive Styles with Proper Classes */
+
+/* Main detail page grid layout */
+.detail-main-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+/* Nutritional info grid */
+.nutritional-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+/* Bottom features grid */
+.features-bottom-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+
+/* Product features grid */
+.product-features-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+}
+
+/* Mobile responsive breakpoints */
+@media (max-width: 800px) {
+  /* Make nutritional info single column */
+  .nutritional-grid {
+    grid-template-columns: 1fr !important;
+    gap: 0.5rem !important;
+  }
+}
+
+@media (max-width: 700px) {
+  /* Make main layout single column */
+  .detail-main-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+  }
+
+  /* Make bottom features single column */
+  .features-bottom-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+  }
+
+  /* Make product features single column */
+  .product-features-grid {
+    grid-template-columns: 1fr !important;
+    gap: 0.5rem !important;
+  }
+}
+
+@media (max-width: 800px) {
+  /* Nutritional info grid - make single column at 800px */
+  [style*='gridTemplateColumns: "repeat(2, 1fr)"'] {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Detail page container adjustments */
+  .detail-page-container,
+  [style*="maxWidth: 1200"],
+  [style*="max-width: 1200"] {
+    padding: 1rem !important;
+    margin: 0 auto !important;
+  }
+
+  /* Main grid layout - convert to single column */
+  [style*='gridTemplateColumns: "1fr 1fr"'] {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 2rem !important;
+  }
+
+  /* Product image adjustments */
+  [style*="height: 400"] {
+    height: 250px !important;
+  }
+
+  /* Product title responsive */
+  [style*='fontSize: "2.5rem"'] {
+    font-size: 2rem !important;
+  }
+
+  /* Description text responsive */
+  [style*='fontSize: "1.2rem"'] {
+    font-size: 1.1rem !important;
+  }
+
+  /* Price tag adjustments */
+  [style*="top: 20"][style*="right: 20"] {
+    top: 10px !important;
+    right: 10px !important;
+    padding: 8px 12px !important;
+    font-size: 14px !important;
+  }
+
+  /* Product features grid - make single column */
+  [style*='gridTemplateColumns: "1fr 1fr"'][style*='gap: "0.5rem"'] {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Nutritional info grid - keep 2 columns but smaller */
+  [style*='gridTemplateColumns: "repeat(2, 1fr)"'] {
+    gap: 0.5rem !important;
+  }
+
+  [style*='fontSize: "1.5rem"'][style*="fontWeight: 700"] {
+    font-size: 1.2rem !important;
+  }
+
+  /* Bottom section grid - make single column */
+  [style*='gridTemplateColumns: "1fr 1fr"'][style*='gap: "3rem"'] {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 1.5rem !important;
+  }
+
+  /* Section headings responsive */
+  [style*='fontSize: "1.5rem"'][style*='borderBottom: "2px solid var(--primary-color)"'] {
+    font-size: 1.3rem !important;
+  }
+
+  /* Card padding adjustments */
+  [style*='padding: "2rem"'] {
+    padding: 1.5rem !important;
+  }
+
+  /* Back button adjustments */
+  [style*='fontSize: "1.1rem"'][style*="fontWeight: 600"] {
+    font-size: 1rem !important;
+  }
+
+  /* Disable magnifier on mobile */
+  [style*='position: "fixed"'][style*='borderRadius: "50%"'] {
+    display: none !important;
+  }
+
+  /* Image cursor adjustment for mobile */
+  [style*='cursor: "crosshair"'] {
+    cursor: default !important;
+  }
+
+  /* Product specifications adjustments */
+  [style*='fontSize: "1.3rem"'][style*='marginBottom: "1rem"'] {
+    font-size: 1.2rem !important;
+  }
+}
+
+/* Specific breakpoint for 700px and below */
+@media (max-width: 700px) {
+  /* Force single column layout with 1rem gap */
+  [style*='gridTemplateColumns: "1fr 1fr"'] {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+  }
+
+  /* Bottom section - single column with 1rem gap */
+  [style*='gridTemplateColumns: "1fr 1fr"'][style*='gap: "3rem"'] {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+  }
+
+  /* Reduce container padding further */
+  .page-container,
+  [style*="maxWidth: 1400"],
+  [style*="max-width: 1400"] {
+    padding: 1rem !important;
+  }
+
+  /* Product image height adjustment */
+  [style*="height: 400"] {
+    height: 200px !important;
+  }
+
+  /* Reduce card padding */
+  [style*='padding: "2rem"'] {
+    padding: 1rem !important;
+  }
+
+  /* Nutritional info grid - ensure proper spacing */
+  [style*='gridTemplateColumns: "repeat(2, 1fr)"'] {
+    gap: 0.5rem !important;
+  }
+
+  /* Features grid - single column with proper gap */
+  [style*='gridTemplateColumns: "1fr 1fr"'][style*='gap: "0.5rem"'] {
+    grid-template-columns: 1fr !important;
+    gap: 0.5rem !important;
+  }
+}
+
+/* Smaller mobile devices */
+@media (max-width: 480px) {
+  /* Further reduce container padding */
+  .detail-page-container,
+  [style*="maxWidth: 1200"],
+  [style*="max-width: 1200"] {
+    padding: 0.5rem !important;
+  }
+
+  /* Reduce image height further */
+  [style*="height: 400"] {
+    height: 200px !important;
+  }
+
+  /* Smaller titles */
+  [style*='fontSize: "2.5rem"'] {
+    font-size: 1.8rem !important;
+  }
+
+  /* Smaller price tags */
+  [style*="top: 20"][style*="right: 20"] {
+    padding: 6px 10px !important;
+    font-size: 12px !important;
+  }
+
+  /* Reduce card padding further */
+  [style*='padding: "2rem"'] {
+    padding: 1rem !important;
+  }
+
+  /* Nutritional info - stack vertically on very small screens */
+  [style*='gridTemplateColumns: "repeat(2, 1fr)"'] {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 0.3rem !important;
+  }
+
+  [style*='fontSize: "1.5rem"'][style*="fontWeight: 700"] {
+    font-size: 1rem !important;
+  }
+
+  [style*='fontSize: "0.9rem"'] {
+    font-size: 0.8rem !important;
+  }
+}
+
+/* Additional responsive helpers for detail pages */
+@media (max-width: 768px) {
+  /* Ensure proper spacing for mobile */
+  .page-container {
+    padding-top: 6rem !important;
+  }
+
+  /* Mobile-specific adjustments for flex containers */
+  [style*='display: "grid"'][style*='gap: "3rem"'] {
+    gap: 1.5rem !important;
+  }
+
+  [style*='marginBottom: "3rem"'] {
+    margin-bottom: 2rem !important;
+  }
+
+  [style*='marginBottom: "2rem"'] {
+    margin-bottom: 1.5rem !important;
+  }
+
+  /* Responsive border radius */
+  [style*="borderRadius: 12"] {
+    border-radius: 8px !important;
+  }
+
+  /* Responsive box shadows */
+  [style*='boxShadow: "0 8px 24px rgba(0,0,0,0.1)"'] {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+  }
+
+  [style*='boxShadow: "0 4px 12px rgba(0,0,0,0.1)"'] {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+  }
+}
+
+/* Page Container with Enhanced Top Padding */
+.page-container {
+  padding-top: 6rem !important; /* Increased from default 5rem */
+  min-height: calc(100vh - 200px);
+}
+
+/* Extra spacing for product listing pages */
+.page-container-extra {
+  padding-top: 4rem !important;
+  min-height: calc(100vh - 200px);
+}
+
+/* Header spacing for main content pages */
+.content-page-spacing {
+  padding-top: 4rem !important;
 }

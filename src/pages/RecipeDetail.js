@@ -120,7 +120,7 @@ const RecipeDetail = () => {
   }
 
   return (
-    <div className="recipe-detail-page">
+    <div className="recipe-detail page-container">
       <div className="recipe-detail-hero">
         <h1>{recipe.title}</h1>
       </div>

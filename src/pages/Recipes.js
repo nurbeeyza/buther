@@ -28,7 +28,7 @@ const Recipes = () => {
   ];
 
   return (
-    <div className="recipes-page">
+    <div className="recipes page-container">
       <div className="recipes-hero">
         <h1>YEMEK TARİFLERİ</h1>
         <p>
