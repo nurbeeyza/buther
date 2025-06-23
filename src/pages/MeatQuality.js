@@ -13,115 +13,95 @@ const MeatQuality = () => {
         <img src="/images/9f3e4a6c9a5464acfbdec7958c3bd608.png" alt="Et Kalitesi" />
       </div>
 
-      <h1 className="page-title">Aldığımız etin kaliteli olduğunu nasıl anlarız?</h1>
+      <h1 className="page-title">Kaliteli Et Nasıl Seçilir?</h1>
       
       <div className="content-section">
         <div className="intro-section">
           <p>
-            Bonfile, kontrfile, T-bone steak, pirzola… Favoriniz hangisi olursa olsun, 
+            Bonfile, kontrfile, T-bone steak, pirzola… Hangi eti severseniz sevin, 
             satın alırken ve pişirirken dikkat etmeniz gereken önemli noktalar var. 
-            Mükemmel lezzette bir kırmızı et hazırlamak için öncelikle onu biraz daha 
-            yakından tanımaya ne dersiniz?
+            Mükemmel lezzette bir kırmızı et hazırlamak için önce onu nasıl seçeceğimizi öğrenelim.
           </p>
           <p>
-            En taze ve lezzetli etin parlak kırmızı renge sahip olduğuna inanırız, 
-            pekiyi bu doğru mu? Kasabınıza en lezzetli parçanın hangisi olduğunu sorun. 
-            Sizlere zamanla yumuşak bir dokuya ve derinleşmiş tada sahip doğru eti gösterir.
+            Çoğumuz en taze etin parlak kırmızı renkte olduğunu düşünürüz, 
+            ama bu her zaman doğru değil. Kasabınıza en lezzetli parçanın hangisi olduğunu sorun. 
+            Size hem yumuşak hem de lezzetli olan doğru eti gösterecektir.
           </p>
         </div>
 
         <div className="quality-section">
-          <h2>Kırmızı et alırken nelere dikkat edelim?</h2>
-          <p>Kırmızı et seçerken aşağıda belirtilenleri dikkate alırsanız daha kaliteli bir ürün almış olursunuz:</p>
+          <h2>Et Alırken Nelere Dikkat Edelim?</h2>
+          <p>Kaliteli et seçmek için şu noktalara dikkat edin:</p>
           
           <ul className="quality-list">
-            <li>Yağ lezzeti artırır. Sarı renk tonu hayvanın çim ile beslendiğini gösterir.</li>
-            <li>Etin yüzeyi pürüzsüz olmalıdır. Yapışkan veya sümüksü yapıya sahip olması üründe bakteri ürediğine işaret edebilir.</li>
-            <li>Etin hafif bir kokusu olur fakat bu koku rahatsız edici düzeyde olmamalı.</li>
-            <li>Yumuşak kesimler için küçük taneli ve biraz bağ dokulu et tercih edin. Daha sert kesimler için ise kasın daha iyi kullanıldığını gösterir bölümler seçin.</li>
-            <li>Şiş için yağ ve bağ dokulu etler tercih edin.</li>
-            <li>Mozaik yapı etin lezzet dolu olduğuna işaret eder.</li>
+            <li><strong>Yağ:</strong> Etteki yağ lezzeti artırır. Sarımsı yağ, hayvanın doğal beslenmiş olduğunu gösterir.</li>
+            <li><strong>Yüzey:</strong> Etin yüzeyi pürüzsüz olmalı. Yapışkan veya sümüksü olması bozulduğunu işaret eder.</li>
+            <li><strong>Koku:</strong> Etin hafif bir kokusu olur ama bu koku rahatsız edici olmamalı.</li>
+            <li><strong>Doku:</strong> Yumuşak et için ince lifli, sert et için daha kalın lifli kısımları seçin.</li>
+            <li><strong>Şiş için:</strong> Yağlı ve lifli etler tercih edin.</li>
+            <li><strong>Mozaik görünüm:</strong> Etteki yağ dağılımı lezzetli olduğunu gösterir.</li>
           </ul>
         </div>
 
         <div className="time-section">
-          <h2>Etin Rengi ve Zaman İlişkisi</h2>
+          <h2>Etin Rengi Zamanla Nasıl Değişir?</h2>
           <div className="time-grid">
             <div className="time-item">
-              <h3>0 saat</h3>
-              <p>Yeni kesilmiş. Kesildikten sonra vakumlanan etin doğal mor dokusu olabilir.</p>
+              <h3>Yeni Kesilmiş</h3>
+              <p>Vakumlu paketlerde morumsu renkte olabilir. Bu normaldir.</p>
             </div>
             <div className="time-item">
-              <h3>3 saat</h3>
-              <p>Oksijene maruz kalmış ve rengi parlak kırmızıya dönmüş et.</p>
+              <h3>3 Saat Sonra</h3>
+              <p>Hava ile temas edince parlak kırmızı renge döner.</p>
             </div>
             <div className="time-item">
-              <h3>7 saat</h3>
-              <p>Hava ile teması devam eden etin rengi koyulaşmaya başlar.</p>
+              <h3>7 Saat Sonra</h3>
+              <p>Hava ile temas devam ettikçe rengi koyulaşmaya başlar.</p>
             </div>
             <div className="time-item">
-              <h3>9 gün</h3>
-              <p>Miyoglobin, hava ile temas devam ettiği sürece etin rengini gittikçe koyulaştırır.</p>
+              <h3>9 Gün Sonra</h3>
+              <p>Hava ile temas sürdükçe rengi gittikçe koyulaşır.</p>
             </div>
           </div>
         </div>
 
         <div className="color-section">
-          <h2>Rengi kahverengiye dönmüş etleri almaktan kaçınmalı mıyız?</h2>
+          <h2>Kahverengi Et Kötü mü?</h2>
           <p>
-            Etin rengi tek başına tazeliği veya kaliteyi ölçen bir kıstas değil. Etin doğal rengi, 
-            kas dokusunda depolanan miyoglobin isimli kırmızı oksijen taşıyan pigmentten geliyor. 
-            Farklı hayvanlarda farklı düzeyde miyoglobin bulunuyor. Kırmızı ette beyaz etten fazla 
-            bulunuyor, yaşlı hayvanlarda yine bu pigmentin düzeyi fazlalık gösteriyor.
+            Etin rengi tek başına tazeliğini göstermez. Etin doğal rengi, 
+            kaslarda bulunan kırmızı renk maddesinden gelir. Bu madde farklı hayvanlarda 
+            farklı miktarlarda bulunur. Kırmızı ette beyaz etten daha fazla bulunur.
           </p>
           <p>
-            Vakumlanmış paketlerde bulunan etlerde oksijenden mahrum kalındığı için doğal olarak 
-            mor renk katmanı ortaya çıkıyor. Hava ile temasa geçildiğinde ise miyoglobin rengi 
-            değiştiriyor ve parlak kırmızı oluyor.
+            Vakumlu paketlerdeki etler havasız kaldığı için mor görünebilir. 
+            Hava ile temas edince kırmızı renge döner. Bu tamamen normal bir durumdur.
           </p>
         </div>
 
         <div className="cuts-section">
-          <h2>Dana Eti Kesimleri ve Pişirme Önerileri</h2>
+          <h2>Et Kesimleri ve Pişirme Önerileri</h2>
           <div className="cuts-grid">
             <div className="cut-item">
               <h3>Bonfile</h3>
-              <p>Oldukça yumuşak ve hassas bir yapıya sahiptir. Yağ dokusu azdır. Orta dereceden fazla pişirilmemelidir, az yağ dokusu sebebiyle fazla pişirilirse et kurur.</p>
+              <p>Çok yumuşak ve hassas bir et. Yağı azdır. Fazla pişirilirse kurur. Az pişmiş en iyisidir.</p>
             </div>
             <div className="cut-item">
               <h3>Kontrfile</h3>
-              <p>Etin üst kısmı alt kısmına göre daha hassas olup mermerimsi bir görüntüye sahiptir. Dolgun yağ dokusu sayesinde çok zengin tada sahip bir ettir. Hızlı pişirilmelidir, az-orta en iyi derece olacaktır.</p>
+              <p>Yağlı ve lezzetli bir et. Mermer görünümlüdür. Hızlı pişirilmelidir. Az-orta pişmiş ideal.</p>
             </div>
             <div className="cut-item">
-              <h3>T-Bone biftek</h3>
-              <p>Etin ortasında bulunan kemik, T-bone'u ikiye ayırır. Bu etin bir tarafı bonfile, bir tarafı kontrfile olur. Çok lezzetli ve değerli bir ettir. Kemik de ayrıca ete lezzet katar. Mükemmel lezzet için tava ya da ızgarada az veya az-orta şeklinde pişirilmeli.</p>
+              <h3>T-Bone Biftek</h3>
+              <p>Ortasında kemik olan değerli bir et. Bir tarafı bonfile, diğer tarafı kontrfiledir. Kemik ete lezzet katar. Az pişmiş en iyisidir.</p>
             </div>
             <div className="cut-item">
-              <h3>Kemiksiz pirzola</h3>
-              <p>Çok kullanılan kaslarla çevrelenmiş kaburga bölgesinde bulunan lezzetli bir ettir. Bağ dokuları ve yağların yumuşayabilmesi için en az orta derecede pişirilmesi gerekir.</p>
+              <h3>Pirzola</h3>
+              <p>Kaburga bölgesinden gelen lezzetli et. Orta pişmiş olmalıdır. Yağları yumuşayınca daha lezzetli olur.</p>
             </div>
             <div className="cut-item">
-              <h3>But (sığır)</h3>
-              <p>3 ayrı kas dokusundan oluşur, fileminyon ve bonfileden daha sert bir ettir. Yağ dokusu yaygın olduğundan lezzetli bir et olarak kabul edilir. Tavada az-orta veya orta derecesinde pişirilmesi uygun olur.</p>
+              <h3>But</h3>
+              <p>Bonfileden daha sert ama lezzetli bir et. Yağı yaygındır. Orta pişmiş ideal.</p>
             </div>
           </div>
-        </div>
-
-        <div className="wagyu-section">
-          <h2>Wagyu et neden bu kadar pahalı?</h2>
-          <p>
-            Wagyu yani Japon sığır etini ('wa', 'Japon' ve 'gyu' da 'inek' anlamına geliyor) 
-            lezzet açısından zengin kılan yüzde 40'a kadar çıkabilen mermer görüntüsünün 
-            (çeşitli miktarlarda kas içi yağ içeren et) olması. Wagyu ette bulunan kalpain 
-            isimli enzimler etin yumuşaklaşmasını sağlıyor.
-          </p>
-          <p>
-            Japonya'da bu etlerin en kaliteli düzeye ulaşabilmesi için sığırlara harcanan 
-            hiçbir masraftan kaçınılmıyor. Bazı çobanlar hayvanlara masaj yaparken, bazıları 
-            da yağ dokusu fazla olsun diye onları bira ile besliyor. Bu yorucu ve zaman alan 
-            iş sonucunda ortaya çıkan aşırı lezzetli ve harika kıvamlı et, oldukça yüksek 
-            fiyatlarla alıcı buluyor.
-          </p>
         </div>
 
         <div className="comment-section">

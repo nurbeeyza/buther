@@ -72,16 +72,6 @@ const Footer = () => {
             <h3>GİZLİLİK VE SÖZLEŞMELER</h3>
             <ul>
               <li>
-                <Link to="/cancellation-policy" className="footer-link">
-                  İPTAL VE İADE ŞARTLARI
-                </Link>
-              </li>
-              <li>
-                <Link to="/distance-sales-agreement" className="footer-link">
-                  MESAFELİ SATIŞ SÖZLEŞMESİ
-                </Link>
-              </li>
-              <li>
                 <Link to="/privacy-security" className="footer-link">
                   GİZLİLİK VE GÜVENLİK
                 </Link>

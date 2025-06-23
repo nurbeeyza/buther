@@ -56,30 +56,69 @@ const tdStyle = {
 
 const CookiePolicy = () => (
   <div style={sectionStyle}>
-    <h1 style={headingStyle}>Çerez Politikası</h1>
+    <h1 style={headingStyle}>BAŞPINARLAR GIDA SANAYİ VE TİCARET ANONİM ŞİRKETİ</h1>
+    <h2 style={subHeadingStyle}>ÇEREZ POLİTİKASI</h2>
+    
     <p style={paragraphStyle}>
-      Ziyaretçilerin işbu internet sitesini nasıl kullandıklarını kavramak amacıyla tarayıcı türü ve işletim sistemi, referans sayfası, site içinde izlenen yol ve benzeri kişisel bilgileri toplamak için takip teknolojisi (‘Çerezler’) kullanılmaktadır. Çerezler, işbu internet sitesini kişisel ihtiyaçlarınıza göre özelleştirmemize imkan tanımaktadır.
+      Değerli Ziyaretçi,
     </p>
+    
     <p style={paragraphStyle}>
-      Bu teknolojilerin kullanımı başta 6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK Kanunu) olmak üzere tabi olduğumuz mevzuata uygun şekilde gerçekleştirilmektedir.
+      Bu Çerez Politikası'nın amacı, internet sitemizde kullanılan çerezlerin cihazınıza yerleştirilmesi aracılığıyla otomatik yolla elde edilen kişisel verilerin işlenmesine ilişkin olarak, hangi amaçlarla hangi tür çerezleri kullandığımız, hukuki sebebi ve haklarınız hakkında sizlere bilgi vermektir.
     </p>
+
+    <h2 style={subHeadingStyle}>Çerez Nedir?</h2>
     <p style={paragraphStyle}>
-      İşbu Çerez politikasının amacı, sitenin kullanımı sırasında yararlanılan çerez ve kişisel verilerin işlenmesine ilişkin olarak sizlere bilgi vermektir. İşbu çerez politikamızda ve uygulamamızda hangi amaçlarla hangi tür çerezleri kullandığımızı ve bu çerezleri nasıl kontrol edebileceğinizi sizlere açıklamak istiyoruz.
+      Çerezler (cookies), internet sitemizi ziyaret ettiğinizde bilgisayarınıza ya da mobil cihazınıza kaydedilen ve isim-değer formatında veri barındıran küçük metin dosyalarıdır. Bu metin dosyaları ile beraber, web işaretçileri, pikseller veya etiketler gibi diğer takip teknolojileri işbu Çerez Bilgilendirme Metni kapsamında çerez olarak kabul edilir.
     </p>
+
+    <h2 style={subHeadingStyle}>Çerezlerin Kullanım Amaçları Nelerdir?</h2>
     <p style={paragraphStyle}>
-      Çerezler aracılığıyla elde edilecek tüm veriler Başpınarlar Hayvancılık Gıda Restoran San. ve Tic. Limited Şirketi veya önceden belirlenmiş üçüncü taraflar dışına bildirilmeyecektir; istenmeyen iletişim için de kullanılmayacaktır. Çerez uygulaması sadece üyeler için ve üye olunurken paylaşılan bilgilerle sınırlı olacak şekilde uygulanacaktır.
+      Çerezleri aşağıdaki amaçlarla kullanmaktayız:
     </p>
+    <ul style={{...paragraphStyle, paddingLeft: 20}}>
+      <li>Sitemizin güvenli bir şekilde çalışmasını sağlamak,</li>
+      <li>Sitemizde gezinmenizi ve sitemizde yer alan hizmet ve özelliklerden yararlanmanızı sağlamak,</li>
+      <li>Kullanıcılar (kullanıcı cihazları ve tarayıcı ön bellekleri üzerinden) ve site kullanımı hakkındaki bilgileri saklamak,</li>
+      <li>Kullanıcı davranışlarını analiz etmek ve sitemiz üzerindeki genel kullanıcı eğilimini tespit etmek,</li>
+      <li>Sizlere daha iyi bir deneyim sunmak ve hizmetlerimizi size uygun olarak kişiselleştirmek,</li>
+      <li>Sitemizin performansını artırmak ve internet sitemizi kullanıcı dostu hale getirmek,</li>
+      <li>Reklam ve pazarlama faaliyetlerimizi geliştirmek,</li>
+      <li>Mevcut ve potansiyel kullanıcılarımızın sitemize eklenen içerikleri sosyal medya ağlarında paylaşmasına imkân vermek,</li>
+      <li>Sitemizin farklı sürümlerinin performansını ölçmek ve kullanıcıların devamlı aynı sürümü görüntülemesini sağlamak.</li>
+    </ul>
+
+    <h2 style={subHeadingStyle}>Çerez Çeşitleri Nelerdir?</h2>
     <p style={paragraphStyle}>
-      Başpınarlar Hayvancılık Gıda Restoran San. ve Tic. Limited Şirketi olarak sitemizde kullandığımız çerezleri kullanmaktan vazgeçebilir, bunların türlerini veya fonksiyonlarını değiştirebilir veya sitemize yeni çerezler ekleyebiliriz. Dolayısıyla işbu çerez politikası hükümlerini dilediğimiz zaman değiştirme hakkını saklı tutarız. Güncel politika üzerinde gerçekleştirilmiş olan her türlü değişiklik sitede veya herhangi bir kamuya açık mecrada yayımlanmakla birlikte yürürlük kazanacaktır.
+      <strong>Kullanım Süresine Göre Çerezler:</strong>
     </p>
+    <ul style={{...paragraphStyle, paddingLeft: 20}}>
+      <li>Oturum çerezleri: Tarayıcı kapatıldığında silinir.</li>
+      <li>Kalıcı çerezler: Belirli bir süre boyunca cihazda kalır.</li>
+    </ul>
+    
     <p style={paragraphStyle}>
-      Kişisel verilerinizin Başpınarlar Hayvancılık Gıda Restoran San. ve Tic. Limited Şirketi tarafından işlenmesi hakkında daha detaylı bilgi için <a href="https://xn--bapnarlar-xpb81c.net/gizlilik-ve-guvenlik/" style={{ color: '#800020', textDecoration: 'underline' }} target="_blank" rel="noopener noreferrer">Gizlilik ve Güvenlik</a> sayfasını okumanızı öneririz.
+      <strong>Kaynağa Göre Çerezler:</strong>
     </p>
-    <h2 style={subHeadingStyle}>Çerez nedir?</h2>
+    <ul style={{...paragraphStyle, paddingLeft: 20}}>
+      <li>Birinci taraf çerezler: Ziyaret edilen site tarafından yerleştirilir.</li>
+      <li>Üçüncü taraf çerezler: Ziyaret edilen site dışındaki etki alanları tarafından yerleştirilir.</li>
+    </ul>
+    
     <p style={paragraphStyle}>
-      Çerez bir web sitesinin sizi daha sonra tanıyabilmesi için gerekli ufak bir metin dosyasıdır. Bu metin dosyası size özel olup, sadece bu kodu tanımlayan web sunucusu tarafından okunabilir. Kesinlikle bir virüs değildir. Sizi zaman kaybından korur, kayıt olmuşsanız daha sonraki girişlerinizde vermiş olduğunuz cevapları otomatik olarak hatırlar.
+      <strong>Amaca Göre Çerezler:</strong>
     </p>
-    <h2 style={subHeadingStyle}>Kullanılan Çerez Türleri ve Amaçları</h2>
+    <ul style={{...paragraphStyle, paddingLeft: 20}}>
+      <li>Zorunlu çerezler</li>
+      <li>İşlevsel çerezler</li>
+      <li>Performans-analitik çerezler</li>
+      <li>Reklam ve pazarlama çerezleri</li>
+    </ul>
+
+    <h2 style={subHeadingStyle}>Sitemizde Kullanılan Çerezler</h2>
+    <p style={paragraphStyle}>
+      İnternet sitemizde, aşağıdaki çerezler aracılığıyla kişisel verileriniz işlenmektedir:
+    </p>
     <table style={tableStyle}>
       <thead>
         <tr>
@@ -88,40 +127,40 @@ const CookiePolicy = () => (
         </tr>
       </thead>
       <tbody>
-        <tr><td style={tdStyle}>INSOPTOUT</td><td style={tdStyle}>Mevcuttaki kullanıcının devre dışı bırakma durumunu saklar</td></tr>
-        <tr><td style={tdStyle}>customDataSet-*</td><td style={tdStyle}>Özel segmentasyonları tutar</td></tr>
-        <tr><td style={tdStyle}>ins-storage-version</td><td style={tdStyle}>localStorage değerlerinin çalışandan ortak siteye taşınmasını önler veya bunlara izin verir</td></tr>
-        <tr><td style={tdStyle}>first-permission-impression</td><td style={tdStyle}>Kullanıcı ile katılım izni ekranı arasındaki durumu saklar. Onay formunu görmeyen kullanıcılar için tekrar giriş ekranını göstermemize yardımcı olur.</td></tr>
-        <tr><td style={tdStyle}>native-permission-impression</td><td style={tdStyle}>Kullanıcı ve olağan katılım izni ekranı arasındaki durumu saklar. Görmeyen kullanıcılar için tekrar giriş ekranını göstermemize yardımcı olur.</td></tr>
-        <tr><td style={tdStyle}>ins-gaSSId</td><td style={tdStyle}>Google Analytics kullanıcılarını 30 dakikalık oturumlar için izler.</td></tr>
-        <tr><td style={tdStyle}>ins-test-cookie</td><td style={tdStyle}>Kullanıcının şu anda kullanmakta olduğu tarayıcıda çerezlerin etkin olup olmadığını test eder.</td></tr>
-        <tr><td style={tdStyle}>variationCandidate</td><td style={tdStyle}>Panelimizde Test Link ile ziyaret edilen kampanyalarda kullanılır ve kampanyalarımızı test etmemizi sağlar</td></tr>
-        <tr><td style={tdStyle}>insdrSubsId</td><td style={tdStyle}>Web Push izni veren kullanıcının Web Push Token'ini tutar.</td></tr>
-        <tr><td style={tdStyle}>insdrSubsIdCreateDate</td><td style={tdStyle}>Web Push Token'ın oluşturulma ve Web Push izni verilme tarihini tutar.</td></tr>
-        <tr><td style={tdStyle}>push-request-sent</td><td style={tdStyle}>Mevcut partneleri opt-in izinlerine göre toplar</td></tr>
-        <tr><td style={tdStyle}>campaignId-countdownId-until</td><td style={tdStyle}>Tek bir kampanyanın geri sayım bilgilerini depolar</td></tr>
-        <tr><td style={tdStyle}>insdrPushCookieStatus</td><td style={tdStyle}>Opt-in göre mevcut olup olmadığını gösterir</td></tr>
-        <tr><td style={tdStyle}>isVAPID</td><td style={tdStyle}>Web push token'ın vapid anahtarı ile verildiğini onaylar</td></tr>
-        <tr><td style={tdStyle}>migratedSDK</td><td style={tdStyle}>Kayıtlı sw-sdk yolunu saklar</td></tr>
-        <tr><td style={tdStyle}>insdrDH, insdrAuth, insdrPayloadComplete</td><td style={tdStyle}>Token'ı olan kullanıcı ve sw migration'ı gereki olanı kontrol etmek için kullanılır</td></tr>
-        <tr><td style={tdStyle}>ins-c</td><td style={tdStyle}>Browserda cookie support var mı yok mu ona bakar</td></tr>
-        <tr><td style={tdStyle}>_ga, _gc, _gat</td><td style={tdStyle}>Google Analytics için kullanılır, kullanıcı farklılaştırması ve taleplerin dengelenmesi için kullanılır</td></tr>
+        <tr><td style={tdStyle}>PHPSESSID</td><td style={tdStyle}>Birinci taraf, zorunlu, oturum çerezi – oturum süresince geçerli.</td></tr>
+        <tr><td style={tdStyle}>_ga</td><td style={tdStyle}>Birinci taraf, kalıcı, performans-analitik çerezi – 2 yıl geçerli.</td></tr>
+        <tr><td style={tdStyle}>_gid</td><td style={tdStyle}>Üçüncü taraf, performans-analitik çerezi – 24 saat geçerli.</td></tr>
+        <tr><td style={tdStyle}>gat_gtag_UA*</td><td style={tdStyle}>Performans-analitik çerezi – 1 dakika geçerli.</td></tr>
+        <tr><td style={tdStyle}>ga*</td><td style={tdStyle}>Performans-analitik çerezi – 2 yıl geçerli.</td></tr>
       </tbody>
     </table>
-    <h2 style={subHeadingStyle}>Çerez Kullanım Amaçları</h2>
+    
     <p style={paragraphStyle}>
-      Sitedeki çerezler işlevsellik, performans ve istatistik amaçlarıyla kullanılmaktadır. Sitede pazarlama veya reklam için kullanılan bir çerez tutulmamaktadır.
+      Bu çerezler IP bilgilerinizle ilişkilendirilerek kişisel verilerinizi işler, ancak başka veri sorumlularına aktarılmaz.
     </p>
-    <h2 style={subHeadingStyle}>Çerez Paylaşımı</h2>
+
+    <h2 style={subHeadingStyle}>Çerezler Nasıl Toplanır?</h2>
     <p style={paragraphStyle}>
-      Çerezlerde tutulan bilgiler yukarıda belirlenen amaçlar doğrultusunda PınarOnline için kullanılmak üzere veri analiz çözüm ortaklarımızla paylaşılmaktadır.
+      Çerezler, internet sitemizi ve uygulamamızı kullandığınız cihazlar aracılığıyla toplanır. Bu veriler, sadece kullanılan cihaza özgüdür. Farklı bir cihazla giriş yaptığınızda, önceki cihazdaki çerezler kullanılmaz.
     </p>
-    <h2 style={subHeadingStyle}>Çerezlerin Kullanımının Kontrolü</h2>
+
+    <h2 style={subHeadingStyle}>Çerez Yönetimi</h2>
     <p style={paragraphStyle}>
-      Çerez ve benzeri teknolojilerin kullanımı konusunda ziyaretçi ve kullanıcılarımızın tercihleri bizler için asıldır. Bununla birlikte, Platform'un çalışması için zorunlu olan Çerezler'in kullanılması gerekmektedir. Ek olarak bazı çerezlerin kapatılması halinde Platform'un birtakım işlevlerinin kısmen ya da tamamen çalışmayabileceğini hatırlatırız.
+      Cihazınızda çerez kullanımını istemiyorsanız, tarayıcı ayarlarınız üzerinden çerezleri engelleyebilir, sınırlayabilir veya silebilirsiniz. Bu ayarlar sonradan değiştirilebilir.
     </p>
-    <div style={{...paragraphStyle, marginTop: 32}}>
-      <b>Başpınarlar Hayvancılık Gıda Restoran San. ve Tic. Limited Şirketi</b>
+
+    <h2 style={subHeadingStyle}>Kişisel Verilerin İşlenme Hukuki Dayanağı</h2>
+    <p style={paragraphStyle}>
+      Çerezler yoluyla işlenen kişisel verileriniz, 6698 sayılı Kişisel Verilerin Korunması Kanunu'nun 5. maddesinin 2. fıkrasının (f) bendi uyarınca, "ilgili kişinin temel hak ve özgürlüklerine zarar vermemek kaydıyla veri sorumlusunun meşru menfaatleri için veri işlenmesinin zorunlu olması" hukuki sebebine dayanılarak işlenmektedir.
+    </p>
+
+    <h2 style={subHeadingStyle}>İletişim</h2>
+    <p style={paragraphStyle}>
+      Çerez Bilgilendirme Metni veya internet sitemizdeki çerez kullanımı hakkında her türlü soru, görüş ve öneriniz için bizimle <a href="mailto:kvkk@baspinarlar.com.tr" style={{ color: '#800020', textDecoration: 'underline' }}>kvkk@baspinarlar.com.tr</a> adresi üzerinden iletişime geçebilirsiniz.
+    </p>
+
+    <div style={{...paragraphStyle, marginTop: 32, textAlign: 'center'}}>
+      <strong>BAŞPINARLAR GIDA SANAYİ VE TİCARET ANONİM ŞİRKETİ</strong>
     </div>
   </div>
 );

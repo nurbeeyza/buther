@@ -18,26 +18,20 @@ import Recipes from "./pages/Recipes";
 import RecipeDetail from "./pages/RecipeDetail";
 import Tips from "./pages/Tips";
 import UserRecipes from "./pages/UserRecipes";
-import CancellationPolicy from "./pages/CancellationPolicy";
-import DistanceSalesAgreement from "./pages/DistanceSalesAgreement";
 import PrivacySecurity from "./pages/PrivacySecurity";
 import CookiePolicy from "./pages/CookiePolicy";
 import MeatQuality from "./pages/MeatQuality";
 import MeatCuts from "./pages/MeatCuts";
-import BeefSteak from "./pages/BeefSteak";
-import BeefSteakDetail from "./pages/BeefSteakDetail";
-import ProcessedMeats from "./pages/ProcessedMeats";
-import ProcessedMeatsDetail from "./pages/ProcessedMeatsDetail";
-import ButcherGroup from "./pages/ButcherGroup";
-import ButcherGroupDetail from "./pages/ButcherGroupDetail";
-import DelicatessenGroup from "./pages/DelicatessenGroup";
-import DelicatessenGroupDetail from "./pages/DelicatessenGroupDetail";
-import Pastirma from "./pages/Pastirma";
-import PastirmaDetail from "./pages/PastirmaDetail";
-import Sucuk from "./pages/Sucuk";
-import SucukDetail from "./pages/SucukDetail";
-import Kofte from "./pages/Kofte";
-import KofteDetail from "./pages/KofteDetail";
+import DanaGrubu from "./pages/DanaGrubu";
+import DanaGrubuDetail from "./pages/DanaGrubuDetail";
+import KuzuGrubu from "./pages/KuzuGrubu";
+import KuzuGrubuDetail from "./pages/KuzuGrubuDetail";
+import DanaBeefSteak from "./pages/DanaBeefSteak";
+import DanaBeefSteakDetail from "./pages/DanaBeefSteakDetail";
+import SarkuteriGrubu from "./pages/SarkuteriGrubu";
+import SarkuteriGrubuDetail from "./pages/SarkuteriGrubuDetail";
+import IslenmisUrunGrubu from "./pages/IslenmisUrunGrubu";
+import IslenmisUrunGrubuDetail from "./pages/IslenmisUrunGrubuDetail";
 import "./index.css";
 import { useEffect } from "react";
 
@@ -59,38 +53,37 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/products" element={<Products />} />
-            <Route path="/products/beef-steak" element={<BeefSteak />} />
+            <Route path="/products/dana-grubu" element={<DanaGrubu />} />
             <Route
-              path="/products/beef-steak/:id"
-              element={<BeefSteakDetail />}
+              path="/products/dana-grubu/:id"
+              element={<DanaGrubuDetail />}
+            />
+            <Route path="/products/kuzu-grubu" element={<KuzuGrubu />} />
+            <Route
+              path="/products/kuzu-grubu/:id"
+              element={<KuzuGrubuDetail />}
+            />
+            <Route path="/products/dana-beef-steak" element={<DanaBeefSteak />} />
+            <Route
+              path="/products/dana-beef-steak/:id"
+              element={<DanaBeefSteakDetail />}
             />
             <Route
-              path="/products/processed-meats"
-              element={<ProcessedMeats />}
+              path="/products/sarkuteri-grubu"
+              element={<SarkuteriGrubu />}
             />
             <Route
-              path="/products/processed-meats/:id"
-              element={<ProcessedMeatsDetail />}
-            />
-            <Route path="/products/butcher-group" element={<ButcherGroup />} />
-            <Route
-              path="/products/butcher-group/:id"
-              element={<ButcherGroupDetail />}
+              path="/products/sarkuteri-grubu/:id"
+              element={<SarkuteriGrubuDetail />}
             />
             <Route
-              path="/products/delicatessen-group"
-              element={<DelicatessenGroup />}
+              path="/products/islenmis-urun-grubu"
+              element={<IslenmisUrunGrubu />}
             />
             <Route
-              path="/products/delicatessen-group/:id"
-              element={<DelicatessenGroupDetail />}
+              path="/products/islenmis-urun-grubu/:id"
+              element={<IslenmisUrunGrubuDetail />}
             />
-            <Route path="/products/pastirma" element={<Pastirma />} />
-            <Route path="/products/pastirma/:id" element={<PastirmaDetail />} />
-            <Route path="/products/sucuk" element={<Sucuk />} />
-            <Route path="/products/sucuk/:id" element={<SucukDetail />} />
-            <Route path="/products/kofte" element={<Kofte />} />
-            <Route path="/products/kofte/:id" element={<KofteDetail />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/branches" element={<Branches />} />
@@ -101,14 +94,6 @@ function App() {
             <Route path="/tips" element={<Tips />} />
             <Route path="/user-recipes" element={<UserRecipes />} />
 
-            <Route
-              path="/cancellation-policy"
-              element={<CancellationPolicy />}
-            />
-            <Route
-              path="/distance-sales-agreement"
-              element={<DistanceSalesAgreement />}
-            />
             <Route path="/privacy-security" element={<PrivacySecurity />} />
             <Route path="/cookie-policy" element={<CookiePolicy />} />
             <Route path="/tips/meat-quality" element={<MeatQuality />} />
