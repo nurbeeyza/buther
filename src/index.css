@@ -1232,8 +1232,8 @@ body {
 
 /* Call to Action Section */
 .cta-section {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url("../public/images/kirmizi-et.png");
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../public/images/butcher-pic-bg.png");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -1833,13 +1833,13 @@ body {
 }
 
 .cta-section {
-  background: linear-gradient(rgb(170, 170, 170), rgb(170, 170, 170)),
-    url("../public/images/bbq_bg.png");
-  background-size: cover, 850px;
-  background-position: 430px;
-  background-position-y: -250px;
+  /* background: linear-gradient(rgb(170, 170, 170), rgb(170, 170, 170)),
+    url("../public/images/bbq_bg.png"); */
+  background-repeat: no-repeat;
+  background-position: 0px;
+  background-position-y: 0px;
   background-attachment: fixed;
-  background-blend-mode: overlay;
+  background-blend-mode: color-dodge;
   padding: 4rem 0;
   text-align: center;
   color: var(--white);
