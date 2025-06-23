@@ -2132,7 +2132,7 @@ body {
 
 /* Page Container with Enhanced Top Padding */
 .page-container {
-  padding-top: 4rem !important; /* Increased from default 5rem */
+  padding-top: 6rem !important; /* Increased from default 5rem */
   min-height: calc(100vh - 200px);
 }
 
