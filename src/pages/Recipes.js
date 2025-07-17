@@ -29,9 +29,9 @@ const Recipes = () => {
 
   return (
     <div className="recipes page-container">
-      <div className="recipes-hero">
-        <h1>YEMEK TARİFLERİ</h1>
-        <p>
+      <div className="recipes-hero" style={{ background: '#111', color: '#fff', padding: '4rem 0', textAlign: 'center' }}>
+        <h1 style={{ color: '#fff', fontSize: '2.5rem', marginBottom: '1rem', textTransform: 'uppercase', letterSpacing: 2, fontWeight: 800, textShadow: '0 2px 8px #000' }}>YEMEK TARİFLERİ</h1>
+        <p style={{ color: '#fff', fontSize: '1.2rem', maxWidth: 800, margin: '0 auto' }}>
           Başpınarlar et ürünleri ile hazırlayabileceğiniz lezzetli tarifler
         </p>
       </div>

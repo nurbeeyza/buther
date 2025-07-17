@@ -46,21 +46,6 @@ const Footer = () => {
             <h3>BAŞPINARLAR</h3>
             <ul>
               <li>
-                <Link to="/corporate" className="footer-link">
-                  KURUMSAL
-                </Link>
-              </li>
-              <li>
-                <Link to="/branches" className="footer-link">
-                  ŞUBELERİMİZ
-                </Link>
-              </li>
-              <li>
-                <Link to="/career" className="footer-link">
-                  KARİYER
-                </Link>
-              </li>
-              <li>
                 <Link to="/contact" className="footer-link">
                   İLETİŞİM
                 </Link>

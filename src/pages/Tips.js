@@ -27,17 +27,9 @@ const Tips = () => {
       background: "var(--white)",
       minHeight: "calc(100vh - 200px)"
     }}>
-      <h1 style={{
-        textAlign: "center",
-        color: "var(--primary-color)",
-        marginBottom: "3rem",
-        fontSize: "2.5rem",
-        fontWeight: 800,
-        letterSpacing: 1,
-        textShadow: "0 2px 8px #80002022"
-      }}>
-        PÜF NOKTALAR
-      </h1>
+      <div style={{ background: '#111', color: '#fff', padding: '4rem 0', textAlign: 'center', marginBottom: '3rem', width: '100vw', position: 'relative', left: '50%', right: '50%', marginLeft: '-50vw', marginRight: '-50vw' }}>
+        <h1 style={{ color: '#fff', fontSize: '2.5rem', fontWeight: 800, letterSpacing: 1, textShadow: '0 2px 8px #000' }}>PÜF NOKTALAR</h1>
+      </div>
       
       <div style={{
         display: "grid",

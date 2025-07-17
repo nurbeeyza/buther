@@ -18,26 +18,17 @@ const Header = () => {
                 ANASAYFA
               </Link>
             </li>
-            <li className="nav-item dropdown">
-              <span className="nav-link">KURUMSAL</span>
-              <ul className="dropdown-menu">
-                <li>
-                  <Link to="/about">HAKKIMIZDA</Link>
-                </li>
-                <li>
-                  <Link to="/branches">ŞUBELERİMİZ</Link>
-                </li>
-                <li>
-                  <Link to="/career">KARİYER</Link>
-                </li>
-              </ul>
+            <li className="nav-item">
+              <Link to="/kitchen" className="nav-link">
+                BAŞPINARLAR MUTFAK
+              </Link>
             </li>
           </ul>
         </nav>
 
         <div className="logo">
           <Link to="/">
-            <img src="/images/logo.png" alt="Başpınarlar Logo" />
+            <img src="images/logo1.png" alt="Başpınarlar Logo" />
           </Link>
         </div>
 
@@ -64,25 +55,10 @@ const Header = () => {
                 ANASAYFA
               </Link>
             </li>
-            <li className="nav-item dropdown">
-              <span className="nav-link">KURUMSAL</span>
-              <ul className="dropdown-menu">
-                <li>
-                  <Link to="/about" onClick={handleLinkClick}>
-                    HAKKIMIZDA
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/branches" onClick={handleLinkClick}>
-                    ŞUBELERİMİZ
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/career" onClick={handleLinkClick}>
-                    KARİYER
-                  </Link>
-                </li>
-              </ul>
+            <li className="nav-item">
+              <Link to="/kitchen" className="nav-link" onClick={handleLinkClick}>
+                BAŞPINARLAR MUTFAK
+              </Link>
             </li>
             <li className="nav-item">
               <Link

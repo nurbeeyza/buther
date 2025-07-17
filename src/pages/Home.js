@@ -50,35 +50,35 @@ const Home = () => {
       name: "DANA GRUBU",
       description:
         "En kaliteli dana etlerinden hazırlanan ürünlerimiz ile lezzetli sofralar sizleri bekliyor...",
-      image: "/images/kucuket.png",
+      image: "/images/et_resimler/danagrubujpg.jpg",
       link: "/products/dana-grubu",
     },
     {
       name: "KUZU GRUBU",
       description:
         "Taze ve kaliteli kuzu etlerimiz ile mutfağınızın vazgeçilmezi olacak lezzetler...",
-      image: "/images/kucuket.png",
+      image: "/images/et_resimler/kuzuetigrubu.jpg",
       link: "/products/kuzu-grubu",
     },
     {
       name: "DANA BEEF'S STEAK",
       description:
         "Premium kalite dana steak çeşitlerimiz ile fine dining deneyimi yaşayın...",
-      image: "/images/kucuket.png",
+      image: "/images/et_resimler/danasteakgrubu.jpg",
       link: "/products/dana-beef-steak",
     },
     {
       name: "ŞARKÜTERİ GRUBU",
       description:
         "Çeşit çeşit şarküteri ürünlerimiz ile kahvaltılarınıza lezzet katın...",
-      image: "/images/kucuket.png",
+      image: "/images/et_resimler/şarküteri.jpg",
       link: "/products/sarkuteri-grubu",
     },
     {
       name: "İŞLENMİŞ ÜRÜN GRUBU",
       description:
         "Özenle hazırlanmış işlenmiş et ürünlerimiz ile pratik ve lezzetli yemekler...",
-      image: "/images/kucuket.png",
+      image: "/images/et_resimler/işlenmişetgrup.jpg",
       link: "/products/islenmis-urun-grubu",
     },
   ];

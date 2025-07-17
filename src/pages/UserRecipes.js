@@ -75,20 +75,9 @@ const UserRecipes = () => {
         minHeight: "calc(100vh - 200px)",
       }}
     >
-      <h1
-        style={{
-          textAlign: "center",
-          marginTop: "3rem",
-          marginBottom: "1.5rem",
-          color: "var(--primary-color)",
-          fontWeight: 800,
-          fontSize: 36,
-          letterSpacing: 1,
-          textShadow: "0 2px 8px #80002022",
-        }}
-      >
-        SİZDEN GELENLER
-      </h1>
+      <div style={{ background: '#111', color: '#fff', padding: '4rem 0', textAlign: 'center', marginBottom: '2rem', width: '100vw', position: 'relative', left: '50%', right: '50%', marginLeft: '-50vw', marginRight: '-50vw' }}>
+        <h1 style={{ color: '#fff', fontSize: '2.5rem', fontWeight: 800, letterSpacing: 1, textShadow: '0 2px 8px #000' }}>SİZDEN GELENLER</h1>
+      </div>
       {/* Yorum Ekleme Paneli */}
       <form
         onSubmit={handleSubmit}
@@ -96,17 +85,19 @@ const UserRecipes = () => {
           background: "#fff",
           borderRadius: 14,
           boxShadow: "0 2px 12px #80002011",
-          padding: "1.5rem 1.2rem 1.2rem 1.2rem",
+          padding: "2.5rem 2rem 2rem 2rem",
           marginBottom: 36,
           borderLeft: "7px solid var(--primary-color)",
           width: "100%",
-          maxWidth: 600,
+          maxWidth: 800,
+          margin: "0 auto 36px auto",
           display: "flex",
           flexDirection: "column",
-          gap: 14,
+          gap: 18,
+          alignItems: "center",
         }}
       >
-        <div style={{ display: "flex", gap: 12 }}>
+        <div style={{ display: "flex", gap: 16, width: "100%" }}>
           <input
             type="text"
             name="name"
@@ -115,10 +106,10 @@ const UserRecipes = () => {
             onChange={handleChange}
             style={{
               flex: 1,
-              padding: 10,
+              padding: 12,
               borderRadius: 6,
               border: "1.5px solid #8b0000",
-              fontSize: 15,
+              fontSize: 16,
             }}
           />
           <input
@@ -129,10 +120,10 @@ const UserRecipes = () => {
             onChange={handleChange}
             style={{
               flex: 1,
-              padding: 10,
+              padding: 12,
               borderRadius: 6,
               border: "1.5px solid #8b0000",
-              fontSize: 15,
+              fontSize: 16,
             }}
           />
         </div>
@@ -141,13 +132,15 @@ const UserRecipes = () => {
           placeholder="Yorumunuz"
           value={form.text}
           onChange={handleChange}
-          rows={2}
+          rows={5}
           style={{
-            padding: 10,
+            padding: 14,
             borderRadius: 6,
             border: "1.5px solid #8b0000",
-            fontSize: 15,
+            fontSize: 16,
             resize: "vertical",
+            minHeight: 120,
+            width: "100%",
           }}
         />
         <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
@@ -194,10 +187,12 @@ const UserRecipes = () => {
       <div
         style={{
           width: "100%",
-          maxWidth: 900,
+          maxWidth: 1200,
           display: "grid",
-          gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
-          gap: 28,
+          gridTemplateColumns: "repeat(auto-fit, minmax(400px, 1fr))",
+          gap: 36,
+          margin: "0 auto",
+          justifyItems: "center",
         }}
       >
         {reviews.map((review, idx) => (
@@ -205,28 +200,31 @@ const UserRecipes = () => {
             key={idx}
             style={{
               background: "#fff",
-              borderRadius: 14,
+              borderRadius: 18,
               boxShadow: "0 2px 12px #80002011",
-              padding: "1.5rem 1.2rem 1.2rem 1.2rem",
+              padding: "2.2rem 2rem 2rem 2rem",
               borderLeft: "7px solid var(--primary-color)",
               display: "flex",
               flexDirection: "column",
-              gap: 6,
-              minHeight: 120,
+              gap: 10,
+              minHeight: 180,
+              width: "100%",
+              maxWidth: 500,
+              margin: "0 auto",
             }}
           >
             <div
-              style={{ marginBottom: 8, display: "flex", alignItems: "center" }}
+              style={{ marginBottom: 14, display: "flex", alignItems: "center" }}
             >
-              <span style={{ color: "#eab308", fontSize: 20, fontWeight: 700 }}>
+              <span style={{ color: "#eab308", fontSize: 28, fontWeight: 700 }}>
                 {"⭐️".repeat(review.stars)}
               </span>
               <span
                 style={{
                   color: "#111",
-                  marginLeft: 10,
-                  fontWeight: 600,
-                  fontSize: 15,
+                  marginLeft: 16,
+                  fontWeight: 700,
+                  fontSize: 20,
                 }}
               >
                 – {review.name} / {review.city}
@@ -234,7 +232,7 @@ const UserRecipes = () => {
             </div>
             <div
               style={{
-                fontSize: 17,
+                fontSize: 22,
                 color: "#222",
                 fontStyle: "italic",
                 lineHeight: 1.7,

@@ -13,7 +13,6 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Branches from "./pages/Branches";
 import Career from "./pages/Career";
-import Corporate from "./pages/Corporate";
 import Recipes from "./pages/Recipes";
 import RecipeDetail from "./pages/RecipeDetail";
 import Tips from "./pages/Tips";
@@ -32,6 +31,7 @@ import SarkuteriGrubu from "./pages/SarkuteriGrubu";
 import SarkuteriGrubuDetail from "./pages/SarkuteriGrubuDetail";
 import IslenmisUrunGrubu from "./pages/IslenmisUrunGrubu";
 import IslenmisUrunGrubuDetail from "./pages/IslenmisUrunGrubuDetail";
+import Kitchen from "./pages/Kitchen";
 import "./index.css";
 import { useEffect } from "react";
 
@@ -88,11 +88,11 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/branches" element={<Branches />} />
             <Route path="/career" element={<Career />} />
-            <Route path="/corporate" element={<Corporate />} />
             <Route path="/recipes" element={<Recipes />} />
             <Route path="/recipes/:id" element={<RecipeDetail />} />
             <Route path="/tips" element={<Tips />} />
             <Route path="/user-recipes" element={<UserRecipes />} />
+            <Route path="/kitchen" element={<Kitchen />} />
 
             <Route path="/privacy-security" element={<PrivacySecurity />} />
             <Route path="/cookie-policy" element={<CookiePolicy />} />
