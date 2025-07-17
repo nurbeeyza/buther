@@ -797,7 +797,7 @@ body {
 .footer {
   background-color: var(--bg-dark-red);
   color: var(--white);
-  padding: 2rem 0 2rem;
+  padding: 0.5rem 0 2rem;
 }
 
 .footer-content {
