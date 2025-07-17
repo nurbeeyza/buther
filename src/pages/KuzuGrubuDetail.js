@@ -34,7 +34,7 @@ const KuzuGrubuDetail = () => {
       name: "Kuzu Gerdan",
       price: "650,00₺",
       weight: "kg",
-      image: "/images/et_resimler/kuzu_gerdan.png",
+      image: "/images/et_resimler/kuzu-gerdan.png",
       description: "Yumuşacık kuzu gerdan, ızgara ve tavada pişirme için ideal.",
       features: [
         "Yumuşacık doku",
@@ -59,7 +59,7 @@ const KuzuGrubuDetail = () => {
       name: "Kuzu Kol",
       price: "680,00₺",
       weight: "kg",
-      image: "/images/et_resimler/kuzu_kol.png",
+      image: "/images/et_resimler/kuzukol .png",
       description: "Taze kuzu kol, güveç ve kavurma için mükemmel.",
       features: [
         "Güveç için ideal",
@@ -84,7 +84,7 @@ const KuzuGrubuDetail = () => {
       name: "Kuzu Kaburga",
       price: "720,00₺",
       weight: "kg",
-      image: "/images/et_resimler/kuzu_kaburga.png",
+      image: "/images/et_resimler/kuzukaburga.png",
       description: "Lezzetli kuzu kaburga, uzun pişirme için ideal.",
       features: [
         "Kemikli özel kesim",
@@ -109,7 +109,7 @@ const KuzuGrubuDetail = () => {
       name: "Kuzu Döş",
       price: "750,00₺",
       weight: "kg",
-      image: "/images/et_resimler/kuzu_dos.png",
+      image: "/images/et_resimler/kuzudös.png",
       description: "Yumuşak kuzu döş, fırın yemekleri için mükemmel.",
       features: [
         "Fırın için ideal",
@@ -134,7 +134,7 @@ const KuzuGrubuDetail = () => {
       name: "Kuzu Pirzola",
       price: "850,00₺",
       weight: "kg",
-      image: "/images/et_resimler/kuzu_pirzola.png",
+      image: "/images/et_resimler/kuzu-pirzola.png",
       description: "Premium kuzu pirzola, ızgara için mükemmel seçim.",
       features: [
         "Kemikli özel kesim",
@@ -159,7 +159,7 @@ const KuzuGrubuDetail = () => {
       name: "Kuzu But",
       price: "780,00₺",
       weight: "kg",
-      image: "/images/et_resimler/kuzu_but.png",
+      image: "/images/et_resimler/kuzu-but.png",
       description: "Taze kuzu but, çeşitli yemekler için ideal.",
       features: [
         "Çok amaçlı kullanım",
@@ -184,7 +184,7 @@ const KuzuGrubuDetail = () => {
       name: "Kuzu Küşleme",
       price: "820,00₺",
       weight: "kg",
-      image: "/images/et_resimler/kuzu_kusleme.png",
+      image: "/images/et_resimler/kuzuküşleme.png",
       description: "Özel kesim kuzu küşleme, mangal için mükemmel.",
       features: [
         "Mangal için ideal",
@@ -209,7 +209,7 @@ const KuzuGrubuDetail = () => {
       name: "Kuzu Külbastı",
       price: "800,00₺",
       weight: "kg",
-      image: "/images/et_resimler/kuzu_kulbasti.png",
+      image: "/images/et_resimler/kuzukülbastı.png",
       description: "Yumuşacık kuzu külbastı, hızlı pişirme için ideal.",
       features: [
         "Hızlı pişirme",
@@ -234,7 +234,7 @@ const KuzuGrubuDetail = () => {
       name: "Kuzu Lokum",
       price: "900,00₺",
       weight: "kg",
-      image: "/images/et_resimler/kuzu_lokum.png",
+      image: "/images/et_resimler/kuzulokum.png",
       description: "Premium kuzu lokum, en kaliteli kuzu eti kesimi.",
       features: [
         "En kaliteli kuzu eti",

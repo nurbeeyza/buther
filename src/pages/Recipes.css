@@ -51,10 +51,12 @@
 }
 
 .recipe-image img {
-  width: 100%;
+  width: 80%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   transition: transform 0.5s ease;
+  margin: 0 auto;
+  display: block;
 }
 
 .recipe-card:hover .recipe-image img {
@@ -121,3 +123,15 @@
     height: 200px;
   }
 }
+
+/* Specific styling for spaghetti image - wider and shorter */
+.recipe-card:nth-child(3) .recipe-image img {
+  width: 80%;
+  height: 80%;
+  object-fit: cover;
+  object-position: center;
+  margin: 25px auto 0;
+  display: block;
+}
+
+

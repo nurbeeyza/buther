@@ -26,7 +26,7 @@ const DanaBeefSteak = () => {
       name: "New York Steak",
       price: "900,00₺",
       weight: "kg",
-      image: "/images/et_resimler/new_york_steak.png",
+      image: "/images/et_resimler/newyorksteak.png",
       description: "Amerikan klasiği New York steak, mükemmel marbling yapısı."
     },
     {
@@ -34,7 +34,7 @@ const DanaBeefSteak = () => {
       name: "Toma Hawk Steak",
       price: "1000,00₺",
       weight: "kg",
-      image: "/images/et_resimler/toma_hawk_steak.png",
+      image: "/images/et_resimler/tomahawk.png",
       description: "Premium Toma Hawk steak, özel kesim ve kalın dilim."
     },
     {

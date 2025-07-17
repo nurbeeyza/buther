@@ -14,7 +14,7 @@ const RecipeDetail = () => {
         title: "Başpınarlar Pastırmalı Humus",
         shortDescription:
           "Geleneksel humus tarifimize Başpınarlar'ın özel pastırması ile lezzet katıyoruz.",
-        image: "/images/yemek_tarif/humus.png",
+        image: "/images/yemek_tarif/pastırmalıhumus.png",
         ingredients: [
           "3 su bardağı haşlanmış nohut",
           "1/3 su bardağı tahin",

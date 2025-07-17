@@ -9,7 +9,7 @@ const Recipes = () => {
       title: "Başpınarlar Pastırmalı Humus",
       description:
         "Pastırmalı humus için öncelikle haşlanmış nohutlatın kabuklarını soyalım. Bu şekilde humusumuz daha pürüzsüz olacaktır. Ardından blendere alalım. Üzerine tahin, sarımsak, kimyon ve tuzu ekleyelim.",
-      image: "/images/yemek_tarif/humus.png",
+      image: "/images/yemek_tarif/pastırmalıhumus.png",
     },
     {
       id: 2,

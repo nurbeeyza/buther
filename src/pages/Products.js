@@ -160,7 +160,7 @@ const Products = () => {
         name: "New York Steak",
         price: "900,00₺",
         weight: "kg",
-        image: "/images/et_resimler/new_york_steak.png",
+        image: "/images/et_resimler/newyorksteak.png",
         link: "/products/dana-beef-steak/3",
       },
       {
@@ -168,7 +168,7 @@ const Products = () => {
         name: "Toma Hawk Steak",
         price: "1000,00₺",
         weight: "kg",
-        image: "/images/et_resimler/toma_hawk_steak.png",
+        image: "/images/et_resimler/tomahawk.png",
         link: "/products/dana-beef-steak/4",
       },
       {

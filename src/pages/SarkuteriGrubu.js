@@ -74,7 +74,7 @@ const SarkuteriGrubu = () => {
       name: "Dana Antrikot Pastırma",
       price: "280,00₺",
       weight: "250 gr/paket",
-      image: "/images/et_resimler/dana_antrikot_pastirma.png",
+      image: "/images/et_resimler/danaantrikotpastırma.png",
       description: "Premium dana antrikot pastırma, geleneksel lezzet."
     },
     {
@@ -90,7 +90,7 @@ const SarkuteriGrubu = () => {
       name: "Dana Seçme Pastırma",
       price: "300,00₺",
       weight: "250 gr/paket",
-      image: "/images/et_resimler/dana_secme_pastirma.png",
+      image: "/images/et_resimler/danaseçmepastırma.png",
       description: "En kaliteli dana seçme pastırma."
     },
     {
