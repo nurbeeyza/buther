@@ -2272,21 +2272,108 @@ body {
   }
 }
 
-/* Page Container with Enhanced Top Padding */
-.page-container {
-  padding-top: 6rem !important; /* Increased from default 5rem */
-  min-height: calc(100vh - 200px);
+/* Global page spacing to ensure content is below navbar */
+main,
+.main-content,
+.page-content,
+[class*="page"],
+[class*="content"],
+.contact-hero,
+.about-hero,
+.products-page,
+.detail-page,
+.recipe-page,
+.tips-page,
+.branches-page {
+  margin-top: 80px;
 }
 
-/* Extra spacing for product listing pages */
+/* Specific page containers */
+.page-container {
+  padding-top: 6rem !important; /* Keep existing enhanced padding */
+  min-height: calc(100vh - 200px);
+  margin-top: 80px; /* Add margin for navbar clearance */
+}
+
 .page-container-extra {
   padding-top: 4rem !important;
   min-height: calc(100vh - 200px);
+  margin-top: 80px; /* Add margin for navbar clearance */
 }
 
-/* Header spacing for main content pages */
 .content-page-spacing {
   padding-top: 4rem !important;
+  margin-top: 80px; /* Add margin for navbar clearance */
+}
+
+/* Responsive adjustments for page margins */
+@media (max-width: 1000px) {
+  main,
+  .main-content,
+  .page-content,
+  [class*="page"],
+  [class*="content"],
+  .contact-hero,
+  .about-hero,
+  .products-page,
+  .detail-page,
+  .recipe-page,
+  .tips-page,
+  .branches-page {
+    margin-top: 85px;
+  }
+
+  .page-container,
+  .page-container-extra,
+  .content-page-spacing {
+    margin-top: 85px;
+  }
+}
+
+@media (max-width: 900px) {
+  main,
+  .main-content,
+  .page-content,
+  [class*="page"],
+  [class*="content"],
+  .contact-hero,
+  .about-hero,
+  .products-page,
+  .detail-page,
+  .recipe-page,
+  .tips-page,
+  .branches-page {
+    margin-top: 80px;
+  }
+
+  .page-container,
+  .page-container-extra,
+  .content-page-spacing {
+    margin-top: 80px;
+  }
+}
+
+@media (max-width: 770px) {
+  main,
+  .main-content,
+  .page-content,
+  [class*="page"],
+  [class*="content"],
+  .contact-hero,
+  .about-hero,
+  .products-page,
+  .detail-page,
+  .recipe-page,
+  .tips-page,
+  .branches-page {
+    margin-top: 85px;
+  }
+
+  .page-container,
+  .page-container-extra,
+  .content-page-spacing {
+    margin-top: 85px;
+  }
 }
 
 @media (max-width: 650px) {
