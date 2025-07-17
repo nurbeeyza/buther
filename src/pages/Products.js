@@ -495,23 +495,16 @@ const Products = () => {
 
           <div
             style={{
-              marginTop: 18,
-              padding: "1.1rem 0",
-              background: "linear-gradient(90deg, #800020, #d4af37)",
-              borderRadius: 10,
+              marginTop: 12,
+              padding: "8px 16px",
+              background: "linear-gradient(135deg, #f8f9fa, #e9ecef)",
+              borderRadius: 8,
               textAlign: "center",
-              color: "#fff",
-              fontWeight: 800,
-              fontSize: 20,
-              letterSpacing: 1,
-              border: "none",
-              boxShadow: "0 4px 16px #80002022",
-              width: "100%",
-              cursor: "pointer",
-              transition: "all 0.2s",
+              color: "var(--primary-color)",
+              fontWeight: 600,
+              fontSize: 14,
+              border: "1px solid #dee2e6"
             }}
-            onMouseOver={e => { e.currentTarget.style.background = 'linear-gradient(90deg, #d4af37, #800020)'; e.currentTarget.style.color = '#800020'; }}
-            onMouseOut={e => { e.currentTarget.style.background = 'linear-gradient(90deg, #800020, #d4af37)'; e.currentTarget.style.color = '#fff'; }}
           >
             Detayları Görüntüle
           </div>
