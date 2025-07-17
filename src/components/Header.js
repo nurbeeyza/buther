@@ -28,7 +28,7 @@ const Header = () => {
 
         <div className="logo">
           <Link to="/">
-            <img src="images/logo1.png" alt="Başpınarlar Logo" />
+            <img src="/images/logo-main.png" alt="Başpınarlar Logo" />
           </Link>
         </div>
 
@@ -56,7 +56,11 @@ const Header = () => {
               </Link>
             </li>
             <li className="nav-item">
-              <Link to="/kitchen" className="nav-link" onClick={handleLinkClick}>
+              <Link
+                to="/kitchen"
+                className="nav-link"
+                onClick={handleLinkClick}
+              >
                 BAŞPINARLAR MUTFAK
               </Link>
             </li>

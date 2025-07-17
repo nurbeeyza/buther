@@ -166,41 +166,28 @@ const Home = () => {
           </div>
           <div className="categories-grid">
             {categories.map((category, index) => (
-              <div key={index} className="category-card" style={{ boxShadow: '0 8px 32px #80002022', borderRadius: 16, overflow: 'hidden', background: '#fff', transition: 'transform 0.2s', minHeight: 420, display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}
-                onMouseOver={e => e.currentTarget.style.transform = 'translateY(-8px) scale(1.03)'}
-                onMouseOut={e => e.currentTarget.style.transform = 'none'}
-              >
-                <div className="category-image" style={{ height: 300, background: '#f8f9fa', display: 'flex', alignItems: 'flex-start', justifyContent: 'center' }}>
-                  <img src={category.image} alt={category.name} style={{ maxHeight: 220, maxWidth: '90%', marginTop: 8, marginBottom: 'auto' }} />
-                </div>
-                <div className="category-overlay" style={{ position: 'static', background: 'none', color: '#800020', padding: 24, textAlign: 'center', minHeight: 180, display: 'flex', flexDirection: 'column', alignItems: 'center', flex: 1, justifyContent: 'space-between' }}>
-                  <h3 style={{ fontSize: 26, fontWeight: 900, marginBottom: 8, color: '#800020', letterSpacing: 1, textShadow: '0 2px 8px #800020' }}>{category.name}</h3>
-                  <p style={{ fontSize: 16, color: '#444', marginBottom: 18 }}>{category.description}</p>
-                  <div style={{ flex: 1 }} />
-                  <Link
-                    to={category.link}
-                    className="category-link"
-                    style={{
-                      display: 'inline-block',
-                      fontSize: 20,
-                      fontWeight: 700,
-                      padding: '1.1rem 2.5rem',
-                      background: 'linear-gradient(90deg, #800020, #d4af37)',
-                      color: '#fff',
-                      borderRadius: 8,
-                      textDecoration: 'none',
-                      marginTop: 'auto',
-                      boxShadow: '0 4px 16px #80002022',
-                      letterSpacing: 1,
-                      transition: 'all 0.2s',
-                      width: '100%',
-                      maxWidth: 260,
-                    }}
-                    onMouseOver={e => { e.currentTarget.style.background = 'linear-gradient(90deg, #d4af37, #800020)'; e.currentTarget.style.color = '#800020'; }}
-                    onMouseOut={e => { e.currentTarget.style.background = 'linear-gradient(90deg, #800020, #d4af37)'; e.currentTarget.style.color = '#fff'; }}
-                  >
-                    Detayları Görüntüle
-                  </Link>
+              <div key={index} className="category-card">
+                <div className="category-image">
+                  <img src={category.image} alt={category.name} />
+                  <div className="category-overlay">
+                    <h3>{category.name}</h3>
+                    <p>{category.description}</p>
+                    <Link
+                      to={category.link}
+                      className="category-link"
+                      onClick={(e) => {
+                        console.log(
+                          "Link clicked!",
+                          category.name,
+                          category.link
+                        );
+                        console.log("Event:", e);
+                        console.log("Current URL:", window.location.href);
+                      }}
+                    >
+                      Tümünü Gör
+                    </Link>
+                  </div>
                 </div>
               </div>
             ))}
