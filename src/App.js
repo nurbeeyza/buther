@@ -25,7 +25,6 @@ import DanaGrubu from "./pages/DanaGrubu";
 import DanaGrubuDetail from "./pages/DanaGrubuDetail";
 import KuzuGrubu from "./pages/KuzuGrubu";
 import KuzuGrubuDetail from "./pages/KuzuGrubuDetail";
-import BeefSteakDetail from "./pages/BeefSteakDetail";
 import SarkuteriGrubu from "./pages/SarkuteriGrubu";
 import SarkuteriGrubuDetail from "./pages/SarkuteriGrubuDetail";
 import IslenmisUrunGrubu from "./pages/IslenmisUrunGrubu";
@@ -64,7 +63,10 @@ function App() {
               path="/products/kuzu-grubu/:id"
               element={<KuzuGrubuDetail />}
             />
-            <Route path="/products/dana-beef-steak" element={<DanaBeefSteak />} />
+            <Route
+              path="/products/dana-beef-steak"
+              element={<DanaBeefSteak />}
+            />
             <Route
               path="/products/dana-beef-steak/:id"
               element={<DanaBeefSteakDetail />}
