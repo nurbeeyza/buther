@@ -366,24 +366,24 @@ const Products = () => {
       <div
         style={{
           background: "#fff",
-          borderRadius: 12,
+          borderRadius: 16,
           overflow: "hidden",
-          boxShadow: "0 3px 12px #80002011",
+          boxShadow: "0 8px 32px #80002022",
           transition: "all 0.3s ease",
           position: "relative",
           cursor: "pointer",
-          borderLeft: "4px solid var(--primary-color)",
-          height: "320px",
+          borderLeft: "6px solid var(--primary-color)",
+          height: "420px",
           display: "flex",
           flexDirection: "column",
         }}
         onMouseEnter={(e) => {
-          e.currentTarget.style.transform = "translateY(-6px)";
-          e.currentTarget.style.boxShadow = "0 6px 20px #80002022";
+          e.currentTarget.style.transform = "translateY(-8px) scale(1.03)";
+          e.currentTarget.style.boxShadow = "0 12px 32px #80002033";
         }}
         onMouseLeave={(e) => {
           e.currentTarget.style.transform = "translateY(0)";
-          e.currentTarget.style.boxShadow = "0 3px 12px #80002011";
+          e.currentTarget.style.boxShadow = "0 8px 32px #80002022";
         }}
       >
         {/* Resim Alanı */}
@@ -391,7 +391,7 @@ const Products = () => {
           style={{
             position: "relative",
             width: "100%",
-            height: 140,
+            height: 200,
             overflow: "hidden",
             flexShrink: 0,
             display: "flex",
@@ -404,13 +404,15 @@ const Products = () => {
             src={product.image}
             alt={product.name}
             style={{
-              maxWidth: "80%",
-              maxHeight: "80%",
+              width: 180,
+              height: 180,
               objectFit: "contain",
               transition: "transform 0.3s ease",
+              display: "block",
+              margin: "0 auto",
             }}
             onMouseEnter={(e) => {
-              e.target.style.transform = "scale(1.05)";
+              e.target.style.transform = "scale(1.08)";
             }}
             onMouseLeave={(e) => {
               e.target.style.transform = "scale(1)";
@@ -421,17 +423,18 @@ const Products = () => {
           <div
             style={{
               position: "absolute",
-              top: 8,
-              right: 8,
+              top: 12,
+              right: 12,
               background:
                 "linear-gradient(135deg, var(--primary-color), var(--dark-red))",
               color: "white",
-              padding: "4px 10px",
-              borderRadius: 12,
-              fontWeight: 700,
-              fontSize: 12,
-              boxShadow: "0 3px 8px #80002033",
+              padding: "8px 18px",
+              borderRadius: 20,
+              fontWeight: 800,
+              fontSize: 18,
+              boxShadow: "0 4px 12px #80002033",
               transform: "rotate(2deg)",
+              letterSpacing: 1,
             }}
           >
             {product.price}
@@ -441,10 +444,10 @@ const Products = () => {
         {/* İçerik Alanı */}
         <div
           style={{
-            padding: "1rem",
+            padding: "1.3rem 1.2rem 0.5rem 1.2rem",
             display: "flex",
             flexDirection: "column",
-            gap: 4,
+            gap: 8,
             flex: 1,
             justifyContent: "space-between",
           }}
@@ -452,12 +455,14 @@ const Products = () => {
           <div>
             <h3
               style={{
-                color: "var(--primary-color)",
-                fontSize: "1.1rem",
-                fontWeight: 700,
+                color: "#800020",
+                fontSize: "1.5rem",
+                fontWeight: 900,
                 margin: 0,
                 lineHeight: 1.3,
-                marginBottom: "0.3rem",
+                marginBottom: "0.5rem",
+                letterSpacing: 1,
+                textShadow: "0 2px 8px #80002022",
               }}
             >
               {product.name}
@@ -466,27 +471,47 @@ const Products = () => {
             <p
               style={{
                 color: "#888",
-                fontSize: 10,
-                margin: "0 0 0.3rem 0",
-                fontWeight: 600,
+                fontSize: 15,
+                margin: "0 0 0.5rem 0",
+                fontWeight: 700,
+                letterSpacing: 0.5,
               }}
             >
               {product.weight}
+            </p>
+
+            <p
+              style={{
+                color: "#444",
+                fontSize: 17,
+                lineHeight: 1.5,
+                margin: 0,
+                fontWeight: 500,
+              }}
+            >
+              {product.description}
             </p>
           </div>
 
           <div
             style={{
-              marginTop: 6,
-              padding: "4px 10px",
-              background: "linear-gradient(135deg, #f8f9fa, #e9ecef)",
-              borderRadius: 4,
+              marginTop: 18,
+              padding: "1.1rem 0",
+              background: "linear-gradient(90deg, #800020, #d4af37)",
+              borderRadius: 10,
               textAlign: "center",
-              color: "var(--primary-color)",
-              fontWeight: 600,
-              fontSize: 10,
-              border: "1px solid #dee2e6",
+              color: "#fff",
+              fontWeight: 800,
+              fontSize: 20,
+              letterSpacing: 1,
+              border: "none",
+              boxShadow: "0 4px 16px #80002022",
+              width: "100%",
+              cursor: "pointer",
+              transition: "all 0.2s",
             }}
+            onMouseOver={e => { e.currentTarget.style.background = 'linear-gradient(90deg, #d4af37, #800020)'; e.currentTarget.style.color = '#800020'; }}
+            onMouseOut={e => { e.currentTarget.style.background = 'linear-gradient(90deg, #800020, #d4af37)'; e.currentTarget.style.color = '#fff'; }}
           >
             Detayları Görüntüle
           </div>

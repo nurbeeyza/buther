@@ -25,13 +25,14 @@ import DanaGrubu from "./pages/DanaGrubu";
 import DanaGrubuDetail from "./pages/DanaGrubuDetail";
 import KuzuGrubu from "./pages/KuzuGrubu";
 import KuzuGrubuDetail from "./pages/KuzuGrubuDetail";
-import DanaBeefSteak from "./pages/DanaBeefSteak";
-import DanaBeefSteakDetail from "./pages/DanaBeefSteakDetail";
+import BeefSteakDetail from "./pages/BeefSteakDetail";
 import SarkuteriGrubu from "./pages/SarkuteriGrubu";
 import SarkuteriGrubuDetail from "./pages/SarkuteriGrubuDetail";
 import IslenmisUrunGrubu from "./pages/IslenmisUrunGrubu";
 import IslenmisUrunGrubuDetail from "./pages/IslenmisUrunGrubuDetail";
 import Kitchen from "./pages/Kitchen";
+import DanaBeefSteak from "./pages/DanaBeefSteak";
+import DanaBeefSteakDetail from "./pages/DanaBeefSteakDetail";
 import "./index.css";
 import { useEffect } from "react";
 
