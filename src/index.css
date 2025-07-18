@@ -1081,7 +1081,7 @@ body {
 }
 
 .category-card {
-  background: var(--white);
+  /* background: var(--white); */
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -2857,12 +2857,6 @@ main,
 /* Products page main grid - single column */
 [style*='gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))"'] {
   grid-template-columns: 1fr !important;
-}
-
-/* Home page categories grid - single column */
-.categories-grid {
-  grid-template-columns: 1fr !important;
-  gap: 1.5rem !important;
 }
 
 /* Make sure all cards are properly sized */

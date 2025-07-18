@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useCallback } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import {
   Link,
@@ -19,6 +19,23 @@ const Products = () => {
     (state) => state.category.selectedCategory
   );
 
+  // Memoize updateUrl to avoid recreating it on every render
+  const updateUrl = useCallback(
+    (categoryId) => {
+      const newSearchParams = new URLSearchParams();
+      if (categoryId !== "all") {
+        newSearchParams.set("category", categoryId);
+      }
+
+      const newUrl = newSearchParams.toString()
+        ? `${location.pathname}?${newSearchParams.toString()}`
+        : location.pathname;
+
+      navigate(newUrl, { replace: true });
+    },
+    [location.pathname, navigate]
+  );
+
   // Initialize from URL on mount
   useEffect(() => {
     const urlCategory = searchParams.get("category");
@@ -29,7 +46,7 @@ const Products = () => {
       // If URL has no category but store has one, update URL
       updateUrl(selectedCategory);
     }
-  }, []); // Only run on mount
+  }, [searchParams, selectedCategory, dispatch, updateUrl]);
 
   // Listen to URL changes (back/forward navigation)
   useEffect(() => {
@@ -37,20 +54,7 @@ const Products = () => {
     if (urlCategory !== selectedCategory) {
       dispatch(syncFromUrl(urlCategory));
     }
-  }, [searchParams.toString()]);
-
-  const updateUrl = (categoryId) => {
-    const newSearchParams = new URLSearchParams();
-    if (categoryId !== "all") {
-      newSearchParams.set("category", categoryId);
-    }
-
-    const newUrl = newSearchParams.toString()
-      ? `${location.pathname}?${newSearchParams.toString()}`
-      : location.pathname;
-
-    navigate(newUrl, { replace: true });
-  };
+  }, [searchParams, selectedCategory, dispatch]);
 
   const handleCategoryChange = (categoryId) => {
     // Update Redux store (this will also update localStorage)
