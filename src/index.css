@@ -391,25 +391,6 @@ body {
   overflow: hidden;
 }
 
-/* Responsive hero margin adjustments */
-@media (max-width: 1000px) {
-  .hero {
-    margin-top: 65px;
-  }
-}
-
-@media (max-width: 900px) {
-  .hero {
-    margin-top: 60px;
-  }
-}
-
-@media (max-width: 770px) {
-  .hero {
-    margin-top: 65px;
-  }
-}
-
 .hero-background {
   position: absolute;
   top: 0;
@@ -1769,11 +1750,6 @@ body {
     padding: 0 15px;
   }
 
-  /* Header Mobile Styles */
-  .header {
-    padding: 0.5rem 0;
-  }
-
   .logo {
     position: absolute;
     left: 50%;
@@ -2236,23 +2212,6 @@ body {
 
   /* ===== FLEX LAYOUTS - Convert ALL to vertical (column) ===== */
 
-  /* Force ALL flex containers to column direction */
-  .flex,
-  [class*="flex"],
-  [style*="display: flex"],
-  [style*="display:flex"],
-  .d-flex,
-  .flex-container {
-    flex-direction: column !important;
-    align-items: stretch !important;
-  }
-
-  /* Header container - make vertical on mobile */
-  .header-container {
-    flex-direction: column !important;
-    gap: 1rem !important;
-  }
-
   /* Footer bottom - vertical layout */
   .footer-bottom {
     flex-direction: column !important;
@@ -2542,7 +2501,7 @@ main,
 }
 
 /* Responsive adjustments for page margins */
-@media (max-width: 1000px) {
+/* @media (max-width: 1000px) {
   main,
   .main-content,
   .page-content,
@@ -2563,9 +2522,9 @@ main,
   .content-page-spacing {
     margin-top: 85px;
   }
-}
+} */
 
-@media (max-width: 900px) {
+/* @media (max-width: 900px) {
   main,
   .main-content,
   .page-content,
@@ -2586,9 +2545,9 @@ main,
   .content-page-spacing {
     margin-top: 80px;
   }
-}
+} */
 
-@media (max-width: 770px) {
+/* @media (max-width: 770px) {
   main,
   .main-content,
   .page-content,
@@ -2609,7 +2568,7 @@ main,
   .content-page-spacing {
     margin-top: 85px;
   }
-}
+} */
 
 @media (max-width: 650px) {
   .footer-content {
