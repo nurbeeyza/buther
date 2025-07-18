@@ -1,57 +1,63 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
 import {
   Link,
   useLocation,
   useNavigate,
   useSearchParams,
 } from "react-router-dom";
+import { setCategory, syncFromUrl } from "../store/categorySlice";
 
 const Products = () => {
-  const [searchParams, setSearchParams] = useSearchParams();
-  const location = useLocation();
+  const [searchParams] = useSearchParams();
   const navigate = useNavigate();
+  const location = useLocation();
+  const dispatch = useDispatch();
 
-  // Initialize selected category from URL params, localStorage, or default to "all"
-  const getInitialCategory = () => {
-    const urlCategory = searchParams.get("category");
-    if (urlCategory) return urlCategory;
+  // Get category from Redux store
+  const selectedCategory = useSelector(
+    (state) => state.category.selectedCategory
+  );
 
-    const savedCategory = localStorage.getItem("selectedProductCategory");
-    if (savedCategory) return savedCategory;
-
-    return "all";
-  };
-
-  const [selectedCategory, setSelectedCategory] = useState(getInitialCategory);
-
-  // Update URL and localStorage when category changes
-  useEffect(() => {
-    const newSearchParams = new URLSearchParams(searchParams);
-    if (selectedCategory !== "all") {
-      newSearchParams.set("category", selectedCategory);
-    } else {
-      newSearchParams.delete("category");
-    }
-
-    // Update URL without causing a re-render
-    navigate(`${location.pathname}?${newSearchParams.toString()}`, {
-      replace: true,
-    });
-
-    // Save to localStorage
-    localStorage.setItem("selectedProductCategory", selectedCategory);
-  }, [selectedCategory, navigate, location.pathname, searchParams]);
-
-  // Listen for URL parameter changes (e.g., when coming back from detail pages)
+  // Initialize from URL on mount
   useEffect(() => {
     const urlCategory = searchParams.get("category");
     if (urlCategory && urlCategory !== selectedCategory) {
-      setSelectedCategory(urlCategory);
+      // If URL has a category different from store, sync the store
+      dispatch(syncFromUrl(urlCategory));
+    } else if (!urlCategory && selectedCategory !== "all") {
+      // If URL has no category but store has one, update URL
+      updateUrl(selectedCategory);
     }
-  }, [searchParams, selectedCategory]);
+  }, []); // Only run on mount
+
+  // Listen to URL changes (back/forward navigation)
+  useEffect(() => {
+    const urlCategory = searchParams.get("category") || "all";
+    if (urlCategory !== selectedCategory) {
+      dispatch(syncFromUrl(urlCategory));
+    }
+  }, [searchParams.toString()]);
+
+  const updateUrl = (categoryId) => {
+    const newSearchParams = new URLSearchParams();
+    if (categoryId !== "all") {
+      newSearchParams.set("category", categoryId);
+    }
+
+    const newUrl = newSearchParams.toString()
+      ? `${location.pathname}?${newSearchParams.toString()}`
+      : location.pathname;
+
+    navigate(newUrl, { replace: true });
+  };
 
   const handleCategoryChange = (categoryId) => {
-    setSelectedCategory(categoryId);
+    // Update Redux store (this will also update localStorage)
+    dispatch(setCategory(categoryId));
+
+    // Update URL
+    updateUrl(categoryId);
   };
 
   const categories = [

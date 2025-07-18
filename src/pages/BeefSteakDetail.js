@@ -1,15 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import { useParams, Link } from "react-router-dom";
 
 const BeefSteakDetail = () => {
   const { id } = useParams();
-
-  const [magnifier, setMagnifier] = useState({
-    isVisible: false,
-    x: 0,
-    y: 0,
-    backgroundPosition: "0% 0%",
-  });
 
   const products = {
     1: {
@@ -18,9 +11,7 @@ const BeefSteakDetail = () => {
       weight: "300-400g",
       image: "/images/et_resimler/dallas_steak.png",
       description:
-        "Dallas Steak, Amerika'nın en ünlü steaklerinden biridir. Özel olarak seçilmiş dana etinin en kaliteli bölümünden elde edilir. Yumuşaklığı ve yoğun lezzetiyle öne çıkar. Dallas Steak, yüksek ateşte mühürlenip kısa sürede pişirilerek sulu ve aromatik bir sonuç elde edilir. Genellikle deniz tuzu ve taze çekilmiş karabiber ile sade şekilde servis edilir. Yanında közlenmiş sebzeler ve patates püresiyle mükemmel bir uyum sağlar. Etin doğal aroması ve dokusu, steak severler için unutulmaz bir deneyim sunar.",
-      detailedDescription:
-        "Dallas Steak, Amerika'nın en ünlü steak çeşitlerinden biridir. Özel olarak seçilmiş dana etinin en kaliteli bölümlerinden elde edilen bu steak, yumuşaklığı ve lezzeti ile ünlüdür. Uzman kasaplarımız tarafından özenle kesilir ve özel marinasyon işleminden geçirilir. Dallas Steak, yüksek ateşte kısa sürede mühürlenerek pişirilir ve içi sulu kalır. Etin doğal aroması ve dokusu korunur. Genellikle deniz tuzu ve taze çekilmiş karabiber ile sade şekilde servis edilir. Yanında közlenmiş sebzeler, patates püresi veya taze salata ile sunulabilir. Steak severler için unutulmaz bir lezzet deneyimi sunar.",
+        "Dallas Steak, Amerika'nın en ünlü steaklerinden biridir. Özel olarak seçilmiş dana etinin en kaliteli bölümünden elde edilir. Yumuşaklığı ve yoğun lezzetiyle öne çıkar.",
       features: [
         "Premium kalite dana eti",
         "Özel kesim tekniği",
@@ -40,10 +31,7 @@ const BeefSteakDetail = () => {
         protein: "26g",
         fat: "15g",
         calories: "250 kcal",
-        iron: "2.5mg",
       },
-      origin: "Yerli Dana",
-      storage: "0-4°C'de muhafaza edin, 2-3 gün içinde tüketin",
     },
     2: {
       name: "Dana Antrikot",
@@ -257,62 +245,31 @@ const BeefSteakDetail = () => {
   }
 
   return (
-    <>
-      <style>
-        {`
-          @media (max-width: 700px) {
-            .detail-container {
-              grid-template-columns: 1fr !important;
-              gap: 2rem !important;
-            }
-            .product-image {
-              max-width: 80% !important;
-              margin: 0 auto !important;
-              display: block !important;
-            }
-            .product-info {
-              order: 2 !important;
-            }
-            .cooking-nutrition {
-              order: 3 !important;
-              margin-top: 2rem !important;
-            }
-            .nutrition-grid {
-              grid-template-columns: repeat(2, 1fr) !important;
-            }
-            .detail-page {
-              padding: 1rem !important;
-            }
-          }
-        `}
-      </style>
-      <div className="detail-page" style={{ padding: "2rem", maxWidth: "1200px", margin: "0 auto" }}>
-        <div
-          className="detail-container"
-          style={{
-            display: "grid",
-            gridTemplateColumns: "1fr 1fr",
-            gap: "3rem",
-            alignItems: "start",
-          }}
-        >
-          {/* Sol taraf - Ürün resmi */}
-          <div>
-            <img
-              src={product.image}
-              alt={product.name}
-              className="product-image"
-              style={{
-                width: "100%",
-                height: "auto",
-                borderRadius: "12px",
-                boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
-              }}
-            />
-          </div>
+    <div style={{ padding: "2rem", maxWidth: "1200px", margin: "0 auto" }}>
+      <div
+        style={{
+          display: "grid",
+          gridTemplateColumns: "1fr 1fr",
+          gap: "3rem",
+          alignItems: "start",
+        }}
+      >
+        {/* Sol taraf - Ürün resmi */}
+        <div>
+          <img
+            src={product.image}
+            alt={product.name}
+            style={{
+              width: "100%",
+              height: "auto",
+              borderRadius: "12px",
+              boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
+            }}
+          />
+        </div>
 
-          {/* Sağ taraf - Ürün bilgileri */}
-          <div className="product-info">
+        {/* Sağ taraf - Ürün bilgileri */}
+        <div>
           <h1
             style={{
               color: "var(--primary-color)",
@@ -323,6 +280,7 @@ const BeefSteakDetail = () => {
           >
             {product.name}
           </h1>
+
           <div
             style={{
               fontSize: "1.5rem",
@@ -333,6 +291,7 @@ const BeefSteakDetail = () => {
           >
             {product.price} / {product.weight}
           </div>
+
           <p
             style={{
               fontSize: "1.1rem",
@@ -350,72 +309,69 @@ const BeefSteakDetail = () => {
               Özellikler
             </h3>
             <ul style={{ listStyle: "none", padding: 0 }}>
-              {product.features &&
-                product.features.map((feature, index) => (
-                  <li
-                    key={index}
+              {product.features.map((feature, index) => (
+                <li
+                  key={index}
+                  style={{
+                    padding: "0.5rem 0",
+                    borderBottom: "1px solid #eee",
+                    display: "flex",
+                    alignItems: "center",
+                  }}
+                >
+                  <span
                     style={{
-                      padding: "0.5rem 0",
-                      borderBottom: "1px solid #eee",
-                      display: "flex",
-                      alignItems: "center",
+                      color: "var(--primary-color)",
+                      marginRight: "0.5rem",
                     }}
                   >
-                    <span
-                      style={{
-                        color: "var(--primary-color)",
-                        marginRight: "0.5rem",
-                      }}
-                    >
-                      ✓
-                    </span>
-                    {feature}
-                  </li>
-                ))}
+                    ✓
+                  </span>
+                  {feature}
+                </li>
+              ))}
             </ul>
           </div>
 
           {/* Pişirme önerileri */}
-          <div className="cooking-nutrition" style={{ marginBottom: "2rem" }}>
+          <div style={{ marginBottom: "2rem" }}>
             <h3 style={{ color: "var(--primary-color)", marginBottom: "1rem" }}>
               Pişirme Önerileri
             </h3>
             <ul style={{ listStyle: "none", padding: 0 }}>
-              {product.cookingTips &&
-                product.cookingTips.map((tip, index) => (
-                  <li
-                    key={index}
+              {product.cookingTips.map((tip, index) => (
+                <li
+                  key={index}
+                  style={{
+                    padding: "0.5rem 0",
+                    borderBottom: "1px solid #eee",
+                    display: "flex",
+                    alignItems: "center",
+                  }}
+                >
+                  <span
                     style={{
-                      padding: "0.5rem 0",
-                      borderBottom: "1px solid #eee",
-                      display: "flex",
-                      alignItems: "center",
+                      color: "var(--primary-color)",
+                      marginRight: "0.5rem",
                     }}
                   >
-                    <span
-                      style={{
-                        color: "var(--primary-color)",
-                        marginRight: "0.5rem",
-                      }}
-                    >
-                      •
-                    </span>
-                    {tip}
-                  </li>
-                ))}
+                    •
+                  </span>
+                  {tip}
+                </li>
+              ))}
             </ul>
           </div>
 
           {/* Besin değerleri */}
-          <div className="cooking-nutrition" style={{ marginBottom: "2rem" }}>
+          <div style={{ marginBottom: "2rem" }}>
             <h3 style={{ color: "var(--primary-color)", marginBottom: "1rem" }}>
               Besin Değerleri (100g)
             </h3>
             <div
-              className="nutrition-grid"
               style={{
                 display: "grid",
-                gridTemplateColumns: "repeat(4, 1fr)",
+                gridTemplateColumns: "repeat(3, 1fr)",
                 gap: "1rem",
               }}
             >
@@ -432,9 +388,7 @@ const BeefSteakDetail = () => {
                 >
                   Protein
                 </div>
-                <div>
-                  {product.nutritionalInfo && product.nutritionalInfo.protein}
-                </div>
+                <div>{product.nutritionalInfo.protein}</div>
               </div>
               <div
                 style={{
@@ -449,9 +403,7 @@ const BeefSteakDetail = () => {
                 >
                   Yağ
                 </div>
-                <div>
-                  {product.nutritionalInfo && product.nutritionalInfo.fat}
-                </div>
+                <div>{product.nutritionalInfo.fat}</div>
               </div>
               <div
                 style={{
@@ -466,37 +418,8 @@ const BeefSteakDetail = () => {
                 >
                   Kalori
                 </div>
-                <div>
-                  {product.nutritionalInfo && product.nutritionalInfo.calories}
-                </div>
+                <div>{product.nutritionalInfo.calories}</div>
               </div>
-              <div
-                style={{
-                  textAlign: "center",
-                  padding: "1rem",
-                  background: "#f8f9fa",
-                  borderRadius: "8px",
-                }}
-              >
-                <div
-                  style={{ fontWeight: "bold", color: "var(--primary-color)" }}
-                >
-                  Demir
-                </div>
-                <div>
-                  {product.nutritionalInfo && product.nutritionalInfo.iron}
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Menşei ve Saklama */}
-          <div style={{ marginBottom: "2rem" }}>
-            <div>
-              <strong>Menşei:</strong> {product.origin}
-            </div>
-            <div>
-              <strong>Saklama:</strong> {product.storage}
             </div>
           </div>
 
@@ -505,32 +428,26 @@ const BeefSteakDetail = () => {
             to="/products/beef-steak"
             style={{
               display: "inline-block",
-              background:
-                "linear-gradient(135deg, var(--primary-color), var(--dark-red))",
-              color: "white",
               padding: "1rem 2rem",
-              borderRadius: 8,
+              background: "var(--primary-color)",
+              color: "white",
               textDecoration: "none",
-              fontWeight: 600,
-              transition: "all 0.3s ease",
-              boxShadow: "0 4px 12px #80002033",
-              marginTop: "1rem",
+              borderRadius: "8px",
+              fontWeight: "600",
+              textAlign: "center",
             }}
-            onMouseEnter={(e) => {
-              e.target.style.transform = "translateY(-2px)";
-              e.target.style.boxShadow = "0 6px 16px #80002044";
-            }}
-            onMouseLeave={(e) => {
-              e.target.style.transform = "translateY(0)";
-              e.target.style.boxShadow = "0 4px 12px #80002033";
+            onClick={() => {
+              // Ensure scroll to top when navigating back
+              setTimeout(() => {
+                window.scrollTo({ top: 0, behavior: "smooth" });
+              }, 100);
             }}
           >
-            ← Beef Steak Ürünlerine Dön
+            Beef Steak Ürünlerine Dön
           </Link>
         </div>
       </div>
     </div>
-    </>
   );
 };
 
