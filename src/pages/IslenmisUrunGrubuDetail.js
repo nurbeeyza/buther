@@ -16,19 +16,19 @@ const IslenmisUrunGrubuDetail = () => {
         "Özel baharat karışımı",
         "Hazır köfte",
         "Pratik kullanım",
-        "Hijyenik paketleme"
+        "Hijyenik paketleme",
       ],
       cookingTips: [
         "Tavada orta ateşte pişirin",
         "Her iki tarafı 4-5 dakika",
         "Fazla çevirmeyin",
-        "Sıcak servis yapın"
+        "Sıcak servis yapın",
       ],
       nutritionalInfo: {
         protein: "18g",
         fat: "16g",
-        calories: "220 kcal"
-      }
+        calories: "220 kcal",
+      },
     },
     2: {
       name: "Dana Sucuk",
@@ -41,19 +41,19 @@ const IslenmisUrunGrubuDetail = () => {
         "Geleneksel tarif",
         "Kahvaltı için ideal",
         "Uzun raf ömrü",
-        "Doğal kılıf"
+        "Doğal kılıf",
       ],
       cookingTips: [
         "Tavada hafif pişirin",
         "Direkt tüketilebilir",
         "Kahvaltıda peynir ile servis edin",
-        "Soğuk servis yapın"
+        "Soğuk servis yapın",
       ],
       nutritionalInfo: {
         protein: "20g",
         fat: "22g",
-        calories: "280 kcal"
-      }
+        calories: "280 kcal",
+      },
     },
     3: {
       name: "Dana Hamburger Köfte",
@@ -66,45 +66,46 @@ const IslenmisUrunGrubuDetail = () => {
         "Hamburger için ideal",
         "4 adet köfte",
         "Hazır şekilli",
-        "Pratik kullanım"
+        "Pratik kullanım",
       ],
       cookingTips: [
         "Tavada orta ateşte pişirin",
         "Her iki tarafı 3-4 dakika",
         "Fazla çevirmeyin",
-        "Hamburger ekmeği ile servis edin"
+        "Hamburger ekmeği ile servis edin",
       ],
       nutritionalInfo: {
         protein: "19g",
         fat: "15g",
-        calories: "210 kcal"
-      }
+        calories: "210 kcal",
+      },
     },
     4: {
       name: "Dana İnegöl Köfte",
       price: "220,00₺",
       weight: "400 gr/paket",
       image: "/images/et_resimler/görye_köfte.png",
-      description: "Geleneksel İnegöl köftesi, özel baharatlarla hazırlanmıştır.",
+      description:
+        "Geleneksel İnegöl köftesi, özel baharatlarla hazırlanmıştır.",
       features: [
         "Geleneksel İnegöl tarifi",
         "Özel baharat karışımı",
         "Hazır köfte",
         "Pratik kullanım",
-        "Hijyenik paketleme"
+        "Hijyenik paketleme",
       ],
       cookingTips: [
         "Tavada orta ateşte pişirin",
         "Her iki tarafı 4-5 dakika",
         "Fazla çevirmeyin",
-        "Sıcak servis yapın"
+        "Sıcak servis yapın",
       ],
       nutritionalInfo: {
         protein: "18g",
         fat: "16g",
-        calories: "220 kcal"
-      }
-    }
+        calories: "220 kcal",
+      },
+    },
   };
 
   const product = products[id];
@@ -113,14 +114,23 @@ const IslenmisUrunGrubuDetail = () => {
     return (
       <div style={{ textAlign: "center", padding: "2rem" }}>
         <h2>Ürün bulunamadı</h2>
-        <Link to="/products/islenmis-urun-grubu">İşlenmiş Ürün Grubu sayfasına dön</Link>
+        <Link to="/products/islenmis-urun-grubu">
+          İşlenmiş Ürün Grubu sayfasına dön
+        </Link>
       </div>
     );
   }
 
   return (
     <div style={{ padding: "2rem", maxWidth: "1200px", margin: "0 auto" }}>
-      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "3rem", alignItems: "start" }}>
+      <div
+        style={{
+          display: "grid",
+          gridTemplateColumns: "1fr 1fr",
+          gap: "3rem",
+          alignItems: "start",
+        }}
+      >
         {/* Sol taraf - Ürün resmi */}
         <div>
           <img
@@ -130,37 +140,70 @@ const IslenmisUrunGrubuDetail = () => {
               width: "100%",
               height: "auto",
               borderRadius: "12px",
-              boxShadow: "0 4px 12px rgba(0,0,0,0.1)"
+              boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
             }}
           />
         </div>
 
         {/* Sağ taraf - Ürün bilgileri */}
         <div>
-          <h1 style={{ color: "var(--primary-color)", fontSize: "2.5rem", fontWeight: 800, marginBottom: "1rem" }}>
+          <h1
+            style={{
+              color: "var(--primary-color)",
+              fontSize: "2.5rem",
+              fontWeight: 800,
+              marginBottom: "1rem",
+            }}
+          >
             {product.name}
           </h1>
-          
-          <div style={{ fontSize: "1.5rem", fontWeight: "bold", color: "#e74c3c", marginBottom: "1rem" }}>
+
+          <div
+            style={{
+              fontSize: "1.5rem",
+              fontWeight: "bold",
+              color: "#e74c3c",
+              marginBottom: "1rem",
+            }}
+          >
             {product.price} / {product.weight}
           </div>
-          
-          <p style={{ fontSize: "1.1rem", color: "#666", lineHeight: 1.6, marginBottom: "2rem" }}>
+
+          <p
+            style={{
+              fontSize: "1.1rem",
+              color: "#666",
+              lineHeight: 1.6,
+              marginBottom: "2rem",
+            }}
+          >
             {product.description}
           </p>
 
           {/* Özellikler */}
           <div style={{ marginBottom: "2rem" }}>
-            <h3 style={{ color: "var(--primary-color)", marginBottom: "1rem" }}>Özellikler</h3>
+            <h3 style={{ color: "var(--primary-color)", marginBottom: "1rem" }}>
+              Özellikler
+            </h3>
             <ul style={{ listStyle: "none", padding: 0 }}>
               {product.features.map((feature, index) => (
-                <li key={index} style={{ 
-                  padding: "0.5rem 0", 
-                  borderBottom: "1px solid #eee",
-                  display: "flex",
-                  alignItems: "center"
-                }}>
-                  <span style={{ color: "var(--primary-color)", marginRight: "0.5rem" }}>✓</span>
+                <li
+                  key={index}
+                  style={{
+                    padding: "0.5rem 0",
+                    borderBottom: "1px solid #eee",
+                    display: "flex",
+                    alignItems: "center",
+                  }}
+                >
+                  <span
+                    style={{
+                      color: "var(--primary-color)",
+                      marginRight: "0.5rem",
+                    }}
+                  >
+                    ✓
+                  </span>
                   {feature}
                 </li>
               ))}
@@ -169,16 +212,28 @@ const IslenmisUrunGrubuDetail = () => {
 
           {/* Pişirme önerileri */}
           <div style={{ marginBottom: "2rem" }}>
-            <h3 style={{ color: "var(--primary-color)", marginBottom: "1rem" }}>Pişirme Önerileri</h3>
+            <h3 style={{ color: "var(--primary-color)", marginBottom: "1rem" }}>
+              Pişirme Önerileri
+            </h3>
             <ul style={{ listStyle: "none", padding: 0 }}>
               {product.cookingTips.map((tip, index) => (
-                <li key={index} style={{ 
-                  padding: "0.5rem 0", 
-                  borderBottom: "1px solid #eee",
-                  display: "flex",
-                  alignItems: "center"
-                }}>
-                  <span style={{ color: "var(--primary-color)", marginRight: "0.5rem" }}>•</span>
+                <li
+                  key={index}
+                  style={{
+                    padding: "0.5rem 0",
+                    borderBottom: "1px solid #eee",
+                    display: "flex",
+                    alignItems: "center",
+                  }}
+                >
+                  <span
+                    style={{
+                      color: "var(--primary-color)",
+                      marginRight: "0.5rem",
+                    }}
+                  >
+                    •
+                  </span>
                   {tip}
                 </li>
               ))}
@@ -187,18 +242,59 @@ const IslenmisUrunGrubuDetail = () => {
 
           {/* Besin değerleri */}
           <div style={{ marginBottom: "2rem" }}>
-            <h3 style={{ color: "var(--primary-color)", marginBottom: "1rem" }}>Besin Değerleri (100g)</h3>
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "1rem" }}>
-              <div style={{ textAlign: "center", padding: "1rem", background: "#f8f9fa", borderRadius: "8px" }}>
-                <div style={{ fontWeight: "bold", color: "var(--primary-color)" }}>Protein</div>
+            <h3 style={{ color: "var(--primary-color)", marginBottom: "1rem" }}>
+              Besin Değerleri (100g)
+            </h3>
+            <div
+              style={{
+                display: "grid",
+                gridTemplateColumns: "repeat(3, 1fr)",
+                gap: "1rem",
+              }}
+            >
+              <div
+                style={{
+                  textAlign: "center",
+                  padding: "1rem",
+                  background: "#f8f9fa",
+                  borderRadius: "8px",
+                }}
+              >
+                <div
+                  style={{ fontWeight: "bold", color: "var(--primary-color)" }}
+                >
+                  Protein
+                </div>
                 <div>{product.nutritionalInfo.protein}</div>
               </div>
-              <div style={{ textAlign: "center", padding: "1rem", background: "#f8f9fa", borderRadius: "8px" }}>
-                <div style={{ fontWeight: "bold", color: "var(--primary-color)" }}>Yağ</div>
+              <div
+                style={{
+                  textAlign: "center",
+                  padding: "1rem",
+                  background: "#f8f9fa",
+                  borderRadius: "8px",
+                }}
+              >
+                <div
+                  style={{ fontWeight: "bold", color: "var(--primary-color)" }}
+                >
+                  Yağ
+                </div>
                 <div>{product.nutritionalInfo.fat}</div>
               </div>
-              <div style={{ textAlign: "center", padding: "1rem", background: "#f8f9fa", borderRadius: "8px" }}>
-                <div style={{ fontWeight: "bold", color: "var(--primary-color)" }}>Kalori</div>
+              <div
+                style={{
+                  textAlign: "center",
+                  padding: "1rem",
+                  background: "#f8f9fa",
+                  borderRadius: "8px",
+                }}
+              >
+                <div
+                  style={{ fontWeight: "bold", color: "var(--primary-color)" }}
+                >
+                  Kalori
+                </div>
                 <div>{product.nutritionalInfo.calories}</div>
               </div>
             </div>
@@ -206,7 +302,7 @@ const IslenmisUrunGrubuDetail = () => {
 
           {/* Geri dön butonu */}
           <Link
-            to="/products/islenmis-urun-grubu"
+            to="/products?category=islenmis-urun-grubu"
             style={{
               display: "inline-block",
               padding: "1rem 2rem",
@@ -215,7 +311,13 @@ const IslenmisUrunGrubuDetail = () => {
               textDecoration: "none",
               borderRadius: "8px",
               fontWeight: "600",
-              textAlign: "center"
+              textAlign: "center",
+            }}
+            onClick={() => {
+              // Ensure scroll to top when navigating back
+              setTimeout(() => {
+                window.scrollTo({ top: 0, behavior: "smooth" });
+              }, 100);
             }}
           >
             İŞLENMİŞ ÜRÜN GRUBU'na Geri Dön
@@ -226,4 +328,4 @@ const IslenmisUrunGrubuDetail = () => {
   );
 };
 
-export default IslenmisUrunGrubuDetail; 
+export default IslenmisUrunGrubuDetail;

@@ -38,7 +38,17 @@ import { useEffect } from "react";
 function ScrollToTop() {
   const { pathname } = useLocation();
   useEffect(() => {
-    window.scrollTo(0, 0);
+    // Scroll to top immediately and smoothly
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
+
+    // Fallback for browsers that don't support smooth scrolling
+    setTimeout(() => {
+      window.scrollTo(0, 0);
+    }, 50);
   }, [pathname]);
   return null;
 }

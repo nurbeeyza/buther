@@ -1,8 +1,58 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import {
+  Link,
+  useLocation,
+  useNavigate,
+  useSearchParams,
+} from "react-router-dom";
 
 const Products = () => {
-  const [selectedCategory, setSelectedCategory] = useState("all");
+  const [searchParams, setSearchParams] = useSearchParams();
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  // Initialize selected category from URL params, localStorage, or default to "all"
+  const getInitialCategory = () => {
+    const urlCategory = searchParams.get("category");
+    if (urlCategory) return urlCategory;
+
+    const savedCategory = localStorage.getItem("selectedProductCategory");
+    if (savedCategory) return savedCategory;
+
+    return "all";
+  };
+
+  const [selectedCategory, setSelectedCategory] = useState(getInitialCategory);
+
+  // Update URL and localStorage when category changes
+  useEffect(() => {
+    const newSearchParams = new URLSearchParams(searchParams);
+    if (selectedCategory !== "all") {
+      newSearchParams.set("category", selectedCategory);
+    } else {
+      newSearchParams.delete("category");
+    }
+
+    // Update URL without causing a re-render
+    navigate(`${location.pathname}?${newSearchParams.toString()}`, {
+      replace: true,
+    });
+
+    // Save to localStorage
+    localStorage.setItem("selectedProductCategory", selectedCategory);
+  }, [selectedCategory, navigate, location.pathname, searchParams]);
+
+  // Listen for URL parameter changes (e.g., when coming back from detail pages)
+  useEffect(() => {
+    const urlCategory = searchParams.get("category");
+    if (urlCategory && urlCategory !== selectedCategory) {
+      setSelectedCategory(urlCategory);
+    }
+  }, [searchParams, selectedCategory]);
+
+  const handleCategoryChange = (categoryId) => {
+    setSelectedCategory(categoryId);
+  };
 
   const categories = [
     { id: "all", name: "Tüm Ürünler", count: 41 },
@@ -503,7 +553,7 @@ const Products = () => {
               color: "var(--primary-color)",
               fontWeight: 600,
               fontSize: 14,
-              border: "1px solid #dee2e6"
+              border: "1px solid #dee2e6",
             }}
           >
             Detayları Görüntüle
@@ -556,7 +606,7 @@ const Products = () => {
         {categories.map((category) => (
           <button
             key={category.id}
-            onClick={() => setSelectedCategory(category.id)}
+            onClick={() => handleCategoryChange(category.id)}
             style={{
               background:
                 selectedCategory === category.id

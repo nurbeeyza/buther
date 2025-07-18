@@ -16,19 +16,19 @@ const SarkuteriGrubuDetail = () => {
         "Kahvaltı için ideal",
         "İnce dilimlenebilir",
         "Tavada pişirme",
-        "Hijyenik paketleme"
+        "Hijyenik paketleme",
       ],
       cookingTips: [
         "Tavada orta ateşte pişirin",
         "3-4 dakika çevirerek pişirin",
         "Fazla pişirmeyin",
-        "Kahvaltıda yumurta ile servis edin"
+        "Kahvaltıda yumurta ile servis edin",
       ],
       nutritionalInfo: {
         protein: "18g",
         fat: "25g",
-        calories: "290 kcal"
-      }
+        calories: "290 kcal",
+      },
     },
     2: {
       name: "Dana Jambon",
@@ -41,19 +41,19 @@ const SarkuteriGrubuDetail = () => {
         "Sandviç için ideal",
         "Kahvaltıda kullanım",
         "İnce dilimlenebilir",
-        "Uzun raf ömrü"
+        "Uzun raf ömrü",
       ],
       cookingTips: [
         "Direkt tüketilebilir",
         "İnce dilimler halinde kesin",
         "Kahvaltıda peynir ile servis edin",
-        "Soğuk servis yapın"
+        "Soğuk servis yapın",
       ],
       nutritionalInfo: {
         protein: "20g",
         fat: "18g",
-        calories: "240 kcal"
-      }
+        calories: "240 kcal",
+      },
     },
     3: {
       name: "Dana Kavurma",
@@ -66,19 +66,19 @@ const SarkuteriGrubuDetail = () => {
         "Kahvaltıların vazgeçilmezi",
         "Özel baharatlarla",
         "Taze günlük üretim",
-        "Hijyenik paketleme"
+        "Hijyenik paketleme",
       ],
       cookingTips: [
         "Tavada hafif ısıtın",
         "Direkt tüketilebilir",
         "Kahvaltıda yumurta ile servis edin",
-        "Sıcak servis yapın"
+        "Sıcak servis yapın",
       ],
       nutritionalInfo: {
         protein: "19g",
         fat: "22g",
-        calories: "270 kcal"
-      }
+        calories: "270 kcal",
+      },
     },
     4: {
       name: "Dana Salam",
@@ -91,19 +91,19 @@ const SarkuteriGrubuDetail = () => {
         "Çok amaçlı kullanım",
         "İnce dilimlenebilir",
         "Kahvaltı için ideal",
-        "Uzun raf ömrü"
+        "Uzun raf ömrü",
       ],
       cookingTips: [
         "Direkt tüketilebilir",
         "İnce dilimler halinde kesin",
         "Kahvaltıda peynir ile servis edin",
-        "Soğuk servis yapın"
+        "Soğuk servis yapın",
       ],
       nutritionalInfo: {
         protein: "20g",
         fat: "18g",
-        calories: "240 kcal"
-      }
+        calories: "240 kcal",
+      },
     },
     5: {
       name: "Dana İsli Et",
@@ -116,19 +116,19 @@ const SarkuteriGrubuDetail = () => {
         "İsli et tekniği",
         "Kahvaltı için ideal",
         "Yoğun lezzet",
-        "Hijyenik paketleme"
+        "Hijyenik paketleme",
       ],
       cookingTips: [
         "Tavada hafif ısıtın",
         "Direkt tüketilebilir",
         "Kahvaltıda yumurta ile servis edin",
-        "Sıcak servis yapın"
+        "Sıcak servis yapın",
       ],
       nutritionalInfo: {
         protein: "21g",
         fat: "20g",
-        calories: "260 kcal"
-      }
+        calories: "260 kcal",
+      },
     },
     6: {
       name: "Dana Rozbif",
@@ -141,19 +141,19 @@ const SarkuteriGrubuDetail = () => {
         "Özel kesim",
         "Sandviç için ideal",
         "İnce dilimlenebilir",
-        "Premium kalite"
+        "Premium kalite",
       ],
       cookingTips: [
         "Direkt tüketilebilir",
         "İnce dilimler halinde kesin",
         "Sandviçte kullanın",
-        "Soğuk servis yapın"
+        "Soğuk servis yapın",
       ],
       nutritionalInfo: {
         protein: "25g",
         fat: "12g",
-        calories: "200 kcal"
-      }
+        calories: "200 kcal",
+      },
     },
     7: {
       name: "Dana Kekikli Rozbif",
@@ -166,19 +166,19 @@ const SarkuteriGrubuDetail = () => {
         "Özel baharatlarla",
         "Sandviç için ideal",
         "İnce dilimlenebilir",
-        "Premium kalite"
+        "Premium kalite",
       ],
       cookingTips: [
         "Direkt tüketilebilir",
         "İnce dilimler halinde kesin",
         "Sandviçte kullanın",
-        "Soğuk servis yapın"
+        "Soğuk servis yapın",
       ],
       nutritionalInfo: {
         protein: "25g",
         fat: "12g",
-        calories: "200 kcal"
-      }
+        calories: "200 kcal",
+      },
     },
     8: {
       name: "Dana Karabiberli Rozbif",
@@ -191,19 +191,19 @@ const SarkuteriGrubuDetail = () => {
         "Özel baharatlarla",
         "Sandviç için ideal",
         "İnce dilimlenebilir",
-        "Premium kalite"
+        "Premium kalite",
       ],
       cookingTips: [
         "Direkt tüketilebilir",
         "İnce dilimler halinde kesin",
         "Sandviçte kullanın",
-        "Soğuk servis yapın"
+        "Soğuk servis yapın",
       ],
       nutritionalInfo: {
         protein: "25g",
         fat: "12g",
-        calories: "200 kcal"
-      }
+        calories: "200 kcal",
+      },
     },
     9: {
       name: "Dana Antrikot Pastırma",
@@ -216,19 +216,19 @@ const SarkuteriGrubuDetail = () => {
         "Geleneksel lezzet",
         "Kahvaltı için ideal",
         "İnce dilimlenebilir",
-        "Uzun raf ömrü"
+        "Uzun raf ömrü",
       ],
       cookingTips: [
         "Direkt tüketilebilir",
         "İnce dilimler halinde kesin",
         "Kahvaltıda peynir ile servis edin",
-        "Soğuk servis yapın"
+        "Soğuk servis yapın",
       ],
       nutritionalInfo: {
         protein: "26g",
         fat: "14g",
-        calories: "220 kcal"
-      }
+        calories: "220 kcal",
+      },
     },
     10: {
       name: "Dana Kontrfile Pastırma",
@@ -241,19 +241,19 @@ const SarkuteriGrubuDetail = () => {
         "Premium kalite",
         "Kahvaltı için ideal",
         "İnce dilimlenebilir",
-        "Uzun raf ömrü"
+        "Uzun raf ömrü",
       ],
       cookingTips: [
         "Direkt tüketilebilir",
         "İnce dilimler halinde kesin",
         "Kahvaltıda peynir ile servis edin",
-        "Soğuk servis yapın"
+        "Soğuk servis yapın",
       ],
       nutritionalInfo: {
         protein: "27g",
         fat: "13g",
-        calories: "210 kcal"
-      }
+        calories: "210 kcal",
+      },
     },
     11: {
       name: "Dana Seçme Pastırma",
@@ -266,19 +266,19 @@ const SarkuteriGrubuDetail = () => {
         "Premium pastırma",
         "Kahvaltı için ideal",
         "İnce dilimlenebilir",
-        "Uzun raf ömrü"
+        "Uzun raf ömrü",
       ],
       cookingTips: [
         "Direkt tüketilebilir",
         "İnce dilimler halinde kesin",
         "Kahvaltıda peynir ile servis edin",
-        "Soğuk servis yapın"
+        "Soğuk servis yapın",
       ],
       nutritionalInfo: {
         protein: "28g",
         fat: "12g",
-        calories: "200 kcal"
-      }
+        calories: "200 kcal",
+      },
     },
     12: {
       name: "Dana İspanyol Salam",
@@ -291,19 +291,19 @@ const SarkuteriGrubuDetail = () => {
         "Özel baharatlarla",
         "Kahvaltı için ideal",
         "İnce dilimlenebilir",
-        "Uzun raf ömrü"
+        "Uzun raf ömrü",
       ],
       cookingTips: [
         "Direkt tüketilebilir",
         "İnce dilimler halinde kesin",
         "Kahvaltıda peynir ile servis edin",
-        "Soğuk servis yapın"
+        "Soğuk servis yapın",
       ],
       nutritionalInfo: {
         protein: "20g",
         fat: "19g",
-        calories: "250 kcal"
-      }
+        calories: "250 kcal",
+      },
     },
     13: {
       name: "Dana Göden Sucuk",
@@ -316,19 +316,19 @@ const SarkuteriGrubuDetail = () => {
         "Özel baharatlarla",
         "Kahvaltı için ideal",
         "Doğal kılıf",
-        "Uzun raf ömrü"
+        "Uzun raf ömrü",
       ],
       cookingTips: [
         "Tavada hafif pişirin",
         "Direkt tüketilebilir",
         "Kahvaltıda peynir ile servis edin",
-        "Soğuk servis yapın"
+        "Soğuk servis yapın",
       ],
       nutritionalInfo: {
         protein: "22g",
         fat: "24g",
-        calories: "300 kcal"
-      }
+        calories: "300 kcal",
+      },
     },
     14: {
       name: "Dana Dilim Sucuk",
@@ -341,19 +341,19 @@ const SarkuteriGrubuDetail = () => {
         "Pratik kullanım",
         "Kahvaltı için ideal",
         "Hijyenik paketleme",
-        "Uzun raf ömrü"
+        "Uzun raf ömrü",
       ],
       cookingTips: [
         "Direkt tüketilebilir",
         "Kahvaltıda peynir ile servis edin",
         "Sandviçte kullanın",
-        "Soğuk servis yapın"
+        "Soğuk servis yapın",
       ],
       nutritionalInfo: {
         protein: "21g",
         fat: "23g",
-        calories: "290 kcal"
-      }
+        calories: "290 kcal",
+      },
     },
     15: {
       name: "Dana Baton Sucuk",
@@ -366,20 +366,20 @@ const SarkuteriGrubuDetail = () => {
         "Geleneksel lezzet",
         "Kahvaltı için ideal",
         "Doğal kılıf",
-        "Uzun raf ömrü"
+        "Uzun raf ömrü",
       ],
       cookingTips: [
         "Tavada hafif pişirin",
         "Direkt tüketilebilir",
         "Kahvaltıda peynir ile servis edin",
-        "Soğuk servis yapın"
+        "Soğuk servis yapın",
       ],
       nutritionalInfo: {
         protein: "21g",
         fat: "23g",
-        calories: "290 kcal"
-      }
-    }
+        calories: "290 kcal",
+      },
+    },
   };
 
   const product = products[id];
@@ -388,14 +388,23 @@ const SarkuteriGrubuDetail = () => {
     return (
       <div style={{ textAlign: "center", padding: "2rem" }}>
         <h2>Ürün bulunamadı</h2>
-        <Link to="/products/sarkuteri-grubu">Şarküteri Grubu sayfasına dön</Link>
+        <Link to="/products/sarkuteri-grubu">
+          Şarküteri Grubu sayfasına dön
+        </Link>
       </div>
     );
   }
 
   return (
     <div style={{ padding: "2rem", maxWidth: "1200px", margin: "0 auto" }}>
-      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "3rem", alignItems: "start" }}>
+      <div
+        style={{
+          display: "grid",
+          gridTemplateColumns: "1fr 1fr",
+          gap: "3rem",
+          alignItems: "start",
+        }}
+      >
         {/* Sol taraf - Ürün resmi */}
         <div>
           <img
@@ -405,37 +414,70 @@ const SarkuteriGrubuDetail = () => {
               width: "100%",
               height: "auto",
               borderRadius: "12px",
-              boxShadow: "0 4px 12px rgba(0,0,0,0.1)"
+              boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
             }}
           />
         </div>
 
         {/* Sağ taraf - Ürün bilgileri */}
         <div>
-          <h1 style={{ color: "var(--primary-color)", fontSize: "2.5rem", fontWeight: 800, marginBottom: "1rem" }}>
+          <h1
+            style={{
+              color: "var(--primary-color)",
+              fontSize: "2.5rem",
+              fontWeight: 800,
+              marginBottom: "1rem",
+            }}
+          >
             {product.name}
           </h1>
-          
-          <div style={{ fontSize: "1.5rem", fontWeight: "bold", color: "#e74c3c", marginBottom: "1rem" }}>
+
+          <div
+            style={{
+              fontSize: "1.5rem",
+              fontWeight: "bold",
+              color: "#e74c3c",
+              marginBottom: "1rem",
+            }}
+          >
             {product.price} / {product.weight}
           </div>
-          
-          <p style={{ fontSize: "1.1rem", color: "#666", lineHeight: 1.6, marginBottom: "2rem" }}>
+
+          <p
+            style={{
+              fontSize: "1.1rem",
+              color: "#666",
+              lineHeight: 1.6,
+              marginBottom: "2rem",
+            }}
+          >
             {product.description}
           </p>
 
           {/* Özellikler */}
           <div style={{ marginBottom: "2rem" }}>
-            <h3 style={{ color: "var(--primary-color)", marginBottom: "1rem" }}>Özellikler</h3>
+            <h3 style={{ color: "var(--primary-color)", marginBottom: "1rem" }}>
+              Özellikler
+            </h3>
             <ul style={{ listStyle: "none", padding: 0 }}>
               {product.features.map((feature, index) => (
-                <li key={index} style={{ 
-                  padding: "0.5rem 0", 
-                  borderBottom: "1px solid #eee",
-                  display: "flex",
-                  alignItems: "center"
-                }}>
-                  <span style={{ color: "var(--primary-color)", marginRight: "0.5rem" }}>✓</span>
+                <li
+                  key={index}
+                  style={{
+                    padding: "0.5rem 0",
+                    borderBottom: "1px solid #eee",
+                    display: "flex",
+                    alignItems: "center",
+                  }}
+                >
+                  <span
+                    style={{
+                      color: "var(--primary-color)",
+                      marginRight: "0.5rem",
+                    }}
+                  >
+                    ✓
+                  </span>
                   {feature}
                 </li>
               ))}
@@ -444,16 +486,28 @@ const SarkuteriGrubuDetail = () => {
 
           {/* Pişirme önerileri */}
           <div style={{ marginBottom: "2rem" }}>
-            <h3 style={{ color: "var(--primary-color)", marginBottom: "1rem" }}>Kullanım Önerileri</h3>
+            <h3 style={{ color: "var(--primary-color)", marginBottom: "1rem" }}>
+              Kullanım Önerileri
+            </h3>
             <ul style={{ listStyle: "none", padding: 0 }}>
               {product.cookingTips.map((tip, index) => (
-                <li key={index} style={{ 
-                  padding: "0.5rem 0", 
-                  borderBottom: "1px solid #eee",
-                  display: "flex",
-                  alignItems: "center"
-                }}>
-                  <span style={{ color: "var(--primary-color)", marginRight: "0.5rem" }}>•</span>
+                <li
+                  key={index}
+                  style={{
+                    padding: "0.5rem 0",
+                    borderBottom: "1px solid #eee",
+                    display: "flex",
+                    alignItems: "center",
+                  }}
+                >
+                  <span
+                    style={{
+                      color: "var(--primary-color)",
+                      marginRight: "0.5rem",
+                    }}
+                  >
+                    •
+                  </span>
                   {tip}
                 </li>
               ))}
@@ -462,18 +516,59 @@ const SarkuteriGrubuDetail = () => {
 
           {/* Besin değerleri */}
           <div style={{ marginBottom: "2rem" }}>
-            <h3 style={{ color: "var(--primary-color)", marginBottom: "1rem" }}>Besin Değerleri (100g)</h3>
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "1rem" }}>
-              <div style={{ textAlign: "center", padding: "1rem", background: "#f8f9fa", borderRadius: "8px" }}>
-                <div style={{ fontWeight: "bold", color: "var(--primary-color)" }}>Protein</div>
+            <h3 style={{ color: "var(--primary-color)", marginBottom: "1rem" }}>
+              Besin Değerleri (100g)
+            </h3>
+            <div
+              style={{
+                display: "grid",
+                gridTemplateColumns: "repeat(3, 1fr)",
+                gap: "1rem",
+              }}
+            >
+              <div
+                style={{
+                  textAlign: "center",
+                  padding: "1rem",
+                  background: "#f8f9fa",
+                  borderRadius: "8px",
+                }}
+              >
+                <div
+                  style={{ fontWeight: "bold", color: "var(--primary-color)" }}
+                >
+                  Protein
+                </div>
                 <div>{product.nutritionalInfo.protein}</div>
               </div>
-              <div style={{ textAlign: "center", padding: "1rem", background: "#f8f9fa", borderRadius: "8px" }}>
-                <div style={{ fontWeight: "bold", color: "var(--primary-color)" }}>Yağ</div>
+              <div
+                style={{
+                  textAlign: "center",
+                  padding: "1rem",
+                  background: "#f8f9fa",
+                  borderRadius: "8px",
+                }}
+              >
+                <div
+                  style={{ fontWeight: "bold", color: "var(--primary-color)" }}
+                >
+                  Yağ
+                </div>
                 <div>{product.nutritionalInfo.fat}</div>
               </div>
-              <div style={{ textAlign: "center", padding: "1rem", background: "#f8f9fa", borderRadius: "8px" }}>
-                <div style={{ fontWeight: "bold", color: "var(--primary-color)" }}>Kalori</div>
+              <div
+                style={{
+                  textAlign: "center",
+                  padding: "1rem",
+                  background: "#f8f9fa",
+                  borderRadius: "8px",
+                }}
+              >
+                <div
+                  style={{ fontWeight: "bold", color: "var(--primary-color)" }}
+                >
+                  Kalori
+                </div>
                 <div>{product.nutritionalInfo.calories}</div>
               </div>
             </div>
@@ -481,7 +576,7 @@ const SarkuteriGrubuDetail = () => {
 
           {/* Geri dön butonu */}
           <Link
-            to="/products/sarkuteri-grubu"
+            to="/products?category=sarkuteri-grubu"
             style={{
               display: "inline-block",
               padding: "1rem 2rem",
@@ -490,7 +585,13 @@ const SarkuteriGrubuDetail = () => {
               textDecoration: "none",
               borderRadius: "8px",
               fontWeight: "600",
-              textAlign: "center"
+              textAlign: "center",
+            }}
+            onClick={() => {
+              // Ensure scroll to top when navigating back
+              setTimeout(() => {
+                window.scrollTo({ top: 0, behavior: "smooth" });
+              }, 100);
             }}
           >
             ŞARKÜTERİ GRUBU'na Geri Dön
@@ -501,4 +602,4 @@ const SarkuteriGrubuDetail = () => {
   );
 };
 
-export default SarkuteriGrubuDetail; 
+export default SarkuteriGrubuDetail;

@@ -2343,6 +2343,14 @@ body {
   }
 }
 
+/* Specific margin adjustments for Kuzu Grubu pages */
+.kuzu-grubu-page,
+.kuzu-grubu-detail-page,
+[class*="kuzu-grubu"],
+[class*="kuzu-detail"] {
+  margin-top: 120px !important; /* 80px base + 40px additional */
+}
+
 /* Global page spacing to ensure content is below navbar */
 main,
 .main-content,
