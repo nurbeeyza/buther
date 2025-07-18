@@ -203,7 +203,7 @@ const SucukDetail = () => {
   };
 
   return (
-    <div style={{
+    <div className="detail-page" style={{
       maxWidth: 1200,
       margin: "0 auto",
       padding: "2rem",
@@ -226,7 +226,7 @@ const SucukDetail = () => {
         <span>{product.name}</span>
       </div>
 
-      <div style={{
+      <div className="detail-container" style={{
         display: "grid",
         gridTemplateColumns: "1fr 1fr",
         gap: "3rem",
@@ -254,6 +254,7 @@ const SucukDetail = () => {
             <img 
               src={product.image} 
               alt={product.name}
+              className="product-image"
               style={{
                 maxWidth: "80%",
                 maxHeight: "80%",
@@ -286,7 +287,7 @@ const SucukDetail = () => {
         </div>
 
         {/* Sağ Taraf - Bilgiler */}
-        <div>
+        <div className="product-info">
           <h1 style={{
             color: "var(--primary-color)",
             fontSize: "2.5rem",
@@ -360,7 +361,7 @@ const SucukDetail = () => {
       </div>
 
       {/* Alt Bölüm - Detaylı Bilgiler */}
-      <div style={{
+      <div className="cooking-nutrition" style={{
         display: "grid",
         gridTemplateColumns: "1fr 1fr 1fr",
         gap: "2rem",

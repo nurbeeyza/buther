@@ -2201,6 +2201,77 @@ body {
   [style*="max-width: 1200"] {
     padding: 0.5rem !important;
   }
+}
+
+/* Enhanced responsive design for all detail pages */
+@media (max-width: 820px) {
+  /* Force single column layout at 820px and below */
+  [style*='gridTemplateColumns: "1fr 1fr"'] {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
+  
+  /* Ensure images maintain good size */
+  [style*="height: 400"] {
+    height: 350px !important;
+  }
+  
+  /* Product image container adjustments */
+  .product-image {
+    max-width: 100% !important;
+    height: auto !important;
+    margin: 0 auto !important;
+    display: block !important;
+  }
+  
+  /* Bottom section - single column */
+  [style*='gridTemplateColumns: "1fr 1fr"'][style*='gap: "3rem"'] {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
+  
+  /* Nutritional info - keep 2 columns but adjust spacing */
+  [style*='gridTemplateColumns: "repeat(2, 1fr)"'] {
+    gap: 1rem !important;
+  }
+  
+  /* Container padding adjustments */
+  [style*='padding: "2rem"'] {
+    padding: 1.5rem !important;
+  }
+  
+  /* Title size adjustments */
+  [style*='fontSize: "2.5rem"'] {
+    font-size: 2.2rem !important;
+  }
+}
+
+@media (max-width: 700px) {
+  .detail-container {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
+  .product-image {
+    max-width: 80% !important;
+    margin: 0 auto !important;
+    display: block !important;
+  }
+  .product-info {
+    order: 2 !important;
+  }
+  .cooking-nutrition {
+    order: 3 !important;
+    margin-top: 2rem !important;
+  }
+  .nutrition-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  .detail-page {
+    padding: 1rem !important;
+  }
+}
 
   /* Reduce image height further */
   [style*="height: 400"] {
@@ -2236,7 +2307,6 @@ body {
   [style*='fontSize: "0.9rem"'] {
     font-size: 0.8rem !important;
   }
-}
 
 /* Additional responsive helpers for detail pages */
 @media (max-width: 768px) {

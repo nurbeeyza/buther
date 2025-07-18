@@ -250,24 +250,54 @@ const DanaBeefSteakDetail = () => {
   }
 
   return (
-    <div style={{ padding: "2rem", maxWidth: "1200px", margin: "0 auto" }}>
-      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "3rem", alignItems: "start" }}>
-        {/* Sol taraf - Ürün resmi */}
-        <div>
-          <img
-            src={product.image}
-            alt={product.name}
-            style={{
-              width: "100%",
-              height: "auto",
-              borderRadius: "12px",
-              boxShadow: "0 4px 12px rgba(0,0,0,0.1)"
-            }}
-          />
-        </div>
+    <>
+      <style>
+        {`
+          @media (max-width: 700px) {
+            .detail-container {
+              grid-template-columns: 1fr !important;
+              gap: 2rem !important;
+            }
+            .product-image {
+              max-width: 80% !important;
+              margin: 0 auto !important;
+              display: block !important;
+            }
+            .product-info {
+              order: 2 !important;
+            }
+            .cooking-nutrition {
+              order: 3 !important;
+              margin-top: 2rem !important;
+            }
+            .nutrition-grid {
+              grid-template-columns: repeat(2, 1fr) !important;
+            }
+            .detail-page {
+              padding: 1rem !important;
+            }
+          }
+        `}
+      </style>
+      <div className="detail-page" style={{ padding: "2rem", maxWidth: "1200px", margin: "0 auto" }}>
+        <div className="detail-container" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "3rem", alignItems: "start" }}>
+          {/* Sol taraf - Ürün resmi */}
+          <div>
+            <img
+              src={product.image}
+              alt={product.name}
+              className="product-image"
+              style={{
+                width: "100%",
+                height: "auto",
+                borderRadius: "12px",
+                boxShadow: "0 4px 12px rgba(0,0,0,0.1)"
+              }}
+            />
+          </div>
 
-        {/* Sağ taraf - Ürün bilgileri */}
-        <div>
+          {/* Sağ taraf - Ürün bilgileri */}
+          <div className="product-info">
           <h1 style={{ color: "var(--primary-color)", fontSize: "2.5rem", fontWeight: 800, marginBottom: "1rem" }}>
             {product.name}
           </h1>
@@ -297,7 +327,7 @@ const DanaBeefSteakDetail = () => {
           </div>
 
           {/* Pişirme önerileri */}
-          <div style={{ marginBottom: "2rem" }}>
+          <div className="cooking-nutrition" style={{ marginBottom: "2rem" }}>
             <h3 style={{ color: "var(--primary-color)", marginBottom: "1rem" }}>Pişirme Önerileri</h3>
             <ul style={{ listStyle: "none", padding: 0 }}>
               {product.cookingTips && product.cookingTips.map((tip, index) => (
@@ -315,9 +345,9 @@ const DanaBeefSteakDetail = () => {
           </div>
 
           {/* Besin değerleri */}
-          <div style={{ marginBottom: "2rem" }}>
+          <div className="cooking-nutrition" style={{ marginBottom: "2rem" }}>
             <h3 style={{ color: "var(--primary-color)", marginBottom: "1rem" }}>Besin Değerleri (100g)</h3>
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "1rem" }}>
+            <div className="nutrition-grid" style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "1rem" }}>
               <div style={{ textAlign: "center", padding: "1rem", background: "#f8f9fa", borderRadius: "8px" }}>
                 <div style={{ fontWeight: "bold", color: "var(--primary-color)" }}>Protein</div>
                 <div>{product.nutritionalInfo && product.nutritionalInfo.protein}</div>
@@ -372,6 +402,7 @@ const DanaBeefSteakDetail = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

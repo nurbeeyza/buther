@@ -65,22 +65,60 @@ const UserRecipes = () => {
   };
 
   return (
-    <div
-      className="page-container"
-      style={{
-        maxWidth: 1400,
-        margin: "0 auto",
-        padding: "2rem",
-        background: "#f8f9fa",
-        minHeight: "calc(100vh - 200px)",
-      }}
-    >
+    <>
+      <style>
+        {`
+          @media (max-width: 583px) {
+            .form-inputs-container {
+              flex-direction: column !important;
+            }
+            .form-inputs-container input {
+              min-width: 100% !important;
+            }
+          }
+          
+          @media (max-width: 512px) {
+            .review-grid {
+              grid-template-columns: 1fr !important;
+              gap: 16px !important;
+            }
+            .review-card {
+              padding: 1rem !important;
+              min-height: auto !important;
+              max-width: 100% !important;
+            }
+            .review-text {
+              font-size: 16px !important;
+            }
+            .review-name {
+              font-size: 14px !important;
+            }
+            .page-container {
+              padding: 1rem !important;
+            }
+            .form-container {
+              padding: 1rem !important;
+            }
+          }
+        `}
+      </style>
+      <div
+        className="page-container"
+        style={{
+          maxWidth: 1400,
+          margin: "0 auto",
+          padding: "2rem",
+          background: "#f8f9fa",
+          minHeight: "calc(100vh - 200px)",
+        }}
+      >
       <div style={{ background: '#111', color: '#fff', padding: '4rem 0', textAlign: 'center', marginBottom: '2rem', width: '100vw', position: 'relative', left: '50%', right: '50%', marginLeft: '-50vw', marginRight: '-50vw' }}>
         <h1 style={{ color: '#fff', fontSize: '2.5rem', fontWeight: 800, letterSpacing: 1, textShadow: '0 2px 8px #000' }}>SİZDEN GELENLER</h1>
       </div>
       {/* Yorum Ekleme Paneli */}
       <form
         onSubmit={handleSubmit}
+        className="form-container"
         style={{
           background: "#fff",
           borderRadius: 14,
@@ -97,7 +135,14 @@ const UserRecipes = () => {
           alignItems: "center",
         }}
       >
-        <div style={{ display: "flex", gap: 16, width: "100%" }}>
+        <div style={{ 
+          display: "flex", 
+          gap: 16, 
+          width: "100%",
+          flexDirection: "row"
+        }}
+        className="form-inputs-container"
+        >
           <input
             type="text"
             name="name"
@@ -185,6 +230,7 @@ const UserRecipes = () => {
       </form>
       {/* Yorumlar Grid */}
       <div
+        className="review-grid"
         style={{
           width: "100%",
           maxWidth: 1200,
@@ -198,6 +244,7 @@ const UserRecipes = () => {
         {reviews.map((review, idx) => (
           <div
             key={idx}
+            className="review-card"
             style={{
               background: "#fff",
               borderRadius: 18,
@@ -220,6 +267,7 @@ const UserRecipes = () => {
                 {"⭐️".repeat(review.stars)}
               </span>
               <span
+                className="review-name"
                 style={{
                   color: "#111",
                   marginLeft: 16,
@@ -231,6 +279,7 @@ const UserRecipes = () => {
               </span>
             </div>
             <div
+              className="review-text"
               style={{
                 fontSize: 22,
                 color: "#222",
@@ -244,6 +293,7 @@ const UserRecipes = () => {
         ))}
       </div>
     </div>
+    </>
   );
 };
 
