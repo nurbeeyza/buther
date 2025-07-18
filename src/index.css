@@ -33,7 +33,7 @@ body {
   left: 0;
   width: 100%;
   z-index: 1000;
-  background: #000000;
+  background: #151414;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
   transition: all 0.3s ease;
   padding: 1.7rem 0;
@@ -2211,12 +2211,12 @@ body {
     grid-template-columns: 1fr !important;
     gap: 2rem !important;
   }
-  
+
   /* Ensure images maintain good size */
   [style*="height: 400"] {
     height: 350px !important;
   }
-  
+
   /* Product image container adjustments */
   .product-image {
     max-width: 100% !important;
@@ -2224,24 +2224,24 @@ body {
     margin: 0 auto !important;
     display: block !important;
   }
-  
+
   /* Bottom section - single column */
   [style*='gridTemplateColumns: "1fr 1fr"'][style*='gap: "3rem"'] {
     display: grid !important;
     grid-template-columns: 1fr !important;
     gap: 2rem !important;
   }
-  
+
   /* Nutritional info - keep 2 columns but adjust spacing */
   [style*='gridTemplateColumns: "repeat(2, 1fr)"'] {
     gap: 1rem !important;
   }
-  
+
   /* Container padding adjustments */
   [style*='padding: "2rem"'] {
     padding: 1.5rem !important;
   }
-  
+
   /* Title size adjustments */
   [style*='fontSize: "2.5rem"'] {
     font-size: 2.2rem !important;
@@ -2273,40 +2273,40 @@ body {
   }
 }
 
-  /* Reduce image height further */
-  [style*="height: 400"] {
-    height: 200px !important;
-  }
+/* Reduce image height further */
+[style*="height: 400"] {
+  height: 200px !important;
+}
 
-  /* Smaller titles */
-  [style*='fontSize: "2.5rem"'] {
-    font-size: 1.8rem !important;
-  }
+/* Smaller titles */
+[style*='fontSize: "2.5rem"'] {
+  font-size: 1.8rem !important;
+}
 
-  /* Smaller price tags */
-  [style*="top: 20"][style*="right: 20"] {
-    padding: 6px 10px !important;
-    font-size: 12px !important;
-  }
+/* Smaller price tags */
+[style*="top: 20"][style*="right: 20"] {
+  padding: 6px 10px !important;
+  font-size: 12px !important;
+}
 
-  /* Reduce card padding further */
-  [style*='padding: "2rem"'] {
-    padding: 1rem !important;
-  }
+/* Reduce card padding further */
+[style*='padding: "2rem"'] {
+  padding: 1rem !important;
+}
 
-  /* Nutritional info - stack vertically on very small screens */
-  [style*='gridTemplateColumns: "repeat(2, 1fr)"'] {
-    grid-template-columns: repeat(2, 1fr) !important;
-    gap: 0.3rem !important;
-  }
+/* Nutritional info - stack vertically on very small screens */
+[style*='gridTemplateColumns: "repeat(2, 1fr)"'] {
+  grid-template-columns: repeat(2, 1fr) !important;
+  gap: 0.3rem !important;
+}
 
-  [style*='fontSize: "1.5rem"'][style*="fontWeight: 700"] {
-    font-size: 1rem !important;
-  }
+[style*='fontSize: "1.5rem"'][style*="fontWeight: 700"] {
+  font-size: 1rem !important;
+}
 
-  [style*='fontSize: "0.9rem"'] {
-    font-size: 0.8rem !important;
-  }
+[style*='fontSize: "0.9rem"'] {
+  font-size: 0.8rem !important;
+}
 
 /* Additional responsive helpers for detail pages */
 @media (max-width: 768px) {
