@@ -31,11 +31,19 @@ const IslenmisUrunGrubu = () => {
     },
     {
       id: 4,
-      name: "Dana İnegöl Köfte",
+      name: "Görye İnegöl Köfte",
       price: "220,00₺",
       weight: "400 gr/paket",
       image: "/images/et_resimler/görye_köfte.png",
       description: "Geleneksel İnegöl köftesi, özel baharatlarla hazırlanmıştır."
+    },
+    {
+      id: 5,
+      name: "Görye Kangal Sucuk",
+      price: "350,00₺",
+      weight: "350 gr/paket",
+      image: "/images/et_resimler/kangal_sucuk.png",
+      description: "Geleneksel yöntemlerle hazırlanmış, baharatlı ve lezzetli kangal sucuk. Kahvaltı ve yemekleriniz için ideal."
     }
   ];
 

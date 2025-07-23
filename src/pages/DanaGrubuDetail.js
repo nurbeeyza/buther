@@ -32,7 +32,7 @@ const DanaGrubuDetail = () => {
     },
     2: {
       name: "Dana Kuşbaşı",
-      price: "680,00₺",
+      price: "700,00₺",
       weight: "kg",
       image: "/images/et_resimler/dana_kusbasi.png",
       description: "Taze dana kuşbaşı, güveç ve kavurma için ideal.",
@@ -47,7 +47,7 @@ const DanaGrubuDetail = () => {
         "Güveç ve kavurma için ideal",
         "Düşük ateşte uzun pişirin",
         "Sebzelerle birlikte pişirin",
-        "Baharatları baştan ekleyin",
+       
       ],
       nutritionalInfo: {
         protein: "24g",
@@ -57,7 +57,7 @@ const DanaGrubuDetail = () => {
     },
     3: {
       name: "Dana Kaburga Kıyma",
-      price: "300,00₺",
+      price: "610,00₺",
       weight: "400 gr/paket",
       image: "/images/et_resimler/dana_kaburga_kiyma.png",
       description:
@@ -108,7 +108,7 @@ const DanaGrubuDetail = () => {
     },
     5: {
       name: "Dana Asado",
-      price: "800,00₺",
+      price: "610,00₺",
       weight: "kg",
       image: "/images/et_resimler/dana_asado.png",
       description:

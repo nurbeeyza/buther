@@ -17,7 +17,7 @@ const reviewsData = [
     stars: 5,
     name: "Elif A.",
     city: "İzmir",
-    text: "Gerçek kasap kalitesi! Marketten aldıklarımın yanından geçmez. Tavuk göğsü bile bu kadar lezzetli olur mu ya :) Teşekkür ederim!",
+    text: "Gerçek kasap kalitesi! Marketten aldıklarımın yanından geçmez. Bonfile bile bu kadar lezzetli olur mu ya :) Teşekkür ederim!",
   },
   {
     stars: 5,

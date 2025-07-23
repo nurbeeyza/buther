@@ -159,7 +159,7 @@ const CookiePolicy = () => (
 
       <h2 style={subHeadingStyle}>İletişim</h2>
       <p style={paragraphStyle}>
-        Çerez Bilgilendirme Metni veya internet sitemizdeki çerez kullanımı hakkında her türlü soru, görüş ve öneriniz için bizimle <a href="mailto:kvkk@baspinarlar.com.tr" style={{ color: '#800020', textDecoration: 'underline' }}>kvkk@baspinarlar.com.tr</a> adresi üzerinden iletişime geçebilirsiniz.
+        Çerez Bilgilendirme Metni veya internet sitemizdeki çerez kullanımı hakkında her türlü soru, görüş ve öneriniz için bizimle <a href="mailto:info@baspinarlaret.com" style={{ color: '#800020', textDecoration: 'underline' }}>kvkk@baspinarlar.com.tr</a> adresi üzerinden iletişime geçebilirsiniz.
       </p>
 
       <div style={{...paragraphStyle, marginTop: 32, textAlign: 'center'}}>

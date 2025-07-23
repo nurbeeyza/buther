@@ -8,7 +8,7 @@ const KuzuGrubu = () => {
     {
       id: 1,
       name: "Kuzu Bel",
-      price: "700,00₺",
+      price: "950,00₺",
       weight: "kg",
       image: "/images/et_resimler/kuzu_bel.png",
       description: "Premium kalite kuzu bel, özel kesim ile hazırlanmıştır.",
@@ -16,7 +16,7 @@ const KuzuGrubu = () => {
     {
       id: 2,
       name: "Kuzu Gerdan",
-      price: "650,00₺",
+      price: "570,00₺",
       weight: "kg",
       image: "/images/et_resimler/kuzu-gerdan.png",
       description:
@@ -25,7 +25,7 @@ const KuzuGrubu = () => {
     {
       id: 3,
       name: "Kuzu Kol",
-      price: "680,00₺",
+      price: "610,00₺",
       weight: "kg",
       image: "/images/et_resimler/kuzukol .png",
       description: "Taze kuzu kol, güveç ve kavurma için mükemmel.",
@@ -57,7 +57,7 @@ const KuzuGrubu = () => {
     {
       id: 7,
       name: "Kuzu But",
-      price: "780,00₺",
+      price: "690,00₺",
       weight: "kg",
       image: "/images/et_resimler/kuzu-but.png",
       description: "Taze kuzu but, çeşitli yemekler için ideal.",
@@ -73,7 +73,7 @@ const KuzuGrubu = () => {
     {
       id: 9,
       name: "Kuzu Külbastı",
-      price: "800,00₺",
+      price: "890,00₺",
       weight: "kg",
       image: "/images/et_resimler/kuzukülbastı.png",
       description: "Yumuşacık kuzu külbastı, hızlı pişirme için ideal.",

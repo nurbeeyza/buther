@@ -1,6 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import { Link } from "react-router-dom";
 import "./Home.css";
+
+const meatQuestions = [
+  "Bu gün mangalda ne yapsak?",
+  "Hijyen, güvenilir et ürünlerini nerede bulabilirim?",
+  "Etin taze olduğunu nasıl anlarım?",
+  "Hangi et hangi yemekte kullanılır?",
+  "Et pişirirken nelere dikkat etmeliyim?"
+];
 
 const Home = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -106,6 +114,15 @@ const Home = () => {
     },
   ];
 
+  const [q1, q2] = useMemo(() => {
+    let idx1 = Math.floor(Math.random() * meatQuestions.length);
+    let idx2;
+    do {
+      idx2 = Math.floor(Math.random() * meatQuestions.length);
+    } while (idx2 === idx1);
+    return [meatQuestions[idx1], meatQuestions[idx2]];
+  }, []);
+
   return (
     <div className="home">
       <div className="hero">
@@ -198,10 +215,21 @@ const Home = () => {
       {/* Call to Action Section */}
       <section className="cta-section">
         <div className="container">
-          <div className="mangal-cta-content">
-            <h2>Bu gün mangalda ne yapsak?</h2>
-            <p>Hijyen, güvenilir et ürünlerini nerede bulabilirim?</p>
-            <p>gibi sorularınızın cevabı BAŞPINARLAR 'da...</p>
+          <div className="mangal-cta-content" style={{
+            margin: "2rem auto 0 auto",
+            maxWidth: 600,
+            background: "#fff7f0",
+            borderRadius: 16,
+            boxShadow: "0 2px 12px #80002011",
+            padding: "2rem 2.5rem",
+            textAlign: "center",
+            border: "2px solid #d4af37"
+          }}>
+            <h2 style={{ color: "#800020", fontWeight: 800, fontSize: 22, marginBottom: 12 }}>{q1}</h2>
+            <p style={{ color: "#800020", fontWeight: 700, fontSize: 18, marginBottom: 8 }}>{q2}</p>
+            <p style={{ color: "#333", fontSize: 18, fontWeight: 600 }}>
+              gibi sorularınızın cevabı BAŞPINARLAR 'da...
+            </p>
           </div>
         </div>
       </section>

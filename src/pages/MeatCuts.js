@@ -45,6 +45,24 @@ const cuts = [
           "Sırtın alt kısmından elde edilir. Izgara ve biftek için uygundur.",
         uses: ["Izgara", "Biftek"],
       },
+      {
+        name: "Sokum",
+        description:
+          "Sırtın arka kısmında, bonfileye yakın bir bölgedir. Yumuşak ve lezzetli bir ettir.",
+        uses: ["Izgara", "Biftek", "Kavurma"],
+      },
+      {
+        name: "Tranç",
+        description:
+          "Sırt ve but arasında yer alır. Lifli yapısı ile rosto ve haşlama için uygundur.",
+        uses: ["Rosto", "Haşlama", "Biftek"],
+      },
+      {
+        name: "Kontrnuar",
+        description:
+          "Trançın hemen yanında, butun üst kısmında yer alır. Rosto ve haşlama için kullanılır.",
+        uses: ["Rosto", "Haşlama"],
+      },
     ],
   },
   {
@@ -57,10 +75,50 @@ const cuts = [
         uses: ["Rosto", "Biftek"],
       },
       {
+        name: "Bodigo",
+        description:
+          "Butun arka kısmında yer alır. Haşlama ve tencere yemekleri için uygundur.",
+        uses: ["Haşlama", "Tencere Yemeği"],
+      },
+      {
+        name: "Yumurta",
+        description:
+          "Butun iç kısmında, küçük yuvarlak bir ettir. Haşlama ve sote için uygundur.",
+        uses: ["Haşlama", "Sote"],
+      },
+      {
+        name: "Pençeta",
+        description:
+          "Butun alt kısmında, yağlı ve lezzetli bir ettir. Kıyma ve köfte yapımında kullanılır.",
+        uses: ["Kıyma", "Köfte"],
+      },
+      {
         name: "Pirzola",
         description:
           "Butun orta kısmından elde edilir. Izgara için idealdir.",
         uses: ["Izgara", "Tavada"],
+      },
+    ],
+  },
+  {
+    title: "Göğüs ve Karın Bölümü",
+    cuts: [
+      {
+        name: "Döş",
+        description:
+          "Dananın alt karın kısmında yer alır. Kıyma, haşlama ve tencere yemekleri için uygundur.",
+        uses: ["Kıyma", "Haşlama", "Tencere Yemeği"],
+      },
+    ],
+  },
+  {
+    title: "Ön Kol ve Kürek Bölümü",
+    cuts: [
+      {
+        name: "Kürek",
+        description:
+          "Dananın ön bacağında, kol kısmında yer alır. Haşlama, sote ve kıyma için uygundur.",
+        uses: ["Haşlama", "Sote", "Kıyma"],
       },
     ],
   },

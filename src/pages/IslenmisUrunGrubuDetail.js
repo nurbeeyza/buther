@@ -81,7 +81,7 @@ const IslenmisUrunGrubuDetail = () => {
       },
     },
     4: {
-      name: "Dana İnegöl Köfte",
+      name: "Görye İnegöl Köfte",
       price: "220,00₺",
       weight: "400 gr/paket",
       image: "/images/et_resimler/görye_köfte.png",
@@ -105,6 +105,31 @@ const IslenmisUrunGrubuDetail = () => {
         fat: "16g",
         calories: "220 kcal",
       },
+    },
+    5: {
+      name: "Görye Kangal Sucuk",
+      price: "350,00₺",
+      weight: "350 gr/paket",
+      image: "/images/et_resimler/kangal_sucuk.png",
+      description: "Geleneksel yöntemlerle hazırlanmış, baharatlı ve lezzetli kangal sucuk. Kahvaltı ve yemekleriniz için ideal.",
+      features: [
+        "Geleneksel üretim",
+        "Baharatlı ve aromatik",
+        "Doğal kılıf",
+        "Kahvaltı ve yemekler için uygun",
+        "Uzun raf ömrü"
+      ],
+      cookingTips: [
+        "Tavada orta ateşte pişirin",
+        "Her iki tarafı 3-4 dakika çevirin",
+        "Fazla pişirmeyin, sulu kalmasına dikkat edin",
+        "Kahvaltıda veya sandviçte servis edin"
+      ],
+      nutritionalInfo: {
+        protein: "22g",
+        fat: "28g",
+        calories: "340 kcal"
+      }
     },
   };
 

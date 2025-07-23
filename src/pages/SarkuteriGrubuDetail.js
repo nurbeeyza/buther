@@ -7,7 +7,7 @@ const SarkuteriGrubuDetail = () => {
   const products = {
     1: {
       name: "Dana Bacon",
-      price: "90,00₺",
+      price: "1130,00₺",
       weight: "100 gr/paket",
       image: "/images/et_resimler/dana_bacon.png",
       description: "Taze dana bacon, kahvaltılarınıza lezzet katacak.",
@@ -32,7 +32,7 @@ const SarkuteriGrubuDetail = () => {
     },
     2: {
       name: "Dana Jambon",
-      price: "85,00₺",
+      price: "980,00₺",
       weight: "100 gr/paket",
       image: "/images/et_resimler/dana_jambon.png",
       description: "Premium dana jambon, sandviç ve kahvaltı için ideal.",
@@ -57,7 +57,7 @@ const SarkuteriGrubuDetail = () => {
     },
     3: {
       name: "Dana Kavurma",
-      price: "90,00₺",
+      price: "1020,00₺",
       weight: "100 gr/paket",
       image: "/images/et_resimler/dana_kavurma.png",
       description: "Geleneksel dana kavurma, kahvaltıların vazgeçilmezi.",
@@ -107,7 +107,7 @@ const SarkuteriGrubuDetail = () => {
     },
     5: {
       name: "Dana İsli Et",
-      price: "120,00₺",
+      price: "1530,00₺",
       weight: "80 gr/paket",
       image: "/images/et_resimler/dana_isli_et.png",
       description: "Özel baharatlarla hazırlanmış dana isli et.",
@@ -131,7 +131,7 @@ const SarkuteriGrubuDetail = () => {
       },
     },
     6: {
-      name: "Dana Rozbif",
+      name: "Dana Roast Beef",
       price: "250,00₺",
       weight: "200 gr/paket",
       image: "/images/et_resimler/rozbif.png",
@@ -156,7 +156,7 @@ const SarkuteriGrubuDetail = () => {
       },
     },
     7: {
-      name: "Dana Kekikli Rozbif",
+      name: "Dana Kekikli Roast Beef",
       price: "260,00₺",
       weight: "200 gr/paket",
       image: "/images/et_resimler/dana_kekikli_rozbif.png",
@@ -181,7 +181,7 @@ const SarkuteriGrubuDetail = () => {
       },
     },
     8: {
-      name: "Dana Karabiberli Rozbif",
+      name: "Dana Karabiberli Roast Beef",
       price: "270,00₺",
       weight: "200 gr/paket",
       image: "/images/et_resimler/dana_karabiberli_rozbif.png",
@@ -207,7 +207,7 @@ const SarkuteriGrubuDetail = () => {
     },
     9: {
       name: "Dana Antrikot Pastırma",
-      price: "280,00₺",
+      price: "1510,00₺",
       weight: "250 gr/paket",
       image: "/images/et_resimler/danaantrikotpastırma.png",
       description: "Premium dana antrikot pastırma, geleneksel lezzet.",
@@ -232,7 +232,7 @@ const SarkuteriGrubuDetail = () => {
     },
     10: {
       name: "Dana Kontrfile Pastırma",
-      price: "290,00₺",
+      price: "1460,00₺",
       weight: "250 gr/paket",
       image: "/images/et_resimler/dana_kontrfile_pastirma.png",
       description: "Özel kesim dana kontrfile pastırma.",
@@ -257,7 +257,7 @@ const SarkuteriGrubuDetail = () => {
     },
     11: {
       name: "Dana Seçme Pastırma",
-      price: "300,00₺",
+      price: "1310,00₺",
       weight: "250 gr/paket",
       image: "/images/et_resimler/danaseçmepastırma.png",
       description: "En kaliteli dana seçme pastırma.",
@@ -282,7 +282,7 @@ const SarkuteriGrubuDetail = () => {
     },
     12: {
       name: "Dana İspanyol Salam",
-      price: "95,00₺",
+      price: "940,00₺",
       weight: "100 gr/paket",
       image: "/images/et_resimler/dana_ispanyol_salam.png",
       description: "İspanyol usulü dana salam, özel baharatlarla.",
@@ -307,7 +307,7 @@ const SarkuteriGrubuDetail = () => {
     },
     13: {
       name: "Dana Göden Sucuk",
-      price: "380,00₺",
+      price: "720,00₺",
       weight: "400 gr/paket",
       image: "/images/et_resimler/dana_goden_sucuk.png",
       description: "Geleneksel dana göden sucuk, özel baharatlarla.",

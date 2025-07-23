@@ -1,4 +1,4 @@
-import React, { useEffect, useCallback } from "react";
+import React, { useEffect, useCallback, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import {
   Link,
@@ -13,6 +13,7 @@ const Products = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const dispatch = useDispatch();
+  const [modalProduct, setModalProduct] = useState(null);
 
   // Get category from Redux store
   const selectedCategory = useSelector(
@@ -299,7 +300,7 @@ const Products = () => {
       },
       {
         id: 29,
-        name: "Dana Rozbif",
+        name: "Dana Roast Beef",
         price: "250,00₺",
         weight: "200 gr/paket",
         image: "/images/et_resimler/rozbif.png",
@@ -307,7 +308,7 @@ const Products = () => {
       },
       {
         id: 30,
-        name: "Dana Kekikli Rozbif",
+        name: "Dana Kekikli Roast Beef",
         price: "260,00₺",
         weight: "200 gr/paket",
         image: "/images/et_resimler/dana_kekikli_rozbif.png",
@@ -315,7 +316,7 @@ const Products = () => {
       },
       {
         id: 31,
-        name: "Dana Karabiberli Rozbif",
+        name: "Dana Karabiberli Roast Beef",
         price: "270,00₺",
         weight: "200 gr/paket",
         image: "/images/et_resimler/dana_karabiberli_rozbif.png",
@@ -386,6 +387,7 @@ const Products = () => {
         weight: "400 gr/paket",
         image: "/images/et_resimler/kasap_köfte.png",
         link: "/products/islenmis-urun-grubu/1",
+        description: "Geleneksel dana köfte, özel baharatlarla hazırlanmıştır."
       },
       {
         id: 40,
@@ -394,6 +396,7 @@ const Products = () => {
         weight: "350 gr/paket",
         image: "/images/et_resimler/baton_sucuk.png",
         link: "/products/islenmis-urun-grubu/2",
+        description: "Özel baharatlarla hazırlanan dana sucuk."
       },
       {
         id: 41,
@@ -402,15 +405,26 @@ const Products = () => {
         weight: "4x110 gr/paket",
         image: "/images/et_resimler/steak_burger.png",
         link: "/products/islenmis-urun-grubu/3",
+        description: "Premium dana hamburger köftesi, hamburger için ideal."
       },
       {
         id: 42,
-        name: "Dana İnegöl Köfte",
+        name: "Görye İnegöl Köfte",
         price: "220,00₺",
         weight: "400 gr/paket",
         image: "/images/et_resimler/görye_köfte.png",
         link: "/products/islenmis-urun-grubu/4",
+        description: "Geleneksel İnegöl köftesi, özel baharatlarla hazırlanmıştır."
       },
+      {
+        id: 43,
+        name: "Görye Kangal Sucuk",
+        price: "350,00₺",
+        weight: "350 gr/paket",
+        image: "/images/et_resimler/kangal_sucuk.png",
+        link: "/products/islenmis-urun-grubu/5",
+        description: "Geleneksel yöntemlerle hazırlanmış, baharatlı ve lezzetli kangal sucuk. Kahvaltı ve yemekleriniz için ideal."
+      }
     ],
   };
 
@@ -421,157 +435,136 @@ const Products = () => {
     return allProducts[selectedCategory] || [];
   };
 
-  const ProductCard = ({ product }) => (
-    <Link to={product.link} style={{ textDecoration: "none" }}>
-      <div
-        style={{
-          background: "#fff",
-          borderRadius: 16,
-          overflow: "hidden",
-          boxShadow: "0 8px 32px #80002022",
-          transition: "all 0.3s ease",
-          position: "relative",
-          cursor: "pointer",
-          borderLeft: "6px solid var(--primary-color)",
-          height: "420px",
-          display: "flex",
-          flexDirection: "column",
-        }}
-        onMouseEnter={(e) => {
-          e.currentTarget.style.transform = "translateY(-8px) scale(1.03)";
-          e.currentTarget.style.boxShadow = "0 12px 32px #80002033";
-        }}
-        onMouseLeave={(e) => {
-          e.currentTarget.style.transform = "translateY(0)";
-          e.currentTarget.style.boxShadow = "0 8px 32px #80002022";
-        }}
-      >
-        {/* Resim Alanı */}
+  const ProductCard = ({ product }) => {
+    // For all categories, including islenmis-urun-grubu, clicking the card navigates to the detail page
+    return (
+      <Link to={product.link} style={{ textDecoration: "none" }}>
         <div
           style={{
-            position: "relative",
-            width: "100%",
-            height: 200,
+            background: "#fff",
+            borderRadius: 16,
             overflow: "hidden",
-            flexShrink: 0,
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            background: "#f8f9fa",
-          }}
-        >
-          <img
-            src={product.image}
-            alt={product.name}
-            style={{
-              width: 180,
-              height: 180,
-              objectFit: "contain",
-              transition: "transform 0.3s ease",
-              display: "block",
-              margin: "0 auto",
-            }}
-            onMouseEnter={(e) => {
-              e.target.style.transform = "scale(1.08)";
-            }}
-            onMouseLeave={(e) => {
-              e.target.style.transform = "scale(1)";
-            }}
-          />
-
-          {/* Fiyat Etiketi */}
-          <div
-            style={{
-              position: "absolute",
-              top: 12,
-              right: 12,
-              background:
-                "linear-gradient(135deg, var(--primary-color), var(--dark-red))",
-              color: "white",
-              padding: "8px 18px",
-              borderRadius: 20,
-              fontWeight: 800,
-              fontSize: 18,
-              boxShadow: "0 4px 12px #80002033",
-              transform: "rotate(2deg)",
-              letterSpacing: 1,
-            }}
-          >
-            {product.price}
-          </div>
-        </div>
-
-        {/* İçerik Alanı */}
-        <div
-          style={{
-            padding: "1.3rem 1.2rem 0.5rem 1.2rem",
+            boxShadow: "0 8px 32px #80002022",
+            transition: "all 0.3s ease",
+            position: "relative",
+            cursor: "pointer",
+            borderLeft: "6px solid var(--primary-color)",
+            height: "420px",
             display: "flex",
             flexDirection: "column",
-            gap: 8,
-            flex: 1,
-            justifyContent: "space-between",
           }}
         >
-          <div>
-            <h3
-              style={{
-                color: "#800020",
-                fontSize: "1.5rem",
-                fontWeight: 900,
-                margin: 0,
-                lineHeight: 1.3,
-                marginBottom: "0.5rem",
-                letterSpacing: 1,
-                textShadow: "0 2px 8px #80002022",
-              }}
-            >
-              {product.name}
-            </h3>
-
-            <p
-              style={{
-                color: "#888",
-                fontSize: 15,
-                margin: "0 0 0.5rem 0",
-                fontWeight: 700,
-                letterSpacing: 0.5,
-              }}
-            >
-              {product.weight}
-            </p>
-
-            <p
-              style={{
-                color: "#444",
-                fontSize: 17,
-                lineHeight: 1.5,
-                margin: 0,
-                fontWeight: 500,
-              }}
-            >
-              {product.description}
-            </p>
-          </div>
-
+          {/* Resim Alanı */}
           <div
             style={{
-              marginTop: 12,
-              padding: "8px 16px",
-              background: "linear-gradient(135deg, #f8f9fa, #e9ecef)",
-              borderRadius: 8,
-              textAlign: "center",
-              color: "var(--primary-color)",
-              fontWeight: 600,
-              fontSize: 14,
-              border: "1px solid #dee2e6",
+              position: "relative",
+              width: "100%",
+              height: 200,
+              overflow: "hidden",
+              flexShrink: 0,
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              background: "#f8f9fa",
             }}
           >
-            Detayları Görüntüle
+            <img
+              src={product.image}
+              alt={product.name}
+              style={{
+                width: 180,
+                height: 180,
+                objectFit: "contain",
+                transition: "transform 0.3s ease",
+                display: "block",
+                margin: "0 auto",
+              }}
+              onMouseEnter={(e) => {
+                e.target.style.transform = "scale(1.08)";
+              }}
+              onMouseLeave={(e) => {
+                e.target.style.transform = "scale(1)";
+              }}
+            />
+            {/* Fiyat Etiketi */}
+            <div
+              style={{
+                position: "absolute",
+                top: 12,
+                right: 12,
+                background:
+                  "linear-gradient(135deg, var(--primary-color), var(--dark-red))",
+                color: "white",
+                padding: "8px 18px",
+                borderRadius: 20,
+                fontWeight: 800,
+                fontSize: 18,
+                boxShadow: "0 4px 12px #80002033",
+                transform: "rotate(2deg)",
+                letterSpacing: 1,
+              }}
+            >
+              {product.price}
+            </div>
+          </div>
+          {/* İçerik Alanı */}
+          <div
+            style={{
+              padding: "1.3rem 1.2rem 0.5rem 1.2rem",
+              display: "flex",
+              flexDirection: "column",
+              gap: 8,
+              flex: 1,
+              justifyContent: "space-between",
+            }}
+          >
+            <div>
+              <h3
+                style={{
+                  color: "#800020",
+                  fontSize: "1.5rem",
+                  fontWeight: 900,
+                  margin: 0,
+                  lineHeight: 1.3,
+                  marginBottom: "0.5rem",
+                  letterSpacing: 1,
+                  textShadow: "0 2px 8px #80002022",
+                }}
+              >
+                {product.name}
+              </h3>
+              <p
+                style={{
+                  color: "#888",
+                  fontSize: 15,
+                  margin: "0 0 0.5rem 0",
+                  fontWeight: 700,
+                  letterSpacing: 0.5,
+                }}
+              >
+                {product.weight}
+              </p>
+            </div>
+            <div
+              style={{
+                marginTop: 12,
+                padding: "8px 16px",
+                background: "linear-gradient(135deg, #f8f9fa, #e9ecef)",
+                borderRadius: 8,
+                textAlign: "center",
+                color: "var(--primary-color)",
+                fontWeight: 600,
+                fontSize: 14,
+                border: "1px solid #dee2e6",
+              }}
+            >
+              Detayları Görüntüle
+            </div>
           </div>
         </div>
-      </div>
-    </Link>
-  );
+      </Link>
+    );
+  };
 
   return (
     <div

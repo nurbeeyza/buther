@@ -16,7 +16,7 @@ const DanaGrubu = () => {
     {
       id: 2,
       name: "Dana Kuşbaşı",
-      price: "680,00₺",
+      price: "700,00₺",
       weight: "kg",
       image: "/images/et_resimler/dana_kusbasi.png",
       description: "Taze dana kuşbaşı, güveç ve kavurma için ideal."
@@ -24,7 +24,7 @@ const DanaGrubu = () => {
     {
       id: 3,
       name: "Dana Kaburga Kıyma",
-      price: "300,00₺",
+      price: "610,00₺",
       weight: "400 gr/paket",
       image: "/images/et_resimler/dana_kaburga_kiyma.png",
       description: "Taze dana kaburga kıyması, köfte ve yemekler için mükemmel."
@@ -40,7 +40,7 @@ const DanaGrubu = () => {
     {
       id: 5,
       name: "Dana Asado",
-      price: "800,00₺",
+      price: "610,00₺",
       weight: "kg",
       image: "/images/et_resimler/dana_asado.png",
       description: "Özel kesim dana asado, mangal ve ızgara için mükemmel seçim."
