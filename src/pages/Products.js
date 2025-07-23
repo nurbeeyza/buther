@@ -1,4 +1,4 @@
-import React, { useEffect, useCallback, useState } from "react";
+import React, { useEffect, useCallback } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import {
   Link,
@@ -13,7 +13,6 @@ const Products = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const dispatch = useDispatch();
-  const [modalProduct, setModalProduct] = useState(null);
 
   // Get category from Redux store
   const selectedCategory = useSelector(
@@ -387,7 +386,7 @@ const Products = () => {
         weight: "400 gr/paket",
         image: "/images/et_resimler/kasap_köfte.png",
         link: "/products/islenmis-urun-grubu/1",
-        description: "Geleneksel dana köfte, özel baharatlarla hazırlanmıştır."
+        description: "Geleneksel dana köfte, özel baharatlarla hazırlanmıştır.",
       },
       {
         id: 40,
@@ -396,7 +395,7 @@ const Products = () => {
         weight: "350 gr/paket",
         image: "/images/et_resimler/baton_sucuk.png",
         link: "/products/islenmis-urun-grubu/2",
-        description: "Özel baharatlarla hazırlanan dana sucuk."
+        description: "Özel baharatlarla hazırlanan dana sucuk.",
       },
       {
         id: 41,
@@ -405,7 +404,7 @@ const Products = () => {
         weight: "4x110 gr/paket",
         image: "/images/et_resimler/steak_burger.png",
         link: "/products/islenmis-urun-grubu/3",
-        description: "Premium dana hamburger köftesi, hamburger için ideal."
+        description: "Premium dana hamburger köftesi, hamburger için ideal.",
       },
       {
         id: 42,
@@ -414,7 +413,8 @@ const Products = () => {
         weight: "400 gr/paket",
         image: "/images/et_resimler/görye_köfte.png",
         link: "/products/islenmis-urun-grubu/4",
-        description: "Geleneksel İnegöl köftesi, özel baharatlarla hazırlanmıştır."
+        description:
+          "Geleneksel İnegöl köftesi, özel baharatlarla hazırlanmıştır.",
       },
       {
         id: 43,
@@ -423,8 +423,9 @@ const Products = () => {
         weight: "350 gr/paket",
         image: "/images/et_resimler/kangal_sucuk.png",
         link: "/products/islenmis-urun-grubu/5",
-        description: "Geleneksel yöntemlerle hazırlanmış, baharatlı ve lezzetli kangal sucuk. Kahvaltı ve yemekleriniz için ideal."
-      }
+        description:
+          "Geleneksel yöntemlerle hazırlanmış, baharatlı ve lezzetli kangal sucuk. Kahvaltı ve yemekleriniz için ideal.",
+      },
     ],
   };
 
