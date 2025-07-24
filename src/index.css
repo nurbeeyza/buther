@@ -2173,12 +2173,6 @@ body {
   }
 
   /* Force ALL grid layouts to single column */
-  .grid,
-  [class*="grid"],
-  [style*="grid-template-columns"],
-  [style*="gridTemplateColumns"] {
-    grid-template-columns: 1fr !important;
-  }
 
   /* Category grid - single column */
   .category-grid {
@@ -2373,7 +2367,7 @@ body {
   .img-container,
   [class*="image"] {
     width: 100% !important;
-    margin: 0 auto !important;
+    margin: 30px auto !important;
   }
 
   /* Text containers should have proper spacing */

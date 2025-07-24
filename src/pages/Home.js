@@ -504,6 +504,7 @@ const Home = () => {
 
           {/* Thumbnail Grid */}
           <div
+            className="image-carousel-thumbnails"
             style={{
               display: "grid",
               gridTemplateColumns: "repeat(auto-fit, minmax(100px, 1fr))",

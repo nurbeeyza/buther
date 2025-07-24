@@ -628,13 +628,77 @@
   transform: scale(1.2);
 }
 
-.thumbnail-grid {
+.thumbnail-grid,
+.image-carousel-thumbnails {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   gap: 10px;
   margin-top: 2rem;
   max-width: 800px;
   margin: 2rem auto 0;
+  justify-items: center;
+  align-items: center;
+}
+
+/* Specific responsive rules for image carousel thumbnails - override global rules */
+.image-carousel-thumbnails {
+  display: grid !important;
+  justify-items: center !important;
+  align-items: center !important;
+}
+
+/* Large screens - 7+ columns */
+@media (min-width: 900px) {
+  .image-carousel-thumbnails {
+    grid-template-columns: repeat(7, 1fr) !important;
+    gap: 12px !important;
+    justify-items: center !important;
+  }
+}
+
+/* Medium-large screens - 5 columns */
+@media (max-width: 899px) and (min-width: 700px) {
+  .image-carousel-thumbnails {
+    grid-template-columns: repeat(5, 1fr) !important;
+    gap: 10px !important;
+    justify-items: center !important;
+  }
+}
+
+/* Medium screens - 4 columns */
+@media (max-width: 699px) and (min-width: 600px) {
+  .image-carousel-thumbnails {
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 8px !important;
+    justify-items: center !important;
+  }
+}
+
+/* Small-medium screens - 3 columns */
+@media (max-width: 599px) and (min-width: 480px) {
+  .image-carousel-thumbnails {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 8px !important;
+    justify-items: center !important;
+  }
+}
+
+/* Small screens - 2 columns */
+@media (max-width: 479px) and (min-width: 360px) {
+  .image-carousel-thumbnails {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 6px !important;
+    justify-items: center !important;
+  }
+}
+
+/* Very small screens - 1 column */
+@media (max-width: 359px) {
+  .image-carousel-thumbnails {
+    grid-template-columns: 1fr !important;
+    gap: 6px !important;
+    justify-items: center !important;
+  }
 }
 
 .thumbnail-item {
@@ -646,6 +710,8 @@
   border: 3px solid transparent;
   transition: all 0.3s ease;
   opacity: 0.7;
+  justify-self: center;
+  align-self: center;
 }
 
 .thumbnail-item.active {
@@ -663,6 +729,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
 }
 
 /* Responsive styles for image carousel */
@@ -689,13 +756,8 @@
     right: 10px;
   }
 
-  .thumbnail-grid {
-    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
-    gap: 8px;
-    padding: 0 1rem;
-  }
-
-  .thumbnail-item {
+  /* Thumbnail adjustments for mobile */
+  .image-carousel-thumbnails .thumbnail-item {
     width: 80px;
     height: 60px;
   }
@@ -716,12 +778,8 @@
     height: 200px;
   }
 
-  .thumbnail-grid {
-    grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
-    gap: 6px;
-  }
-
-  .thumbnail-item {
+  /* Further thumbnail adjustments for small mobile */
+  .image-carousel-thumbnails .thumbnail-item {
     width: 60px;
     height: 45px;
   }
