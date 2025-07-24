@@ -7,12 +7,14 @@ const meatQuestions = [
   "Hijyen, güvenilir et ürünlerini nerede bulabilirim?",
   "Etin taze olduğunu nasıl anlarım?",
   "Hangi et hangi yemekte kullanılır?",
-  "Et pişirirken nelere dikkat etmeliyim?"
+  "Et pişirirken nelere dikkat etmeliyim?",
 ];
 
 const Home = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
+  const [currentImageSlide, setCurrentImageSlide] = useState(0);
+  const [isManualNavigation, setIsManualNavigation] = useState(false);
 
   const slides = [
     {
@@ -34,7 +36,25 @@ const Home = () => {
     },
   ];
 
-  // Enable auto-slide functionality
+  // Rotating images data
+  const rotatingImages = [
+    "/images/rotating/KSPM0244.jpg",
+    "/images/rotating/KSPM0248.jpg",
+    "/images/rotating/DSC02224.jpg",
+    "/images/rotating/DSC02238.jpg",
+    "/images/rotating/DSC02240.jpg",
+    "/images/rotating/DSC02246.jpg",
+    "/images/rotating/DSC02249.jpg",
+    "/images/rotating/DSC02279.jpg",
+    "/images/rotating/DSC02295.jpg",
+    "/images/rotating/DSC02312.jpg",
+    "/images/rotating/DSC02359.jpg",
+    "/images/rotating/DSC02572.jpg",
+    "/images/rotating/DSC02583.jpg",
+    "/images/rotating/DSC02597.jpg",
+  ];
+
+  // Enable auto-slide functionality for hero
   useEffect(() => {
     const interval = setInterval(() => {
       if (!isTransitioning) {
@@ -45,12 +65,51 @@ const Home = () => {
     return () => clearInterval(interval);
   }, [isTransitioning, slides.length]);
 
+  // Auto-rotate images every 4 seconds, but pause when manually navigating
+  useEffect(() => {
+    if (!isManualNavigation) {
+      const imageInterval = setInterval(() => {
+        setCurrentImageSlide((prev) => (prev + 1) % rotatingImages.length);
+      }, 4000);
+
+      return () => clearInterval(imageInterval);
+    }
+  }, [rotatingImages.length, isManualNavigation]);
+
+  // Reset manual navigation flag after 8 seconds
+  useEffect(() => {
+    if (isManualNavigation) {
+      const timeout = setTimeout(() => {
+        setIsManualNavigation(false);
+      }, 8000);
+
+      return () => clearTimeout(timeout);
+    }
+  }, [isManualNavigation]);
+
   const handleSlideChange = (index) => {
     if (!isTransitioning) {
       setIsTransitioning(true);
       setCurrentSlide(index);
       setTimeout(() => setIsTransitioning(false), 1000);
     }
+  };
+
+  const handleImageSlideChange = (index) => {
+    setIsManualNavigation(true);
+    setCurrentImageSlide(index);
+  };
+
+  const handlePrevImage = () => {
+    setIsManualNavigation(true);
+    setCurrentImageSlide((prev) =>
+      prev === 0 ? rotatingImages.length - 1 : prev - 1
+    );
+  };
+
+  const handleNextImage = () => {
+    setIsManualNavigation(true);
+    setCurrentImageSlide((prev) => (prev + 1) % rotatingImages.length);
   };
 
   const categories = [
@@ -215,21 +274,288 @@ const Home = () => {
       {/* Call to Action Section */}
       <section className="cta-section">
         <div className="container">
-          <div className="mangal-cta-content" style={{
-            margin: "2rem auto 0 auto",
-            maxWidth: 600,
-            background: "#fff7f0",
-            borderRadius: 16,
-            boxShadow: "0 2px 12px #80002011",
-            padding: "2rem 2.5rem",
-            textAlign: "center",
-            border: "2px solid #d4af37"
-          }}>
-            <h2 style={{ color: "#800020", fontWeight: 800, fontSize: 22, marginBottom: 12 }}>{q1}</h2>
-            <p style={{ color: "#800020", fontWeight: 700, fontSize: 18, marginBottom: 8 }}>{q2}</p>
+          <div
+            className="mangal-cta-content"
+            style={{
+              margin: "2rem auto 0 auto",
+              maxWidth: 600,
+              background: "#fff7f0",
+              borderRadius: 16,
+              boxShadow: "0 2px 12px #80002011",
+              padding: "2rem 2.5rem",
+              textAlign: "center",
+              border: "2px solid #d4af37",
+            }}
+          >
+            <h2
+              style={{
+                color: "#800020",
+                fontWeight: 800,
+                fontSize: 22,
+                marginBottom: 12,
+              }}
+            >
+              {q1}
+            </h2>
+            <p
+              style={{
+                color: "#800020",
+                fontWeight: 700,
+                fontSize: 18,
+                marginBottom: 8,
+              }}
+            >
+              {q2}
+            </p>
             <p style={{ color: "#333", fontSize: 18, fontWeight: 600 }}>
               gibi sorularınızın cevabı BAŞPINARLAR 'da...
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Image Carousel Section */}
+      <section
+        className="image-carousel-section"
+        style={{
+          padding: "4rem 0",
+          background: "linear-gradient(to bottom, #f8f9fa, #fff)",
+          overflow: "hidden",
+        }}
+      >
+        <div className="container">
+          <div
+            style={{
+              textAlign: "center",
+              marginBottom: "3rem",
+            }}
+          >
+            <h2
+              style={{
+                fontSize: "2.5rem",
+                fontWeight: 800,
+                color: "var(--primary-color)",
+                marginBottom: "1rem",
+                textTransform: "uppercase",
+                letterSpacing: "2px",
+              }}
+            >
+              GALERİMİZ
+            </h2>
+            <p
+              style={{
+                fontSize: "1.2rem",
+                color: "#666",
+                fontStyle: "italic",
+              }}
+            >
+              Kaliteli et ürünlerimizden görüntüler
+            </p>
+          </div>
+
+          {/* Main Carousel */}
+          <div
+            style={{
+              position: "relative",
+              maxWidth: "800px",
+              margin: "0 auto",
+              borderRadius: "16px",
+              overflow: "hidden",
+              boxShadow: "0 8px 32px rgba(0,0,0,0.15)",
+            }}
+          >
+            <div
+              style={{
+                position: "relative",
+                width: "100%",
+                height: "400px",
+                overflow: "hidden",
+              }}
+            >
+              <div
+                style={{
+                  display: "flex",
+                  width: `${rotatingImages.length * 100}%`,
+                  height: "100%",
+                  transform: `translateX(-${
+                    (currentImageSlide * 100) / rotatingImages.length
+                  }%)`,
+                  transition: "transform 0.5s ease-in-out",
+                }}
+              >
+                {rotatingImages.map((image, index) => (
+                  <div
+                    key={index}
+                    style={{
+                      width: `${100 / rotatingImages.length}%`,
+                      height: "100%",
+                      backgroundImage: `url(${image})`,
+                      backgroundSize: "cover",
+                      backgroundPosition: "center",
+                      backgroundRepeat: "no-repeat",
+                      flexShrink: 0,
+                    }}
+                  />
+                ))}
+              </div>
+            </div>
+
+            {/* Navigation Arrows */}
+            <button
+              onClick={handlePrevImage}
+              style={{
+                position: "absolute",
+                left: "20px",
+                top: "50%",
+                transform: "translateY(-50%)",
+                background: "rgba(0,0,0,0.5)",
+                color: "white",
+                border: "none",
+                borderRadius: "50%",
+                width: "50px",
+                height: "50px",
+                fontSize: "20px",
+                cursor: "pointer",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                transition: "all 0.3s ease",
+                zIndex: 10,
+              }}
+              onMouseEnter={(e) => {
+                e.target.style.background = "rgba(139,0,0,0.8)";
+                e.target.style.transform = "translateY(-50%) scale(1.1)";
+              }}
+              onMouseLeave={(e) => {
+                e.target.style.background = "rgba(0,0,0,0.5)";
+                e.target.style.transform = "translateY(-50%) scale(1)";
+              }}
+            >
+              ‹
+            </button>
+
+            <button
+              onClick={handleNextImage}
+              style={{
+                position: "absolute",
+                right: "20px",
+                top: "50%",
+                transform: "translateY(-50%)",
+                background: "rgba(0,0,0,0.5)",
+                color: "white",
+                border: "none",
+                borderRadius: "50%",
+                width: "50px",
+                height: "50px",
+                fontSize: "20px",
+                cursor: "pointer",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                transition: "all 0.3s ease",
+                zIndex: 10,
+              }}
+              onMouseEnter={(e) => {
+                e.target.style.background = "rgba(139,0,0,0.8)";
+                e.target.style.transform = "translateY(-50%) scale(1.1)";
+              }}
+              onMouseLeave={(e) => {
+                e.target.style.background = "rgba(0,0,0,0.5)";
+                e.target.style.transform = "translateY(-50%) scale(1)";
+              }}
+            >
+              ›
+            </button>
+
+            {/* Dots Navigation */}
+            <div
+              style={{
+                position: "absolute",
+                bottom: "20px",
+                left: "50%",
+                transform: "translateX(-50%)",
+                display: "flex",
+                gap: "8px",
+                zIndex: 10,
+              }}
+            >
+              {rotatingImages.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => handleImageSlideChange(index)}
+                  style={{
+                    width: "12px",
+                    height: "12px",
+                    borderRadius: "50%",
+                    border: "none",
+                    background:
+                      index === currentImageSlide
+                        ? "var(--primary-color)"
+                        : "rgba(255,255,255,0.6)",
+                    cursor: "pointer",
+                    transition: "all 0.3s ease",
+                    transform:
+                      index === currentImageSlide ? "scale(1.2)" : "scale(1)",
+                  }}
+                />
+              ))}
+            </div>
+          </div>
+
+          {/* Thumbnail Grid */}
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fit, minmax(100px, 1fr))",
+              gap: "10px",
+              marginTop: "2rem",
+              maxWidth: "800px",
+              margin: "2rem auto 0",
+            }}
+          >
+            {rotatingImages.map((image, index) => (
+              <div
+                key={index}
+                onClick={() => handleImageSlideChange(index)}
+                style={{
+                  width: "100px",
+                  height: "80px",
+                  borderRadius: "8px",
+                  overflow: "hidden",
+                  cursor: "pointer",
+                  border:
+                    index === currentImageSlide
+                      ? "3px solid var(--primary-color)"
+                      : "3px solid transparent",
+                  transition: "all 0.3s ease",
+                  opacity: index === currentImageSlide ? 1 : 0.7,
+                  transform:
+                    index === currentImageSlide ? "scale(1.05)" : "scale(1)",
+                }}
+                onMouseEnter={(e) => {
+                  if (index !== currentImageSlide) {
+                    e.target.style.opacity = "1";
+                    e.target.style.transform = "scale(1.02)";
+                  }
+                }}
+                onMouseLeave={(e) => {
+                  if (index !== currentImageSlide) {
+                    e.target.style.opacity = "0.7";
+                    e.target.style.transform = "scale(1)";
+                  }
+                }}
+              >
+                <img
+                  src={image}
+                  alt={`Gallery ${index + 1}`}
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    objectFit: "cover",
+                  }}
+                />
+              </div>
+            ))}
           </div>
         </div>
       </section>
