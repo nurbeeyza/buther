@@ -159,51 +159,51 @@ const SarkuteriGrubuDetail = () => {
       name: "Dana Kekikli Roast Beef",
       price: "260,00₺",
       weight: "200 gr/paket",
-      image: "/images/et_resimler/dana_kekikli_rozbif.png",
+      image: "/images/et_resimler/roastbeef-kekikli-2.png",
       description: "Kekikli dana rozbif, özel aroması ile fark yaratır.",
       features: [
         "Kekik aroması",
         "Özel baharatlarla",
         "Sandviç için ideal",
         "İnce dilimlenebilir",
-        "Premium kalite",
+        "Premium kalite"
       ],
       cookingTips: [
         "Direkt tüketilebilir",
         "İnce dilimler halinde kesin",
         "Sandviçte kullanın",
-        "Soğuk servis yapın",
+        "Soğuk servis yapın"
       ],
       nutritionalInfo: {
         protein: "25g",
         fat: "12g",
-        calories: "200 kcal",
-      },
+        calories: "200 kcal"
+      }
     },
     8: {
       name: "Dana Karabiberli Roast Beef",
       price: "270,00₺",
       weight: "200 gr/paket",
-      image: "/images/et_resimler/dana_karabiberli_rozbif.png",
+      image: "/images/et_resimler/danakarabiberliroastbeef.jpg",
       description: "Karabiberli dana rozbif, özel aroması ile fark yaratır.",
       features: [
         "Karabiber aroması",
         "Özel baharatlarla",
         "Sandviç için ideal",
         "İnce dilimlenebilir",
-        "Premium kalite",
+        "Premium kalite"
       ],
       cookingTips: [
         "Direkt tüketilebilir",
         "İnce dilimler halinde kesin",
         "Sandviçte kullanın",
-        "Soğuk servis yapın",
+        "Soğuk servis yapın"
       ],
       nutritionalInfo: {
         protein: "25g",
         fat: "12g",
-        calories: "200 kcal",
-      },
+        calories: "200 kcal"
+      }
     },
     9: {
       name: "Dana Antrikot Pastırma",
@@ -231,29 +231,29 @@ const SarkuteriGrubuDetail = () => {
       },
     },
     10: {
-      name: "Dana Kontrfile Pastırma",
+      name: "Dana Kontrafile Pastırma",
       price: "1460,00₺",
       weight: "250 gr/paket",
-      image: "/images/et_resimler/dana_kontrfile_pastirma.png",
+      image: "/images/et_resimler/250gr-dana-kontrafile-pastirma-95fa24.png",
       description: "Özel kesim dana kontrfile pastırma.",
       features: [
-        "Özel kontrfile kesimi",
-        "Premium kalite",
-        "Kahvaltı için ideal",
+        "Özel kesim",
+        "Kontrafile etinden",
+        "Geleneksel baharat karışımı",
         "İnce dilimlenebilir",
-        "Uzun raf ömrü",
+        "Premium kalite"
       ],
       cookingTips: [
         "Direkt tüketilebilir",
         "İnce dilimler halinde kesin",
-        "Kahvaltıda peynir ile servis edin",
-        "Soğuk servis yapın",
+        "Sandviçte kullanın",
+        "Soğuk servis yapın"
       ],
       nutritionalInfo: {
-        protein: "27g",
-        fat: "13g",
-        calories: "210 kcal",
-      },
+        protein: "24g",
+        fat: "14g",
+        calories: "260 kcal"
+      }
     },
     11: {
       name: "Dana Seçme Pastırma",
@@ -284,26 +284,26 @@ const SarkuteriGrubuDetail = () => {
       name: "Dana İspanyol Salam",
       price: "940,00₺",
       weight: "100 gr/paket",
-      image: "/images/et_resimler/dana_ispanyol_salam.png",
+      image: "/images/et_resimler/ispanyolsalam.png",
       description: "İspanyol usulü dana salam, özel baharatlarla.",
       features: [
         "İspanyol usulü",
-        "Özel baharatlarla",
-        "Kahvaltı için ideal",
+        "Özel baharat karışımı",
+        "Sandviç için ideal",
         "İnce dilimlenebilir",
-        "Uzun raf ömrü",
+        "Premium kalite"
       ],
       cookingTips: [
         "Direkt tüketilebilir",
         "İnce dilimler halinde kesin",
-        "Kahvaltıda peynir ile servis edin",
-        "Soğuk servis yapın",
+        "Sandviçte kullanın",
+        "Soğuk servis yapın"
       ],
       nutritionalInfo: {
         protein: "20g",
-        fat: "19g",
-        calories: "250 kcal",
-      },
+        fat: "18g",
+        calories: "240 kcal"
+      }
     },
     13: {
       name: "Dana Göden Sucuk",
@@ -331,54 +331,29 @@ const SarkuteriGrubuDetail = () => {
       },
     },
     14: {
-      name: "Dana Dilim Sucuk",
-      price: "320,00₺",
-      weight: "300 gr/paket",
-      image: "/images/et_resimler/dana_dilim_sucuk.png",
-      description: "Pratik dana dilim sucuk, hazır kesim.",
-      features: [
-        "Hazır dilimlenmiş",
-        "Pratik kullanım",
-        "Kahvaltı için ideal",
-        "Hijyenik paketleme",
-        "Uzun raf ömrü",
-      ],
-      cookingTips: [
-        "Direkt tüketilebilir",
-        "Kahvaltıda peynir ile servis edin",
-        "Sandviçte kullanın",
-        "Soğuk servis yapın",
-      ],
-      nutritionalInfo: {
-        protein: "21g",
-        fat: "23g",
-        calories: "290 kcal",
-      },
-    },
-    15: {
       name: "Dana Baton Sucuk",
       price: "350,00₺",
       weight: "350 gr/paket",
-      image: "/images/et_resimler/dana_baton_sucuk.png",
+      image: "/images/et_resimler/BATON-SUCUK.png",
       description: "Klasik dana baton sucuk, geleneksel lezzet.",
       features: [
-        "Klasik tarif",
-        "Geleneksel lezzet",
-        "Kahvaltı için ideal",
+        "Klasik baton şekli",
+        "Geleneksel baharat karışımı",
         "Doğal kılıf",
         "Uzun raf ömrü",
+        "Pratik kullanım"
       ],
       cookingTips: [
-        "Tavada hafif pişirin",
-        "Direkt tüketilebilir",
-        "Kahvaltıda peynir ile servis edin",
-        "Soğuk servis yapın",
+        "Tavada orta ateşte pişirin",
+        "Her iki tarafı 3-4 dakika çevirin",
+        "Fazla pişirmeyin, sulu kalmasına dikkat edin",
+        "Kahvaltıda veya sandviçte servis edin"
       ],
       nutritionalInfo: {
-        protein: "21g",
-        fat: "23g",
-        calories: "290 kcal",
-      },
+        protein: "22g",
+        fat: "28g",
+        calories: "340 kcal"
+      }
     },
   };
 

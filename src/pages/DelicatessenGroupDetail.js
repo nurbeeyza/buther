@@ -152,6 +152,136 @@ const DelicatessenGroupDetail = () => {
       origin: "Türkiye",
       storage: "0-4°C buzdolabında saklayın",
     },
+    12: {
+      id: 12,
+      name: "Dana İspanyol Salam",
+      price: "940,00₺",
+      weight: "100 gr/paket",
+      image: "/images/et_resimler/ispanyolsalam.png",
+      description: "İspanyol usulü dana salam, özel baharatlarla.",
+      features: [
+        "İspanyol usulü",
+        "Özel baharat karışımı",
+        "Sandviç için ideal",
+        "İnce dilimlenebilir",
+        "Premium kalite"
+      ],
+      cookingTips: [
+        "Direkt tüketilebilir",
+        "İnce dilimler halinde kesin",
+        "Sandviçte kullanın",
+        "Soğuk servis yapın"
+      ],
+      nutritionalInfo: {
+        protein: "20g",
+        fat: "18g",
+        calories: "240 kcal"
+      }
+    },
+    7: {
+      id: 7,
+      name: "Dana Kekikli Roast Beef",
+      price: "260,00₺",
+      weight: "200 gr/paket",
+      image: "/images/et_resimler/roastbeef-kekikli-2.png",
+      description: "Kekikli dana rozbif, özel aroması ile fark yaratır.",
+      features: [
+        "Kekik aroması",
+        "Özel baharatlarla",
+        "Sandviç için ideal",
+        "İnce dilimlenebilir",
+        "Premium kalite"
+      ],
+      cookingTips: [
+        "Direkt tüketilebilir",
+        "İnce dilimler halinde kesin",
+        "Sandviçte kullanın",
+        "Soğuk servis yapın"
+      ],
+      nutritionalInfo: {
+        protein: "25g",
+        fat: "12g",
+        calories: "200 kcal"
+      }
+    },
+    8: {
+      id: 8,
+      name: "Dana Karabiberli Roast Beef",
+      price: "270,00₺",
+      weight: "200 gr/paket",
+      image: "/images/et_resimler/danakarabiberliroastbeef.jpg",
+      description: "Karabiberli dana rozbif, özel aroması ile fark yaratır.",
+      features: [
+        "Karabiber aroması",
+        "Özel baharatlarla",
+        "Sandviç için ideal",
+        "İnce dilimlenebilir",
+        "Premium kalite"
+      ],
+      cookingTips: [
+        "Direkt tüketilebilir",
+        "İnce dilimler halinde kesin",
+        "Sandviçte kullanın",
+        "Soğuk servis yapın"
+      ],
+      nutritionalInfo: {
+        protein: "25g",
+        fat: "12g",
+        calories: "200 kcal"
+      }
+    },
+    15: {
+      id: 15,
+      name: "Dana Baton Sucuk",
+      price: "350,00₺",
+      weight: "350 gr/paket",
+      image: "/images/et_resimler/BATON-SUCUK.png",
+      description: "Klasik dana baton sucuk, geleneksel lezzet.",
+      features: [
+        "Klasik baton şekli",
+        "Geleneksel baharat karışımı",
+        "Doğal kılıf",
+        "Uzun raf ömrü",
+        "Pratik kullanım"
+      ],
+      cookingTips: [
+        "Tavada orta ateşte pişirin",
+        "Her iki tarafı 3-4 dakika çevirin",
+        "Fazla pişirmeyin, sulu kalmasına dikkat edin",
+        "Kahvaltıda veya sandviçte servis edin"
+      ],
+      nutritionalInfo: {
+        protein: "22g",
+        fat: "28g",
+        calories: "340 kcal"
+      }
+    },
+    10: {
+      id: 10,
+      name: "Dana Kontrafile Pastırma",
+      price: "1460,00₺",
+      weight: "250 gr/paket",
+      image: "/images/et_resimler/250gr-dana-kontrafile-pastirma-95fa24.png",
+      description: "Özel kesim dana kontrfile pastırma.",
+      features: [
+        "Özel kesim",
+        "Kontrafile etinden",
+        "Geleneksel baharat karışımı",
+        "İnce dilimlenebilir",
+        "Premium kalite"
+      ],
+      cookingTips: [
+        "Direkt tüketilebilir",
+        "İnce dilimler halinde kesin",
+        "Sandviçte kullanın",
+        "Soğuk servis yapın"
+      ],
+      nutritionalInfo: {
+        protein: "24g",
+        fat: "14g",
+        calories: "260 kcal"
+      }
+    },
   };
 
   const product = products[id];

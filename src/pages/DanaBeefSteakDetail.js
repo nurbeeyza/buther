@@ -4,7 +4,7 @@ import { useParams, Link } from "react-router-dom";
 const products = {
   1: {
     name: "Dallas Steak",
-    price: "950,00₺",
+    price: "1270,00₺",
     weight: "300-400g",
     image: "/images/et_resimler/dallas_steak.png",
     description:
@@ -35,7 +35,7 @@ const products = {
   },
   2: {
     name: "T-bone Steak",
-    price: "950,00₺",
+    price: "1270,00₺",
     weight: "400-500g",
     image: "/images/et_resimler/t-bonesteak.png",
     description:
@@ -66,7 +66,7 @@ const products = {
   },
   3: {
     name: "New York Steak",
-    price: "900,00₺",
+    price: "1270,00₺",
     weight: "250-300g",
     image: "/images/et_resimler/newyorksteak.png",
     description:
@@ -128,7 +128,7 @@ const products = {
   },
   5: {
     name: "Bonfile",
-    price: "950,00₺",
+    price: "1350,00₺",
     weight: "200-250g",
     image: "/images/et_resimler/dana_bonfile.png",
     description:
@@ -159,7 +159,7 @@ const products = {
   },
   6: {
     name: "Antrikot",
-    price: "800,00₺",
+    price: "970,00₺",
     weight: "250-300g",
     image: "/images/et_resimler/dana_antrikot.png",
     description:
@@ -189,8 +189,8 @@ const products = {
     storage: "0-4°C buzdolabında saklayın",
   },
   7: {
-    name: "Kontrfile",
-    price: "800,00₺",
+    name: "Kontrafile",
+    price: "870,00₺",
     weight: "250-300g",
     image: "/images/et_resimler/dana_kontrfile.png",
     description:

@@ -8,7 +8,7 @@ const BeefSteak = () => {
     {
       id: 1,
       name: "Dallas Steak",
-      price: "950,00₺",
+      price: "1270,00₺",
       image: "/images/et_resimler/dallas_steak.png",
       description:
         "Premium kalite Dallas steak, özel kesim ve marinasyon ile hazırlanmıştır.",
@@ -16,7 +16,7 @@ const BeefSteak = () => {
     {
       id: 2,
       name: "Dana Antrikot",
-      price: "800,00₺",
+      price: "970,00₺",
       image: "/images/et_resimler/dana_antrikot.png",
       description:
         "Yumuşacık dana antrikot, ızgara ve tavada pişirme için ideal.",
@@ -32,7 +32,7 @@ const BeefSteak = () => {
     {
       id: 4,
       name: "Dana Bonfile",
-      price: "950,00₺",
+      price: "1350,00₺",
       image: "/images/et_resimler/dana_bonfile.png",
       description: "En kaliteli dana bonfile, yumuşaklığı ile ünlü premium et.",
     },
@@ -53,9 +53,23 @@ const BeefSteak = () => {
     {
       id: 7,
       name: "T-Bone Steak",
-      price: "950,00₺",
+      price: "1270,00₺",
       image: "/images/et_resimler/t-bonesteak.png",
       description: "Klasik T-Bone steak, hem bonfile hem kontrfile bir arada.",
+    },
+    {
+      id: 8,
+      name: "New York Steak",
+      price: "1270,00₺",
+      image: "/images/et_resimler/newyorksteak.png",
+      description: "Amerikan klasiği New York steak, mükemmel marbling yapısı.",
+    },
+    {
+      id: 9,
+      name: "Kontrafile",
+      price: "870,00₺",
+      image: "/images/et_resimler/dana_kontrfile.png",
+      description: "Premium dana kontrfile, steak ve ızgara için mükemmel seçim.",
     },
   ];
 

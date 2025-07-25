@@ -58,7 +58,7 @@ const SarkuteriGrubu = () => {
       name: "Dana Kekikli Roast Beef",
       price: "260,00₺",
       weight: "200 gr/paket",
-      image: "/images/et_resimler/dana_kekikli_rozbif.png",
+      image: "/images/et_resimler/roastbeef-kekikli-2.png",
       description: "Kekikli dana rozbif, özel aroması ile fark yaratır."
     },
     {
@@ -66,7 +66,7 @@ const SarkuteriGrubu = () => {
       name: "Dana Karabiberli Roast Beef",
       price: "270,00₺",
       weight: "200 gr/paket",
-      image: "/images/et_resimler/dana_karabiberli_rozbif.png",
+      image: "/images/et_resimler/danakarabiberliroastbeef.jpg",
       description: "Karabiberli dana rozbif, özel aroması ile fark yaratır."
     },
     {
@@ -79,10 +79,10 @@ const SarkuteriGrubu = () => {
     },
     {
       id: 10,
-      name: "Dana Kontrfile Pastırma",
+      name: "Dana Kontrafile Pastırma",
       price: "1460,00₺",
       weight: "250 gr/paket",
-      image: "/images/et_resimler/dana_kontrfile_pastirma.png",
+      image: "/images/et_resimler/250gr-dana-kontrafile-pastirma-95fa24.png",
       description: "Özel kesim dana kontrfile pastırma."
     },
     {
@@ -98,31 +98,23 @@ const SarkuteriGrubu = () => {
       name: "Dana İspanyol Salam",
       price: "940,00₺",
       weight: "100 gr/paket",
-      image: "/images/et_resimler/dana_ispanyol_salam.png",
+      image: "/images/et_resimler/ispanyolsalam.png",
       description: "İspanyol usulü dana salam, özel baharatlarla."
     },
     {
       id: 13,
-      name: "Dana Göden Sucuk",
-      price: "720,00₺",
-      weight: "400 gr/paket",
-      image: "/images/et_resimler/dana_goden_sucuk.png",
-      description: "Geleneksel dana göden sucuk, özel baharatlarla."
-    },
-    {
-      id: 14,
       name: "Dana Dilim Sucuk",
       price: "320,00₺",
       weight: "300 gr/paket",
-      image: "/images/et_resimler/dana_dilim_sucuk.png",
+      image: "/images/et_resimler/dilim_sucuk.png",
       description: "Pratik dana dilim sucuk, hazır kesim."
     },
     {
-      id: 15,
+      id: 14,
       name: "Dana Baton Sucuk",
       price: "350,00₺",
       weight: "350 gr/paket",
-      image: "/images/et_resimler/dana_baton_sucuk.png",
+      image: "/images/et_resimler/BATON-SUCUK.png",
       description: "Klasik dana baton sucuk, geleneksel lezzet."
     }
   ];

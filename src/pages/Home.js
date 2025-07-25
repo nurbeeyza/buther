@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useMemo } from "react";
 import { Link } from "react-router-dom";
 import "./Home.css";
+import HTMLFlipBook from "react-pageflip";
 
 const meatQuestions = [
   "Bu gün mangalda ne yapsak?",
@@ -557,6 +558,41 @@ const Home = () => {
                 />
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Kataloğumuz alanı */}
+      <section className="catalog-section" style={{ padding: "4rem 0", background: "#fff", overflow: "hidden" }}>
+        <div className="container">
+          <div style={{ textAlign: "center", marginBottom: "3rem" }}>
+            <h2 style={{ fontSize: "2.5rem", fontWeight: 800, color: "var(--primary-color)", marginBottom: "1rem", textTransform: "uppercase", letterSpacing: "2px" }}>
+              KATALOĞUMUZ
+            </h2>
+            <p style={{ fontSize: "1.2rem", color: "#666", fontStyle: "italic" }}>
+              Ürün kataloğumuzu defter gibi sayfa çevirerek inceleyebilirsiniz.
+            </p>
+          </div>
+          <div style={{ display: "flex", justifyContent: "center" }}>
+            <HTMLFlipBook
+              width={400}
+              height={550}
+              size="stretch"
+              minWidth={315}
+              maxWidth={600}
+              minHeight={400}
+              maxHeight={800}
+              maxShadowOpacity={0.5}
+              showCover={true}
+              mobileScrollSupport={true}
+              style={{ boxShadow: "0 8px 32px #80002022", borderRadius: 12 }}
+            >
+              {Array.from({ length: 27 }, (_, i) => `/images/katalog/katalog${i + 1}.png`).map((src, idx) => (
+                <div key={idx} style={{ width: "100%", height: "100%", background: "#fff" }}>
+                  <img src={src} alt={`Katalog Sayfa ${idx + 1}`} style={{ width: "100%", height: "100%", objectFit: "contain", borderRadius: 8 }} />
+                </div>
+              ))}
+            </HTMLFlipBook>
           </div>
         </div>
       </section>
