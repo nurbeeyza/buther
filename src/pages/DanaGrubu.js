@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const DanaGrubu = () => {
   console.log("DanaGrubu component loaded!");
@@ -46,6 +46,8 @@ const DanaGrubu = () => {
       description: "Özel kesim dana asado, mangal ve ızgara için mükemmel seçim."
     }
   ];
+
+  const navigate = useNavigate();
 
   return (
     <div style={{ padding: "2rem", maxWidth: "1200px", margin: "0 auto" }}>
@@ -203,6 +205,27 @@ const DanaGrubu = () => {
             </div>
           </Link>
         ))}
+      </div>
+      <div style={{ display: "flex", justifyContent: "center", marginTop: 32 }}>
+        <button
+          onClick={() => navigate('/#urunlerimiz')}
+          style={{
+            background: "var(--primary-color)",
+            color: "white",
+            border: "none",
+            borderRadius: 8,
+            padding: "0.7rem 2rem",
+            fontWeight: 700,
+            fontSize: 16,
+            cursor: "pointer",
+            boxShadow: "0 2px 8px #80002022",
+            transition: "all 0.2s",
+          }}
+          onMouseEnter={e => e.target.style.background = "#a0002a"}
+          onMouseLeave={e => e.target.style.background = "var(--primary-color)"}
+        >
+          Kategorilere Dön
+        </button>
       </div>
     </div>
   );

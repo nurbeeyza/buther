@@ -12,6 +12,14 @@ const meatQuestions = [
 ];
 
 const Home = () => {
+  useEffect(() => {
+    if (window.location.hash) {
+      const el = document.getElementById(window.location.hash.replace('#', ''));
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }, []);
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
   const [currentImageSlide, setCurrentImageSlide] = useState(0);
@@ -235,7 +243,7 @@ const Home = () => {
           background: "linear-gradient(to bottom, rgb(18 18 18), #4d4d4d)",
         }}
       >
-        <div className="awe-bg-overlay"></div>
+        <div className="awe-bg-overlay" id="urunlerimiz"></div>
         <div className="container">
           <div className="section-title">
             <h2>ÜRÜNLERİMİZ</h2>
@@ -598,7 +606,7 @@ const Home = () => {
       </section>
 
       {/* Features Section */}
-      <section className="features">
+      <section id="urunlerimiz" className="features-section" style={{ padding: "4rem 0", background: "#fff" }}>
         <div className="container">
           <h2 className="section-title">Neden Bizi Tercih Etmelisiniz?</h2>
           <div className="feature-grid">

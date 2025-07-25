@@ -1,8 +1,10 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const KuzuGrubu = () => {
   console.log("KuzuGrubu component loaded!");
+
+  const navigate = useNavigate();
 
   const products = [
     {
@@ -262,6 +264,27 @@ const KuzuGrubu = () => {
             </div>
           </Link>
         ))}
+      </div>
+      <div style={{ display: "flex", justifyContent: "center", marginTop: 32 }}>
+        <button
+          onClick={() => navigate('/#urunlerimiz')}
+          style={{
+            background: "var(--primary-color)",
+            color: "white",
+            border: "none",
+            borderRadius: 8,
+            padding: "0.7rem 2rem",
+            fontWeight: 700,
+            fontSize: 16,
+            cursor: "pointer",
+            boxShadow: "0 2px 8px #80002022",
+            transition: "all 0.2s",
+          }}
+          onMouseEnter={e => e.target.style.background = "#a0002a"}
+          onMouseLeave={e => e.target.style.background = "var(--primary-color)"}
+        >
+          Kategorilere Dön
+        </button>
       </div>
     </div>
   );

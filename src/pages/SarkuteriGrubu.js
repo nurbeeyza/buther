@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const SarkuteriGrubu = () => {
   console.log("SarkuteriGrubu component loaded!");
@@ -103,6 +103,14 @@ const SarkuteriGrubu = () => {
     },
     {
       id: 13,
+      name: "Dana Göden Sucuk",
+      price: "720,00₺",
+      weight: "400 gr/paket",
+      image: "/images/et_resimler/goden-sucuk.png",
+      description: "Geleneksel dana göden sucuk, özel baharatlarla."
+    },
+    {
+      id: 14,
       name: "Dana Dilim Sucuk",
       price: "375,00₺",
       weight: "300 gr/paket",
@@ -118,6 +126,8 @@ const SarkuteriGrubu = () => {
       description: "Klasik dana baton sucuk, geleneksel lezzet."
     }
   ];
+
+  const navigate = useNavigate();
 
   return (
     <div style={{ padding: "2rem", maxWidth: "1200px", margin: "0 auto" }}>
@@ -275,6 +285,27 @@ const SarkuteriGrubu = () => {
             </div>
           </Link>
         ))}
+      </div>
+      <div style={{ display: "flex", justifyContent: "center", marginTop: 32 }}>
+        <button
+          onClick={() => navigate('/#urunlerimiz')}
+          style={{
+            background: "var(--primary-color)",
+            color: "white",
+            border: "none",
+            borderRadius: 8,
+            padding: "0.7rem 2rem",
+            fontWeight: 700,
+            fontSize: 16,
+            cursor: "pointer",
+            boxShadow: "0 2px 8px #80002022",
+            transition: "all 0.2s",
+          }}
+          onMouseEnter={e => e.target.style.background = "#a0002a"}
+          onMouseLeave={e => e.target.style.background = "var(--primary-color)"}
+        >
+          Kategorilere Dön
+        </button>
       </div>
     </div>
   );

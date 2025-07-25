@@ -115,7 +115,7 @@ const Products = () => {
       { id: 10, name: "Dana Kontrafile Pastırma", price: "1460,00₺", weight: "250 gr/paket", image: "/images/et_resimler/250gr-dana-kontrafile-pastirma-95fa24.png", link: "/products/sarkuteri-grubu/10" },
       { id: 11, name: "Dana Seçme Pastırma", price: "1310,00₺", weight: "250 gr/paket", image: "/images/et_resimler/danaseçmepastırma.png", link: "/products/sarkuteri-grubu/11" },
       { id: 12, name: "Dana İspanyol Salam", price: "940,00₺", weight: "100 gr/paket", image: "/images/et_resimler/ispanyolsalam.png", link: "/products/sarkuteri-grubu/12" },
-      { id: 13, name: "Dana Göden Sucuk", price: "720,00₺", weight: "400 gr/paket", image: "/images/et_resimler/dana_goden_sucuk.png", link: "/products/sarkuteri-grubu/13" },
+      { id: 13, name: "Dana Göden Sucuk", price: "720,00₺", weight: "400 gr/paket", image: "/images/et_resimler/goden-sucuk.png", link: "/products/sarkuteri-grubu/13" },
       { id: 14, name: "Dana Dilim Sucuk", price: "375,00₺", weight: "300 gr/paket", image: "/images/et_resimler/dilim_sucuk.png", link: "/products/sarkuteri-grubu/14" },
       { id: 15, name: "Dana Baton Sucuk", price: "720,00₺", weight: "350 gr/paket", image: "/images/et_resimler/BATON-SUCUK.png", link: "/products/sarkuteri-grubu/15" },
     ],
@@ -394,6 +394,28 @@ const Products = () => {
           >
             {categories.find((cat) => cat.id === selectedCategory)?.name}
           </h2>
+          <div style={{ marginTop: 16 }}>
+            <button
+              onClick={() => handleCategoryChange("all")}
+              style={{
+                background: "var(--primary-color)",
+                color: "white",
+                border: "none",
+                borderRadius: 8,
+                padding: "0.7rem 2rem",
+                fontWeight: 700,
+                fontSize: 16,
+                cursor: "pointer",
+                marginTop: 8,
+                boxShadow: "0 2px 8px #80002022",
+                transition: "all 0.2s",
+              }}
+              onMouseEnter={e => e.target.style.background = "#a0002a"}
+              onMouseLeave={e => e.target.style.background = "var(--primary-color)"}
+            >
+              Tüm Ürünler'e Dön
+            </button>
+          </div>
         </div>
       )}
 

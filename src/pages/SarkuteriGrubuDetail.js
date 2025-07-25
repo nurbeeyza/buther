@@ -309,26 +309,26 @@ const SarkuteriGrubuDetail = () => {
       name: "Dana Göden Sucuk",
       price: "720,00₺",
       weight: "400 gr/paket",
-      image: "/images/et_resimler/dana_goden_sucuk.png",
+      image: "/images/et_resimler/goden-sucuk.png",
       description: "Geleneksel dana göden sucuk, özel baharatlarla.",
       features: [
         "Geleneksel tarif",
         "Özel baharatlarla",
         "Kahvaltı için ideal",
         "Doğal kılıf",
-        "Uzun raf ömrü",
+        "Uzun raf ömrü"
       ],
       cookingTips: [
         "Tavada hafif pişirin",
         "Direkt tüketilebilir",
         "Kahvaltıda peynir ile servis edin",
-        "Soğuk servis yapın",
+        "Soğuk servis yapın"
       ],
       nutritionalInfo: {
         protein: "22g",
         fat: "24g",
-        calories: "300 kcal",
-      },
+        calories: "300 kcal"
+      }
     },
     14: {
       name: "Dana Dilim Sucuk",
