@@ -97,7 +97,7 @@ const products = {
   },
   4: {
     name: "Toma Hawk Steak",
-    price: "1000,00₺",
+    price: "1270,00₺",
     weight: "800-1000g",
     image: "/images/et_resimler/tomahawk.png",
     description:

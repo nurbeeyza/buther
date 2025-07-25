@@ -32,7 +32,7 @@ const DanaBeefSteak = () => {
     {
       id: 4,
       name: "Toma Hawk Steak",
-      price: "1000,00₺",
+      price: "1270,00₺",
       weight: "kg",
       image: "/images/et_resimler/tomahawk.png",
       description: "Premium Toma Hawk steak, özel kesim ve kalın dilim."

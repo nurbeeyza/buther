@@ -83,7 +83,7 @@ const DanaGrubuDetail = () => {
     },
     4: {
       name: "Dana Rosto",
-      price: "700,00₺",
+      price: "840,00₺",
       weight: "kg",
       image: "/images/et_resimler/dana_rosto.png",
       description: "Yumuşak dana rosto, fırın yemekleri için mükemmel.",

@@ -82,7 +82,7 @@ const SarkuteriGrubuDetail = () => {
     },
     4: {
       name: "Dana Salam",
-      price: "85,00₺",
+      price: "900,00₺",
       weight: "100 gr/paket",
       image: "/images/et_resimler/dana_salam.png",
       description: "Taze dana salam, çeşitli yemekler için mükemmel.",
@@ -132,7 +132,7 @@ const SarkuteriGrubuDetail = () => {
     },
     6: {
       name: "Dana Roast Beef",
-      price: "250,00₺",
+      price: "1450,00₺",
       weight: "200 gr/paket",
       image: "/images/et_resimler/rozbif.png",
       description: "Geleneksel dana rozbif, özel kesim ve hazırlama.",
@@ -157,7 +157,7 @@ const SarkuteriGrubuDetail = () => {
     },
     7: {
       name: "Dana Kekikli Roast Beef",
-      price: "260,00₺",
+      price: "1450,00₺",
       weight: "200 gr/paket",
       image: "/images/et_resimler/roastbeef-kekikli-2.png",
       description: "Kekikli dana rozbif, özel aroması ile fark yaratır.",
@@ -182,7 +182,7 @@ const SarkuteriGrubuDetail = () => {
     },
     8: {
       name: "Dana Karabiberli Roast Beef",
-      price: "270,00₺",
+      price: "1450,00₺",
       weight: "200 gr/paket",
       image: "/images/et_resimler/danakarabiberliroastbeef.jpg",
       description: "Karabiberli dana rozbif, özel aroması ile fark yaratır.",
@@ -331,8 +331,8 @@ const SarkuteriGrubuDetail = () => {
       },
     },
     14: {
-      name: "Dana Baton Sucuk",
-      price: "350,00₺",
+      name: "Dana Dilim Sucuk",
+      price: "375,00₺",
       weight: "350 gr/paket",
       image: "/images/et_resimler/BATON-SUCUK.png",
       description: "Klasik dana baton sucuk, geleneksel lezzet.",
@@ -354,6 +354,56 @@ const SarkuteriGrubuDetail = () => {
         fat: "28g",
         calories: "340 kcal"
       }
+    },
+    15: {
+      name: "Dana Baton Sucuk",
+      price: "720,00₺",
+      weight: "350 gr/paket",
+      image: "/images/et_resimler/BATON-SUCUK.png",
+      description: "Klasik dana baton sucuk, geleneksel lezzet.",
+      features: [
+        "Klasik baton şekli",
+        "Geleneksel baharat karışımı",
+        "Doğal kılıf",
+        "Uzun raf ömrü",
+        "Pratik kullanım"
+      ],
+      cookingTips: [
+        "Tavada orta ateşte pişirin",
+        "Her iki tarafı 3-4 dakika çevirin",
+        "Fazla pişirmeyin, sulu kalmasına dikkat edin",
+        "Kahvaltıda veya sandviçte servis edin"
+      ],
+      nutritionalInfo: {
+        protein: "22g",
+        fat: "28g",
+        calories: "340 kcal"
+      }
+    },
+    16: {
+      name: "Dana Antrikot Pastırma",
+      price: "1510,00₺",
+      weight: "250 gr/paket",
+      image: "/images/et_resimler/danaantrikotpastırma.png",
+      description: "Premium dana antrikot pastırma, geleneksel lezzet.",
+      features: [
+        "Premium antrikot etinden",
+        "Geleneksel lezzet",
+        "Kahvaltı için ideal",
+        "İnce dilimlenebilir",
+        "Uzun raf ömrü",
+      ],
+      cookingTips: [
+        "Direkt tüketilebilir",
+        "İnce dilimler halinde kesin",
+        "Kahvaltıda peynir ile servis edin",
+        "Soğuk servis yapın",
+      ],
+      nutritionalInfo: {
+        protein: "26g",
+        fat: "14g",
+        calories: "220 kcal",
+      },
     },
   };
 

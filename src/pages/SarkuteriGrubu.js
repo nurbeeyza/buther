@@ -32,7 +32,7 @@ const SarkuteriGrubu = () => {
     {
       id: 4,
       name: "Dana Salam",
-      price: "85,00₺",
+      price: "900,00₺",
       weight: "100 gr/paket",
       image: "/images/et_resimler/dana_salam.png",
       description: "Taze dana salam, çeşitli yemekler için mükemmel."
@@ -48,7 +48,7 @@ const SarkuteriGrubu = () => {
     {
       id: 6,
       name: "Dana Roast Beef",
-      price: "250,00₺",
+      price: "1450,00₺",
       weight: "200 gr/paket",
       image: "/images/et_resimler/rozbif.png",
       description: "Geleneksel dana rozbif, özel kesim ve hazırlama."
@@ -56,7 +56,7 @@ const SarkuteriGrubu = () => {
     {
       id: 7,
       name: "Dana Kekikli Roast Beef",
-      price: "260,00₺",
+      price: "1450,00₺",
       weight: "200 gr/paket",
       image: "/images/et_resimler/roastbeef-kekikli-2.png",
       description: "Kekikli dana rozbif, özel aroması ile fark yaratır."
@@ -64,7 +64,7 @@ const SarkuteriGrubu = () => {
     {
       id: 8,
       name: "Dana Karabiberli Roast Beef",
-      price: "270,00₺",
+      price: "1450,00₺",
       weight: "200 gr/paket",
       image: "/images/et_resimler/danakarabiberliroastbeef.jpg",
       description: "Karabiberli dana rozbif, özel aroması ile fark yaratır."
@@ -104,7 +104,7 @@ const SarkuteriGrubu = () => {
     {
       id: 13,
       name: "Dana Dilim Sucuk",
-      price: "320,00₺",
+      price: "375,00₺",
       weight: "300 gr/paket",
       image: "/images/et_resimler/dilim_sucuk.png",
       description: "Pratik dana dilim sucuk, hazır kesim."
@@ -112,7 +112,7 @@ const SarkuteriGrubu = () => {
     {
       id: 14,
       name: "Dana Baton Sucuk",
-      price: "350,00₺",
+      price: "720,00₺",
       weight: "350 gr/paket",
       image: "/images/et_resimler/BATON-SUCUK.png",
       description: "Klasik dana baton sucuk, geleneksel lezzet."

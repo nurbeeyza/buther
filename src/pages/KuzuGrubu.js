@@ -33,7 +33,7 @@ const KuzuGrubu = () => {
     {
       id: 4,
       name: "Kuzu Kaburga",
-      price: "720,00₺",
+      price: "590,00₺",
       weight: "kg",
       image: "/images/et_resimler/kuzukaburga.png",
       description: "Lezzetli kuzu kaburga, uzun pişirme için ideal.",
@@ -41,7 +41,7 @@ const KuzuGrubu = () => {
     {
       id: 5,
       name: "Kuzu Döş",
-      price: "750,00₺",
+      price: "590,00₺",
       weight: "kg",
       image: "/images/et_resimler/kuzudös.png",
       description: "Yumuşak kuzu döş, fırın yemekleri için mükemmel.",
@@ -49,7 +49,7 @@ const KuzuGrubu = () => {
     {
       id: 6,
       name: "Kuzu Pirzola",
-      price: "850,00₺",
+      price: "1220,00₺",
       weight: "kg",
       image: "/images/et_resimler/kuzu-pirzola.png",
       description: "Premium kuzu pirzola, ızgara için mükemmel seçim.",
@@ -65,7 +65,7 @@ const KuzuGrubu = () => {
     {
       id: 8,
       name: "Kuzu Küşleme",
-      price: "820,00₺",
+      price: "1550,00₺",
       weight: "kg",
       image: "/images/et_resimler/kuzuküşleme.png",
       description: "Özel kesim kuzu küşleme, mangal için mükemmel.",
@@ -81,7 +81,7 @@ const KuzuGrubu = () => {
     {
       id: 10,
       name: "Kuzu Lokum",
-      price: "900,00₺",
+      price: "1100,00₺",
       weight: "kg",
       image: "/images/et_resimler/kuzulokum.png",
       description: "Premium kuzu lokum, en kaliteli kuzu eti kesimi.",

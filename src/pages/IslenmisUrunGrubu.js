@@ -8,14 +8,14 @@ const IslenmisUrunGrubu = () => {
     {
       id: 1,
       name: "Dana Köfte",
-      price: "220,00₺",
+      price: "440,00₺",
       weight: "400 gr/paket",
       image: "/images/et_resimler/kasap_köfte.png",
       description: "Geleneksel dana köfte, özel baharatlarla hazırlanmıştır."
     },
     {
       id: 2,
-      name: "Dana Sucuk",
+      name: "Dana Baton Sucuk",
       price: "350,00₺",
       weight: "350 gr/paket",
       image: "/images/et_resimler/baton_sucuk.png",
@@ -24,7 +24,7 @@ const IslenmisUrunGrubu = () => {
     {
       id: 3,
       name: "Dana Hamburger Köfte",
-      price: "230,00₺",
+      price: "640,00₺",
       weight: "4x110 gr/paket",
       image: "/images/et_resimler/steak_burger.png",
       description: "Premium dana hamburger köftesi, hamburger için ideal."
@@ -32,7 +32,7 @@ const IslenmisUrunGrubu = () => {
     {
       id: 4,
       name: "Görye İnegöl Köfte",
-      price: "220,00₺",
+      price: "560,00₺",
       weight: "400 gr/paket",
       image: "/images/et_resimler/görye_köfte.png",
       description: "Geleneksel İnegöl köftesi, özel baharatlarla hazırlanmıştır."
@@ -40,7 +40,7 @@ const IslenmisUrunGrubu = () => {
     {
       id: 5,
       name: "Görye Kangal Sucuk",
-      price: "350,00₺",
+      price: "550,00₺",
       weight: "350 gr/paket",
       image: "/images/et_resimler/kangal_sucuk.png",
       description: "Geleneksel yöntemlerle hazırlanmış, baharatlı ve lezzetli kangal sucuk. Kahvaltı ve yemekleriniz için ideal."
