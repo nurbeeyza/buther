@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.c4599d25.css",
-    "main.js": "/static/js/main.1c5f58ee.js",
+    "main.css": "/static/css/main.40a14a8c.css",
+    "main.js": "/static/js/main.8f00f4ea.js",
     "static/media/butcher-pic-bg.png": "/static/media/butcher-pic-bg.05adfcc826743a0e2491.png",
     "index.html": "/index.html",
-    "main.c4599d25.css.map": "/static/css/main.c4599d25.css.map",
-    "main.1c5f58ee.js.map": "/static/js/main.1c5f58ee.js.map"
+    "main.40a14a8c.css.map": "/static/css/main.40a14a8c.css.map",
+    "main.8f00f4ea.js.map": "/static/js/main.8f00f4ea.js.map"
   },
   "entrypoints": [
-    "static/css/main.c4599d25.css",
-    "static/js/main.1c5f58ee.js"
+    "static/css/main.40a14a8c.css",
+    "static/js/main.8f00f4ea.js"
   ]
 }

@@ -15,14 +15,6 @@ const IslenmisUrunGrubu = () => {
     },
     {
       id: 2,
-      name: "Dana Baton Sucuk",
-      price: "350,00₺",
-      weight: "350 gr/paket",
-      image: "/images/et_resimler/baton_sucuk.png",
-      description: "Özel baharatlarla hazırlanan dana sucuk."
-    },
-    {
-      id: 3,
       name: "Dana Hamburger Köfte",
       price: "640,00₺",
       weight: "4x110 gr/paket",
@@ -30,7 +22,7 @@ const IslenmisUrunGrubu = () => {
       description: "Premium dana hamburger köftesi, hamburger için ideal."
     },
     {
-      id: 4,
+      id: 3,
       name: "Görye İnegöl Köfte",
       price: "560,00₺",
       weight: "400 gr/paket",
@@ -38,7 +30,7 @@ const IslenmisUrunGrubu = () => {
       description: "Geleneksel İnegöl köftesi, özel baharatlarla hazırlanmıştır."
     },
     {
-      id: 5,
+      id: 4,
       name: "Görye Kangal Sucuk",
       price: "550,00₺",
       weight: "350 gr/paket",
