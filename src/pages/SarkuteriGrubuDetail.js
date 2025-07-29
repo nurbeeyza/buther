@@ -131,7 +131,7 @@ const SarkuteriGrubuDetail = () => {
       },
     },
     6: {
-      name: "Dana Roast Beef",
+              name: "Dana Sade Roast Beef",
       price: "1450,00₺",
       weight: "200 gr/paket",
       image: "/images/et_resimler/rozbif.png",
@@ -184,7 +184,7 @@ const SarkuteriGrubuDetail = () => {
       name: "Dana Karabiberli Roast Beef",
       price: "1450,00₺",
       weight: "200 gr/paket",
-      image: "/images/et_resimler/danakarabiberliroastbeef.jpg",
+              image: "/images/et_resimler/danakarabiberliroastbeef.png",
       description: "Karabiberli dana rozbif, özel aroması ile fark yaratır.",
       features: [
         "Karabiber aroması",

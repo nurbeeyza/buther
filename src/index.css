@@ -2832,3 +2832,27 @@ main,
   flex-direction: column !important;
   gap: 0.5rem !important;
 }
+
+/* Hide hash fragment from URL */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  z-index: -1;
+}
+
+/* Alternative method - hide hash in browser */
+@media screen {
+  body {
+    overflow-x: hidden;
+  }
+}
+
+/* Hide hash fragment using JavaScript alternative */
+.hash-hidden {
+  display: none;
+}

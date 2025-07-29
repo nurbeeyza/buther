@@ -209,7 +209,7 @@ const DelicatessenGroupDetail = () => {
       name: "Dana Karabiberli Roast Beef",
       price: "270,00₺",
       weight: "200 gr/paket",
-      image: "/images/et_resimler/danakarabiberliroastbeef.jpg",
+              image: "/images/et_resimler/danakarabiberliroastbeef.png",
       description: "Karabiberli dana rozbif, özel aroması ile fark yaratır.",
       features: [
         "Karabiber aroması",
