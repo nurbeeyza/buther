@@ -164,7 +164,7 @@ const Home = () => {
       id: 1,
       title: "Hızlı Teslimat",
       description:
-        "Eskişehir İçi ÜCRETSİZ Teslimat, Eskişehir Dışı 500TL ve Üzeri Alışverişlerinizde ÜCRETSİZ Kargo",
+        "Eskişehir İçi ÜCRETSİZ Teslimat, Eskişehir Dışı 1500TL ve Üzeri Alışverişlerinizde ÜCRETSİZ Kargo",
       icon: "fas fa-truck",
     },
     {

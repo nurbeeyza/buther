@@ -1,14 +1,12 @@
 {
   "files": {
-    "main.css": "/static/css/main.40a14a8c.css",
-    "main.js": "/static/js/main.8f00f4ea.js",
+    "main.css": "/static/css/main.a1c266f8.css",
+    "main.js": "/static/js/main.19955e74.js",
     "static/media/butcher-pic-bg.png": "/static/media/butcher-pic-bg.05adfcc826743a0e2491.png",
-    "index.html": "/index.html",
-    "main.40a14a8c.css.map": "/static/css/main.40a14a8c.css.map",
-    "main.8f00f4ea.js.map": "/static/js/main.8f00f4ea.js.map"
+    "index.html": "/index.html"
   },
   "entrypoints": [
-    "static/css/main.40a14a8c.css",
-    "static/js/main.8f00f4ea.js"
+    "static/css/main.a1c266f8.css",
+    "static/js/main.19955e74.js"
   ]
 }
